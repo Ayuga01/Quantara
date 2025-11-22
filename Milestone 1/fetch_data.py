@@ -27,16 +27,16 @@ def fetch_klines(symbol, interval, start_ms, end_ms):
 
         out.extend(data)
 
-        # Step forward using the last returned candle
+       
         last_open_time = data[-1][0]
         next_ts = last_open_time + 1
 
-        # Avoid infinite loops
+       
         if next_ts <= current:
             break
 
         current = next_ts
-        time.sleep(0.25)  # gentle on rate limits
+        time.sleep(0.25)  
 
     return out
 
@@ -55,14 +55,14 @@ def get_clean_klines(symbol, interval, start_ms, end_ms):
 
     df = df.sort_values("open_time").reset_index(drop=True)
 
-    # FIX: enforce EXACT HOURLY spacing
+   
     full_range = pd.date_range(
         start=df["open_time"].iloc[0],
         end=df["open_time"].iloc[-1],
         freq="1H"
     )
 
-    # Reindex to ensure completeness
+   
     df = df.set_index("open_time").reindex(full_range)
 
     df.index.name = "open_time"
@@ -70,9 +70,6 @@ def get_clean_klines(symbol, interval, start_ms, end_ms):
     return df.reset_index()
 
 
-# -----------------------------------------------------------------------------------------
-
-# FIXED 5-year back calculation (actual 5 years, accounting for leap years)
 import datetime
 end_dt = datetime.datetime.utcnow()
 start_dt = end_dt - datetime.timedelta(days=365.25*5)
@@ -93,7 +90,6 @@ for symbol, name in coins.items():
 
     df = get_clean_klines(symbol, "1h", start_ms, end_ms)
 
-    # After reindex, missing rows = NaNs → safe and detectable
     missing = df["open"].isna().sum()
     print(f"{name}: missing candles filled: {missing}")
 
