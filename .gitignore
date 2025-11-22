@@ -2,3 +2,5 @@
 .DS_Store
 anaconda_projects/
 README.md
+*.npy
+*.npz
