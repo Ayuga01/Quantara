@@ -1,0 +1,1250 @@
+/**
+ * App.css - Cryptocurrency Future Price Prediction Platform
+ * 
+ * Comprehensive stylesheet featuring:
+ * - CSS Custom Properties for theming
+ * - Glassmorphism with backdrop-filter and box-shadow
+ * - Animated floating background elements
+ * - Micro-interactions and hover effects
+ * - Fully responsive design (mobile, tablet, desktop)
+ * - Accessible contrast ratios
+ * - Professional typography
+ */
+
+/* ==========================================
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   Crypto-inspired dark theme palette
+   ========================================== */
+:root {
+  /* Background colors - Deep space theme */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-tertiary: #1a1a2e;
+  
+  /* Text colors with proper contrast */
+  --text-primary: rgba(255, 255, 255, 0.95);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  
+  /* Accent colors - Crypto gradient palette */
+  --accent-blue: #60a5fa;
+  --accent-purple: #a78bfa;
+  --accent-pink: #f472b6;
+  --accent-teal: #2dd4bf;
+  --accent-gold: #fbbf24;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  
+  /* Glassmorphism properties */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+  --glass-blur: 20px;
+  
+  /* Spacing and sizing */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ==========================================
+   BASE RESET & GLOBAL STYLES
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#root {
+  display: block;
+}
+
+/* ==========================================
+   LOGIN PAGE - Full viewport container
+   ========================================== */
+.loginPage {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  
+  /* Deep space gradient background */
+  background: 
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(96, 165, 250, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(167, 139, 250, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 20% 90%, rgba(45, 212, 191, 0.1) 0%, transparent 50%),
+    linear-gradient(180deg, #0a0a0f 0%, #12121a 50%, #0f0f1a 100%);
+}
+
+/* ==========================================
+   FLOATING BACKGROUND ELEMENTS
+   Animated crypto icons and geometric shapes
+   ========================================== */
+.floatingBg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Gradient orbs - ambient lighting */
+.gradientOrb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.6;
+}
+
+.orb1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.4) 0%, transparent 70%);
+  top: -10%;
+  left: -5%;
+  animation: floatOrb1 20s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.35) 0%, transparent 70%);
+  top: 60%;
+  right: -8%;
+  animation: floatOrb2 25s ease-in-out infinite;
+}
+
+.orb3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.25) 0%, transparent 70%);
+  bottom: -5%;
+  left: 30%;
+  animation: floatOrb3 22s ease-in-out infinite;
+}
+
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(50px, 30px) scale(1.1); }
+  66% { transform: translate(-30px, 50px) scale(0.95); }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, -30px) scale(1.05); }
+  66% { transform: translate(30px, -50px) scale(0.9); }
+}
+
+@keyframes floatOrb3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -40px) scale(1.1); }
+}
+
+/* Floating crypto icons */
+.floatingIcon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  opacity: 0.15;
+  animation: floatIcon 15s ease-in-out infinite;
+}
+
+.floatingIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon1 {
+  top: 12%;
+  left: 8%;
+  animation-duration: 18s;
+  animation-delay: 0s;
+}
+
+.icon2 {
+  top: 25%;
+  right: 12%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 22s;
+  animation-delay: -3s;
+}
+
+.icon3 {
+  top: 55%;
+  left: 5%;
+  width: 36px;
+  height: 36px;
+  animation-duration: 20s;
+  animation-delay: -6s;
+}
+
+.icon4 {
+  bottom: 20%;
+  right: 8%;
+  width: 44px;
+  height: 44px;
+  animation-duration: 16s;
+  animation-delay: -9s;
+}
+
+.icon5 {
+  bottom: 35%;
+  left: 15%;
+  width: 38px;
+  height: 38px;
+  animation-duration: 24s;
+  animation-delay: -12s;
+}
+
+.icon6 {
+  top: 70%;
+  right: 20%;
+  width: 32px;
+  height: 32px;
+  animation-duration: 19s;
+  animation-delay: -5s;
+}
+
+@keyframes floatIcon {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+    opacity: 0.15;
+  }
+  25% { 
+    transform: translateY(-20px) rotate(5deg); 
+    opacity: 0.25;
+  }
+  50% { 
+    transform: translateY(-10px) rotate(-3deg); 
+    opacity: 0.2;
+  }
+  75% { 
+    transform: translateY(-25px) rotate(3deg); 
+    opacity: 0.18;
+  }
+}
+
+/* Geometric shapes */
+.geoShape {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0.3;
+}
+
+.shape1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  top: 15%;
+  right: 10%;
+  animation: morphShape 20s ease-in-out infinite;
+}
+
+.shape2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  bottom: 25%;
+  left: 8%;
+  animation: morphShape 25s ease-in-out infinite reverse;
+}
+
+.shape3 {
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  top: 40%;
+  left: 12%;
+  animation: rotateShape 30s linear infinite;
+}
+
+.shape4 {
+  width: 80px;
+  height: 80px;
+  border-radius: 20%;
+  bottom: 15%;
+  right: 15%;
+  animation: rotateShape 35s linear infinite reverse;
+}
+
+@keyframes morphShape {
+  0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+  50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+  75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+}
+
+@keyframes rotateShape {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Grid pattern overlay */
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+/* Particle dots */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.p1 { top: 20%; left: 25%; animation-delay: 0s; }
+.p2 { top: 35%; right: 30%; animation-delay: 0.5s; }
+.p3 { top: 65%; left: 40%; animation-delay: 1s; }
+.p4 { bottom: 30%; left: 20%; animation-delay: 1.5s; }
+.p5 { bottom: 40%; right: 25%; animation-delay: 2s; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.5); }
+}
+
+/* ==========================================
+   LOGIN CONTAINER
+   Centers and constrains content
+   ========================================== */
+.loginContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   BRAND HEADER
+   Logo and tagline
+   ========================================== */
+.loginBrand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.brandIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Glassmorphism effect */
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(167, 139, 250, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Glow effect */
+  box-shadow: 
+    0 0 30px rgba(96, 165, 250, 0.3),
+    0 0 60px rgba(167, 139, 250, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 30px rgba(96, 165, 250, 0.3),
+      0 0 60px rgba(167, 139, 250, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 0 40px rgba(96, 165, 250, 0.5),
+      0 0 80px rgba(167, 139, 250, 0.3);
+  }
+}
+
+.brandText {
+  text-align: left;
+}
+
+.brandTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.brandSubtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================
+   LOGIN CARD
+   Main glassmorphism container
+   ========================================== */
+.loginCard {
+  position: relative;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  
+  /* Glassmorphism core properties */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  
+  /* Border gradient effect */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  
+  /* Layered shadows for depth */
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 10px 40px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 0 80px -20px rgba(96, 165, 250, 0.15);
+  
+  /* Smooth transitions for hover states */
+  transition: 
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.loginCard:hover {
+  box-shadow: 
+    0 8px 12px rgba(0, 0, 0, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 0 100px -20px rgba(96, 165, 250, 0.2);
+}
+
+/* Shake animation for validation errors */
+.loginCard.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Card header section */
+.cardHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.loginTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(200, 200, 255, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loginSubtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0 0;
+}
+
+/* ==========================================
+   FORM ELEMENTS
+   ========================================== */
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Input wrapper with icon support */
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  
+  /* Glassmorphism input */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  
+  transition: 
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.inputWrapper:focus-within {
+  border-color: rgba(96, 165, 250, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 
+    0 0 0 3px rgba(96, 165, 250, 0.1),
+    0 0 20px rgba(96, 165, 250, 0.15);
+}
+
+.inputWrapper.hasError {
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.inputIcon {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+.inputWrapper:focus-within .inputIcon {
+  color: var(--accent-blue);
+}
+
+.formInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.formInput::placeholder {
+  color: var(--text-muted);
+}
+
+.formInput:disabled {
+  opacity: 0.7;
+}
+
+/* Password toggle button */
+.passwordToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: 
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.passwordToggle:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.passwordToggle:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Field error message */
+.fieldError {
+  font-size: 0.75rem;
+  color: var(--accent-red);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ==========================================
+   OPTIONS ROW
+   Remember me + Forgot password
+   ========================================== */
+.optionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Custom checkbox styling */
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.checkboxLabel:hover {
+  color: var(--text-primary);
+}
+
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkboxCustom {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.checkboxCustom svg {
+  width: 12px;
+  height: 12px;
+  color: white;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.checkboxInput:checked + .checkboxCustom {
+  border-color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+}
+
+.checkboxInput:checked + .checkboxCustom svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.checkboxInput:focus-visible + .checkboxCustom {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Forgot password link */
+.forgotLink {
+  font-size: 0.875rem;
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: 
+    color var(--transition-fast),
+    text-shadow var(--transition-fast);
+}
+
+.forgotLink:hover {
+  color: var(--accent-purple);
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+}
+
+/* ==========================================
+   2FA OPTION
+   ========================================== */
+.tfaOption {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(45, 212, 191, 0.05);
+  border: 1px solid rgba(45, 212, 191, 0.15);
+}
+
+.tfaLabel {
+  color: var(--accent-teal);
+}
+
+.tfaLabel svg {
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   ALERT MESSAGES
+   Error and success states
+   ========================================== */
+.alertError,
+.alertSuccess {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alertError {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+.alertSuccess {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+   Primary action with states
+   ========================================== */
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  
+  /* Gradient background */
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 50%, #c084fc 100%);
+  background-size: 200% 200%;
+  
+  /* Glow effect */
+  box-shadow: 
+    0 4px 15px rgba(96, 165, 250, 0.4),
+    0 0 30px rgba(167, 139, 250, 0.2);
+  
+  transition: 
+    transform var(--transition-fast),
+    box-shadow var(--transition-normal),
+    background-position var(--transition-slow);
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background-position: 100% 100%;
+  box-shadow: 
+    0 6px 25px rgba(96, 165, 250, 0.5),
+    0 0 50px rgba(167, 139, 250, 0.3);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButton.loading {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.5) 0%, rgba(167, 139, 250, 0.5) 100%);
+}
+
+.submitButton.success {
+  background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-teal) 100%);
+}
+
+/* Loading spinner animation */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   DIVIDER
+   "or continue with" separator
+   ========================================== */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+}
+
+.divider span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   OAUTH BUTTONS
+   Social login options
+   ========================================== */
+.oauthButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.oauthBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  
+  transition: 
+    transform var(--transition-fast),
+    border-color var(--transition-normal),
+    background var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.oauthBtn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.googleBtn:hover {
+  border-color: rgba(66, 133, 244, 0.5);
+  box-shadow: 0 4px 20px rgba(66, 133, 244, 0.15);
+}
+
+.guestBtn {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.guestBtn:hover {
+  border-color: rgba(167, 139, 250, 0.5);
+  box-shadow: 0 4px 20px rgba(167, 139, 250, 0.15);
+}
+
+.githubBtn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================
+   MODE TOGGLE
+   Sign in / Sign up switcher
+   ========================================== */
+.modeToggle {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.modeLink {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 
+    color var(--transition-fast),
+    text-shadow var(--transition-fast);
+}
+
+.modeLink:hover {
+  color: var(--accent-purple);
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+}
+
+/* ==========================================
+   LOGIN FOOTER
+   Security badge
+   ========================================== */
+.loginFooter {
+  text-align: center;
+}
+
+.securityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.securityBadge svg {
+  color: var(--accent-teal);
+}
+
+/* ==========================================
+   DASHBOARD STYLES
+   For authenticated users
+   ========================================== */
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--bg-primary);
+}
+
+.appHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.appTitle {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.appSubtitle {
+  margin: 0.25rem 0 0;
+  color: var(--text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.panel {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.panelMeta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 520px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.control {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.control:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.error {
+  color: var(--accent-red);
+  font-size: 0.875rem;
+}
+
+.list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.kv {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.kvRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.kvKey {
+  color: var(--text-muted);
+}
+
+.kvValue {
+  font-weight: 600;
+  color: var(--accent-green);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   Mobile, tablet, desktop breakpoints
+   ========================================== */
+
+/* Mobile - Small screens */
+@media (max-width: 480px) {
+  .loginPage {
+    padding: 1rem;
+  }
+  
+  .loginCard {
+    padding: 1.5rem;
+  }
+  
+  .brandIcon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .brandTitle {
+    font-size: 1.5rem;
+  }
+  
+  .loginTitle {
+    font-size: 1.25rem;
+  }
+  
+  .optionsRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .oauthButtons {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reduce floating elements on mobile */
+  .floatingIcon {
+    opacity: 0.1;
+  }
+  
+  .geoShape {
+    display: none;
+  }
+}
+
+/* Tablet - Medium screens */
+@media (min-width: 481px) and (max-width: 768px) {
+  .loginContainer {
+    max-width: 420px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .loginPage {
+    padding: 2rem;
+  }
+  
+  .loginContainer {
+    max-width: 520px;
+  }
+  
+  .loginCard {
+    padding: 2.5rem;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+   Accessibility for motion sensitivity
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floatingBg {
+    display: none;
+  }
+}
+
+/* ==========================================
+   HIGH CONTRAST MODE
+   Enhanced accessibility
+   ========================================== */
+@media (prefers-contrast: high) {
+  .inputWrapper {
+    border-width: 2px;
+  }
+  
+  .submitButton {
+    border: 2px solid white;
+  }
+  
+  .checkboxCustom {
+    border-width: 2px;
+  }
+}
