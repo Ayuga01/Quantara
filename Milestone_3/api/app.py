@@ -494,12 +494,43 @@ def _init_history_db() -> None:
                 last_observed_close REAL,
                 first_predicted_price REAL,
                 last_predicted_price REAL,
-                predictions_json TEXT
+                predictions_json TEXT,
+                target_timestamps_json TEXT,
+                actual_prices_json TEXT,
+                accuracy_verified_at TEXT,
+                mean_error_pct REAL
             )
             """
         )
         conn.execute("CREATE INDEX IF NOT EXISTS idx_history_user ON prediction_history(user_email)")
         conn.commit()
+        
+        # Migration: Add new columns to existing tables BEFORE creating indexes on them
+        _migrate_history_db(conn)
+        
+        # Create index on accuracy_verified_at after migration ensures column exists
+        conn.execute("CREATE INDEX IF NOT EXISTS idx_history_pending ON prediction_history(accuracy_verified_at)")
+        conn.commit()
+
+
+def _migrate_history_db(conn: sqlite3.Connection) -> None:
+    """Add new columns to existing prediction_history table if they don't exist."""
+    cursor = conn.execute("PRAGMA table_info(prediction_history)")
+    existing_columns = {row[1] for row in cursor.fetchall()}
+    
+    new_columns = [
+        ("target_timestamps_json", "TEXT"),
+        ("actual_prices_json", "TEXT"),
+        ("accuracy_verified_at", "TEXT"),
+        ("mean_error_pct", "REAL"),
+    ]
+    
+    for col_name, col_type in new_columns:
+        if col_name not in existing_columns:
+            conn.execute(f"ALTER TABLE prediction_history ADD COLUMN {col_name} {col_type}")
+            print(f"[MIGRATION] Added column {col_name} to prediction_history")
+    
+    conn.commit()
 
 
 class SaveHistoryRequest(BaseModel):
@@ -511,6 +542,7 @@ class SaveHistoryRequest(BaseModel):
     first_predicted_price: Optional[float] = None
     last_predicted_price: Optional[float] = None
     predictions: Optional[list] = None
+    target_timestamps: Optional[list] = None  # List of ISO timestamps for each prediction step
 
 
 @app.get("/history")
@@ -543,7 +575,8 @@ async def get_history(request: Request):
             """
             SELECT id, coin, horizon, steps_ahead, use_live_data, predicted_at,
                    last_observed_close, first_predicted_price, last_predicted_price,
-                   predictions_json
+                   predictions_json, target_timestamps_json, actual_prices_json,
+                   accuracy_verified_at, mean_error_pct
             FROM prediction_history
             WHERE user_email = ?
             ORDER BY predicted_at DESC
@@ -560,6 +593,21 @@ async def get_history(request: Request):
                 predictions = json.loads(row["predictions_json"])
             except:
                 pass
+        
+        target_timestamps = None
+        if row["target_timestamps_json"]:
+            try:
+                target_timestamps = json.loads(row["target_timestamps_json"])
+            except:
+                pass
+        
+        actual_prices = None
+        if row["actual_prices_json"]:
+            try:
+                actual_prices = json.loads(row["actual_prices_json"])
+            except:
+                pass
+        
         history.append({
             "id": row["id"],
             "coin": row["coin"],
@@ -571,6 +619,10 @@ async def get_history(request: Request):
             "first_predicted_price": row["first_predicted_price"],
             "last_predicted_price": row["last_predicted_price"],
             "predictions": predictions,
+            "target_timestamps": target_timestamps,
+            "actual_prices": actual_prices,
+            "accuracy_verified_at": row["accuracy_verified_at"],
+            "mean_error_pct": row["mean_error_pct"],
         })
     
     return {"history": history, "user_key": user_key}
@@ -597,18 +649,20 @@ async def save_history(req: SaveHistoryRequest, request: Request):
     
     predicted_at = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
     predictions_json = json.dumps(req.predictions) if req.predictions else None
+    target_timestamps_json = json.dumps(req.target_timestamps) if req.target_timestamps else None
     
     with _db_connect() as conn:
         cursor = conn.execute(
             """
             INSERT INTO prediction_history 
             (user_email, coin, horizon, steps_ahead, use_live_data, predicted_at,
-             last_observed_close, first_predicted_price, last_predicted_price, predictions_json)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             last_observed_close, first_predicted_price, last_predicted_price, 
+             predictions_json, target_timestamps_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (user_key, req.coin, req.horizon, req.steps_ahead, int(req.use_live_data),
              predicted_at, req.last_observed_close, req.first_predicted_price,
-             req.last_predicted_price, predictions_json),
+             req.last_predicted_price, predictions_json, target_timestamps_json),
         )
         conn.commit()
         history_id = cursor.lastrowid

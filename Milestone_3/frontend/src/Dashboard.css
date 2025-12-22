@@ -1695,6 +1695,88 @@
   filter: drop-shadow(0 0 4px currentColor);
 }
 
+/* Chart Zoom Controls */
+.chart-zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.zoom-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 6px;
+  color: #60a5fa;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.zoom-btn:hover {
+  background: rgba(96, 165, 250, 0.2);
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: scale(1.05);
+}
+
+.zoom-btn.reset {
+  font-size: 0.9rem;
+}
+
+.zoom-level {
+  min-width: 32px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.zoom-hint {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: #fbbf24;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Light mode */
+.dashboard-layout.light .chart-zoom-controls {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-layout.light .zoom-btn {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #3b82f6;
+}
+
+.dashboard-layout.light .zoom-btn:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
 /* Tooltip */
 .chart-tooltip {
   position: absolute;
@@ -4093,4 +4175,226 @@
   .simulator-stats {
     grid-template-columns: 1fr;
   }
+}
+
+/* ========================================
+   PREDICTION ACCURACY TRACKING STYLES
+   ======================================== */
+
+/* Table Header - Updated grid for 9 columns including Actual column */
+.history-table-header {
+  display: grid;
+  grid-template-columns: 70px 80px 60px 1fr 1fr 70px 70px 50px 90px;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.history-row-main {
+  display: grid;
+  grid-template-columns: 70px 80px 60px 1fr 1fr 70px 70px 50px 90px;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Accuracy Column in Row */
+.history-row-accuracy {
+  display: flex;
+  justify-content: center;
+}
+
+/* Accuracy Badge */
+.accuracy-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+.accuracy-badge.good {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+}
+
+.accuracy-badge.moderate {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+}
+
+.accuracy-badge.poor {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.accuracy-badge.pending {
+  background: rgba(148, 163, 184, 0.1);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Actual Price Column Styles */
+.history-row-prices.actual {
+  font-size: 0.8rem;
+}
+
+.history-row-actual {
+  font-weight: 600;
+  color: #34d399;
+}
+
+.history-row-pending {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.history-row-prices.predicted .history-row-pred {
+  color: var(--text-primary);
+}
+
+/* Chart Status Bar */
+.chart-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Verified/Pending Badges in Chart */
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.15), rgba(52, 211, 153, 0.08));
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #34d399;
+}
+
+.pending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Chart Legend */
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.legend-line {
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legend-line.actual {
+  background: linear-gradient(90deg, #34d399 25%, transparent 25%, transparent 50%, #34d399 50%, #34d399 75%, transparent 75%);
+  background-size: 8px 3px;
+}
+
+/* Tooltip Enhancements for Actual Prices */
+.tooltip-actual {
+  font-size: 0.8rem;
+  color: #34d399;
+  margin-top: 0.2rem;
+}
+
+.tooltip-error {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+.tooltip-error.good {
+  color: #34d399;
+}
+
+.tooltip-error.poor {
+  color: #fbbf24;
+}
+
+/* Chart Stat Accuracy */
+.chart-stat.accuracy.good .stat-value {
+  color: #34d399;
+}
+
+.chart-stat.accuracy.moderate .stat-value {
+  color: #fbbf24;
+}
+
+.chart-stat.accuracy.poor .stat-value {
+  color: #ef4444;
+}
+
+/* Update chart footer grid for 5 columns when accuracy is shown */
+.history-chart-enhanced .chart-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Light mode adjustments */
+.dashboard-layout.light .accuracy-badge.good {
+  background: rgba(52, 211, 153, 0.12);
+  color: #059669;
+}
+
+.dashboard-layout.light .accuracy-badge.moderate {
+  background: rgba(251, 191, 36, 0.12);
+  color: #d97706;
+}
+
+.dashboard-layout.light .accuracy-badge.poor {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+
+.dashboard-layout.light .verified-badge {
+  background: rgba(52, 211, 153, 0.1);
+  border-color: rgba(52, 211, 153, 0.2);
+  color: #059669;
+}
+
+.dashboard-layout.light .pending-badge {
+  background: rgba(100, 116, 139, 0.08);
+  border-color: rgba(100, 116, 139, 0.15);
+  color: #64748b;
 }

@@ -65,6 +65,11 @@ app.conf.beat_schedule = {
         'schedule': crontab(minute=30, hour=2),
         'args': ('cardano',)
     },
+    # Prediction accuracy verification: Every 15 minutes
+    'verify-predictions-15m': {
+        'task': 'celery_tasks.verify_prediction_accuracy',
+        'schedule': crontab(minute='*/15'),
+    },
 }
 
 logger = logging.getLogger(__name__)
@@ -102,6 +107,32 @@ def fine_tune_all(self):
         return {"status": "error", "error": str(e)}
 
 
+@app.task(bind=True, name='celery_tasks.verify_prediction_accuracy')
+def verify_prediction_accuracy(self):
+    """
+    Verify prediction accuracy by fetching actual prices from Binance.
+    
+    This task runs every 15 minutes and checks for predictions that:
+    - Have target timestamps that have passed + 10 minute buffer
+    - Have not yet been verified (accuracy_verified_at is NULL)
+    
+    For each pending prediction, it fetches the actual price from Binance
+    and calculates the percentage error.
+    """
+    from accuracy_service import verify_all_pending
+    
+    logger.info("Starting prediction accuracy verification")
+    
+    try:
+        result = verify_all_pending()
+        verified_count = result.get("verified_count", 0)
+        logger.info(f"Prediction verification completed: {verified_count} predictions verified")
+        return result
+    except Exception as e:
+        logger.error(f"Prediction verification failed: {e}")
+        return {"status": "error", "error": str(e)}
+
+
 # Manual trigger endpoint
 @app.task(name='celery_tasks.trigger_fine_tuning')
 def trigger_fine_tuning(coin: str = None):
@@ -115,3 +146,10 @@ def trigger_fine_tuning(coin: str = None):
         return fine_tune_coin.delay(coin)
     else:
         return fine_tune_all.delay()
+
+
+@app.task(name='celery_tasks.trigger_verification')
+def trigger_verification():
+    """Manually trigger prediction accuracy verification."""
+    return verify_prediction_accuracy.delay()
+

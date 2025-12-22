@@ -19,3 +19,9 @@
 [2025-12-22 08:19:31,796: INFO/MainProcess] Scheduler: Sending due task fine-tune-cardano-daily (celery_tasks.fine_tune_coin)
 [2025-12-22 11:47:18,274: INFO/MainProcess] Scheduler: Sending due task fine-tune-bitcoin-6h (celery_tasks.fine_tune_coin)
 [2025-12-22 11:47:18,286: INFO/MainProcess] Scheduler: Sending due task fine-tune-binancecoin-6h (celery_tasks.fine_tune_coin)
+[2025-12-22 18:10:09,994: INFO/MainProcess] Scheduler: Sending due task fine-tune-bitcoin-6h (celery_tasks.fine_tune_coin)
+[2025-12-22 18:10:10,034: INFO/MainProcess] Scheduler: Sending due task fine-tune-binancecoin-6h (celery_tasks.fine_tune_coin)
+[2025-12-22 18:10:10,037: INFO/MainProcess] Scheduler: Sending due task fine-tune-ethereum-12h (celery_tasks.fine_tune_coin)
+[2025-12-22 20:49:37,098: INFO/MainProcess] beat: Starting...
+[2025-12-22 21:00:00,031: INFO/MainProcess] Scheduler: Sending due task verify-predictions-15m (celery_tasks.verify_prediction_accuracy)
+[2025-12-22 21:15:00,000: INFO/MainProcess] Scheduler: Sending due task verify-predictions-15m (celery_tasks.verify_prediction_accuracy)

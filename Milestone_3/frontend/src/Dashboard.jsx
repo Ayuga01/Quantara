@@ -35,10 +35,11 @@ const COIN_COLORS = {
   binancecoin: "#f3ba2f",
 };
 
-// Interactive Prediction Result Chart Component
+// Interactive Prediction Result Chart Component with Zoom
 function PredictionResultChart({ predictions, basePrice, coin, currency }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [zoomLevel, setZoomLevel] = useState(1); // 1 = fit all, higher = zoom in
   const chartRef = useRef(null);
 
   if (!predictions || predictions.length === 0) return null;
@@ -47,8 +48,17 @@ function PredictionResultChart({ predictions, basePrice, coin, currency }) {
   const timestamps = predictions.map(p => p.timestamp);
   const allPrices = basePrice ? [basePrice, ...prices] : prices;
   const allTimestamps = basePrice ? ["Current", ...timestamps] : timestamps;
-  const minPrice = Math.min(...allPrices);
-  const maxPrice = Math.max(...allPrices);
+
+  // Calculate price range with zoom
+  const actualMin = Math.min(...allPrices);
+  const actualMax = Math.max(...allPrices);
+  const actualRange = actualMax - actualMin || 1;
+  const midPrice = (actualMax + actualMin) / 2;
+
+  // Apply zoom: reduce the range around the midpoint
+  const zoomedRange = actualRange / zoomLevel;
+  const minPrice = midPrice - zoomedRange / 2;
+  const maxPrice = midPrice + zoomedRange / 2;
   const range = maxPrice - minPrice || 1;
 
   const width = 600;
@@ -59,10 +69,15 @@ function PredictionResultChart({ predictions, basePrice, coin, currency }) {
 
   const color = COIN_COLORS[coin] || "#60a5fa";
 
-  // Generate path points
+  // Generate path points (clamp Y values to chart area)
+  const getY = (price) => {
+    const normalized = (price - minPrice) / range;
+    return padding.top + chartHeight - Math.max(0, Math.min(1, normalized)) * chartHeight;
+  };
+
   const points = allPrices.map((price, i) => {
     const x = padding.left + (i / (allPrices.length - 1 || 1)) * chartWidth;
-    const y = padding.top + chartHeight - ((price - minPrice) / range) * chartHeight;
+    const y = getY(price);
     return { x, y, price, timestamp: allTimestamps[i], index: i };
   });
 
@@ -103,11 +118,56 @@ function PredictionResultChart({ predictions, basePrice, coin, currency }) {
 
   const handleMouseLeave = () => setHoveredIndex(null);
 
+  // Handle mouse wheel zoom
+  const handleWheel = (e) => {
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? -0.5 : 0.5;
+    setZoomLevel(prev => Math.max(1, Math.min(20, prev + delta)));
+  };
+
   const hoveredPoint = hoveredIndex !== null ? points[hoveredIndex] : null;
+
+  // Calculate price change percentage for display
+  const priceChangePercent = ((actualMax - actualMin) / actualMin * 100).toFixed(2);
 
   return (
     <div className="prediction-chart interactive">
-      <div className="chart-wrapper" ref={chartRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+      {/* Zoom Controls */}
+      <div className="chart-zoom-controls">
+        <button
+          className="zoom-btn"
+          onClick={() => setZoomLevel(prev => Math.min(20, prev + 1))}
+          title="Zoom In"
+        >
+          +
+        </button>
+        <span className="zoom-level">{zoomLevel.toFixed(0)}x</span>
+        <button
+          className="zoom-btn"
+          onClick={() => setZoomLevel(prev => Math.max(1, prev - 1))}
+          title="Zoom Out"
+        >
+          −
+        </button>
+        <button
+          className="zoom-btn reset"
+          onClick={() => setZoomLevel(1)}
+          title="Reset Zoom"
+        >
+          ⟲
+        </button>
+        {zoomLevel === 1 && priceChangePercent < 1 && (
+          <span className="zoom-hint">📈 Small change ({priceChangePercent}%) - try zooming in!</span>
+        )}
+      </div>
+
+      <div
+        className="chart-wrapper"
+        ref={chartRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onWheel={handleWheel}
+      >
         <svg viewBox={`0 0 ${width} ${height}`} className="prediction-chart-svg">
           <defs>
             <linearGradient id={`gradient-${coin}`} x1="0" y1="0" x2="0" y2="1">
@@ -121,6 +181,9 @@ function PredictionResultChart({ predictions, basePrice, coin, currency }) {
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
+            <clipPath id="chart-clip">
+              <rect x={padding.left} y={padding.top} width={chartWidth} height={chartHeight} />
+            </clipPath>
           </defs>
 
           {/* Grid lines */}
@@ -146,19 +209,22 @@ function PredictionResultChart({ predictions, basePrice, coin, currency }) {
             </g>
           ))}
 
-          {/* Area fill */}
-          <path d={areaPath} fill={`url(#gradient-${coin})`} />
+          {/* Clipped chart content */}
+          <g clipPath="url(#chart-clip)">
+            {/* Area fill */}
+            <path d={areaPath} fill={`url(#gradient-${coin})`} />
 
-          {/* Line */}
-          <path
-            d={linePath}
-            fill="none"
-            stroke={color}
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="chart-line"
-          />
+            {/* Line */}
+            <path
+              d={linePath}
+              fill="none"
+              stroke={color}
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="chart-line"
+            />
+          </g>
 
           {/* Hover vertical line */}
           {hoveredPoint && (
@@ -179,7 +245,7 @@ function PredictionResultChart({ predictions, basePrice, coin, currency }) {
             <circle
               key={i}
               cx={p.x}
-              cy={p.y}
+              cy={Math.max(padding.top, Math.min(height - padding.bottom, p.y))}
               r={hoveredIndex === i ? 8 : (i === 0 || i === points.length - 1) ? 5 : 3}
               fill={i === 0 ? "#fff" : color}
               stroke={i === 0 ? color : "#fff"}
@@ -232,11 +298,12 @@ function PredictionResultChart({ predictions, basePrice, coin, currency }) {
       </div>
 
       <div className="chart-hint">
-        💡 Hover over the chart to see price at each step
+        💡 Hover to see details • Scroll to zoom • Use +/- buttons
       </div>
     </div>
   );
 }
+
 
 function formatPrice(value, currency = "USD") {
   const USD_TO_INR = 89;
@@ -498,28 +565,6 @@ function PredictSection({
             </span>
           </div>
 
-          <div className="predict-option-group">
-            <label>Data Source</label>
-            <div className="predict-data-toggle">
-              <button
-                className={useLiveData ? "active live" : ""}
-                onClick={() => setUseLiveData(true)}
-              >
-                🔴 Live Data
-              </button>
-              <button
-                className={!useLiveData ? "active historical" : ""}
-                onClick={() => setUseLiveData(false)}
-              >
-                📊 Historical
-              </button>
-            </div>
-            <span className="predict-hint">
-              {useLiveData
-                ? "Using real-time Binance prices"
-                : "Using static dataset (Nov 2025)"}
-            </span>
-          </div>
         </div>
 
         <button
@@ -1578,6 +1623,16 @@ export default function Dashboard({ user, onLogout, darkMode, setDarkMode }) {
       // Save to history - only for logged-in users, not guests
       if (user) {
         try {
+          // Extract target timestamps from predictions, or generate them if not present
+          const targetTimestamps = (data.future_predictions || []).map((p, i) => {
+            if (p.timestamp) return p.timestamp;
+            // Generate timestamp based on horizon
+            const now = new Date();
+            const hoursPerStep = horizon === "24h" ? 24 : 1;
+            const targetTime = new Date(now.getTime() + (i + 1) * hoursPerStep * 3600000);
+            return targetTime.toISOString();
+          });
+
           await saveHistory({
             coin,
             horizon,
@@ -1587,6 +1642,7 @@ export default function Dashboard({ user, onLogout, darkMode, setDarkMode }) {
             first_predicted_price: data.future_predictions?.[0]?.predicted_price,
             last_predicted_price: data.future_predictions?.[data.future_predictions.length - 1]?.predicted_price,
             predictions: data.future_predictions,
+            target_timestamps: targetTimestamps,
           });
           fetchHistory();
         } catch (e) {

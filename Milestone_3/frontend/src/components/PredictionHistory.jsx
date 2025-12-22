@@ -86,25 +86,36 @@ function calculatePriceChange(item) {
   return ((lastPrice - basePrice) / basePrice) * 100;
 }
 
-// =============== MINI CHART (ENHANCED) ===============
+// =============== MINI CHART (ENHANCED WITH ACTUAL PRICES) ===============
 function MiniPredictionChart({ item, currency }) {
   const predictions = item.predictions || [];
+  const actualPrices = item.actual_prices || [];
+  const isVerified = !!item.accuracy_verified_at;
+  const meanError = item.mean_error_pct;
   const [hoverIndex, setHoverIndex] = useState(null);
 
   if (predictions.length === 0) return <div className="history-chart-empty">No chart data</div>;
 
   const prices = predictions.map(p => p.predicted_price);
-  const minPrice = Math.min(...prices);
-  const maxPrice = Math.max(...prices);
+  const hasActualPrices = actualPrices.length > 0 && actualPrices.some(p => p !== null);
+
+  // Combine predicted and actual prices for Y-axis scaling
+  const allPrices = [...prices];
+  if (hasActualPrices) {
+    actualPrices.forEach(p => { if (p !== null) allPrices.push(p); });
+  }
+
+  const minPrice = Math.min(...allPrices);
+  const maxPrice = Math.max(...allPrices);
   const range = maxPrice - minPrice || 1;
   const startPrice = prices[0];
   const endPrice = prices[prices.length - 1];
   const priceChange = ((endPrice - startPrice) / startPrice) * 100;
 
   const width = 400;
-  const height = 120;
+  const height = 140; // Slightly taller to accommodate legend
   const paddingX = 40;
-  const paddingY = 20;
+  const paddingY = 25;
   const chartWidth = width - 2 * paddingX;
   const chartHeight = height - 2 * paddingY;
 
@@ -114,8 +125,14 @@ function MiniPredictionChart({ item, currency }) {
   const points = prices.map((price, i) => `${getX(i)},${getY(price)}`).join(" ");
   const areaPoints = `${paddingX},${height - paddingY} ${points} ${width - paddingX},${height - paddingY}`;
 
+  // Actual prices line (only points that are not null)
+  const actualPoints = hasActualPrices
+    ? actualPrices.map((price, i) => price !== null ? `${getX(i)},${getY(price)}` : null).filter(p => p).join(" ")
+    : "";
+
   const coinConfig = COIN_CONFIG[item.coin] || {};
   const color = coinConfig.color || "#60a5fa";
+  const actualColor = "#34d399"; // Green for actual prices
 
   // Grid lines (3 horizontal)
   const gridLines = [0, 0.5, 1].map(pct => ({
@@ -125,6 +142,23 @@ function MiniPredictionChart({ item, currency }) {
 
   return (
     <div className="history-chart-enhanced">
+      {/* Verification Status Badge */}
+      <div className="chart-status-bar">
+        {isVerified ? (
+          <span className="verified-badge">
+            ✓ Verified {meanError !== null ? `(${meanError.toFixed(1)}% avg error)` : ''}
+          </span>
+        ) : (
+          <span className="pending-badge">⏳ Pending verification</span>
+        )}
+        {hasActualPrices && (
+          <div className="chart-legend">
+            <span className="legend-item"><span className="legend-line predicted" style={{ background: color }}></span> Predicted</span>
+            <span className="legend-item"><span className="legend-line actual" style={{ background: actualColor }}></span> Actual</span>
+          </div>
+        )}
+      </div>
+
       <div className="chart-wrapper">
         <svg viewBox={`0 0 ${width} ${height}`} onMouseLeave={() => setHoverIndex(null)}>
           <defs>
@@ -157,10 +191,10 @@ function MiniPredictionChart({ item, currency }) {
             </g>
           ))}
 
-          {/* Area Fill */}
+          {/* Area Fill for Predicted */}
           <polygon points={areaPoints} fill={`url(#grad-${item.id})`} />
 
-          {/* Main Line */}
+          {/* Predicted Line (solid) */}
           <polyline
             points={points}
             fill="none"
@@ -170,9 +204,22 @@ function MiniPredictionChart({ item, currency }) {
             strokeLinejoin="round"
           />
 
-          {/* Data Points */}
+          {/* Actual Prices Line (dashed) */}
+          {hasActualPrices && actualPoints && (
+            <polyline
+              points={actualPoints}
+              fill="none"
+              stroke={actualColor}
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="6,4"
+            />
+          )}
+
+          {/* Predicted Data Points */}
           {prices.map((price, i) => (
-            <g key={i}>
+            <g key={`pred-${i}`}>
               <circle
                 cx={getX(i)}
                 cy={getY(price)}
@@ -186,9 +233,22 @@ function MiniPredictionChart({ item, currency }) {
             </g>
           ))}
 
-          {/* Start/End Labels */}
-          <circle cx={getX(0)} cy={getY(startPrice)} r="5" fill={color} stroke="white" strokeWidth="2" />
-          <circle cx={getX(prices.length - 1)} cy={getY(endPrice)} r="5" fill={color} stroke="white" strokeWidth="2" />
+          {/* Actual Price Data Points */}
+          {hasActualPrices && actualPrices.map((price, i) => (
+            price !== null && (
+              <g key={`actual-${i}`}>
+                <circle
+                  cx={getX(i)}
+                  cy={getY(price)}
+                  r={hoverIndex === i ? 5 : 2.5}
+                  fill={actualColor}
+                  stroke="white"
+                  strokeWidth="1.5"
+                  style={{ cursor: 'pointer' }}
+                />
+              </g>
+            )
+          ))}
         </svg>
 
         {/* Hover Tooltip */}
@@ -200,8 +260,16 @@ function MiniPredictionChart({ item, currency }) {
               top: `${(getY(prices[hoverIndex]) / height) * 100 - 15}%`
             }}
           >
-            <div className="tooltip-price">{formatPrice(prices[hoverIndex], currency)}</div>
             <div className="tooltip-step">Step {hoverIndex + 1}</div>
+            <div className="tooltip-price">Pred: {formatPrice(prices[hoverIndex], currency)}</div>
+            {hasActualPrices && actualPrices[hoverIndex] !== null && (
+              <>
+                <div className="tooltip-actual">Actual: {formatPrice(actualPrices[hoverIndex], currency)}</div>
+                <div className={`tooltip-error ${Math.abs((actualPrices[hoverIndex] - prices[hoverIndex]) / prices[hoverIndex] * 100) < 2 ? 'good' : 'poor'}`}>
+                  Error: {Math.abs((actualPrices[hoverIndex] - prices[hoverIndex]) / prices[hoverIndex] * 100).toFixed(2)}%
+                </div>
+              </>
+            )}
           </div>
         )}
       </div>
@@ -220,6 +288,12 @@ function MiniPredictionChart({ item, currency }) {
           <span className="stat-label">Change</span>
           <span className="stat-value">{priceChange >= 0 ? '↑' : '↓'} {Math.abs(priceChange).toFixed(2)}%</span>
         </div>
+        {meanError !== null && (
+          <div className={`chart-stat accuracy ${meanError < 2 ? 'good' : meanError < 5 ? 'moderate' : 'poor'}`}>
+            <span className="stat-label">Accuracy</span>
+            <span className="stat-value">{(100 - meanError).toFixed(1)}%</span>
+          </div>
+        )}
         <div className="chart-stat">
           <span className="stat-label">Steps</span>
           <span className="stat-value">{prices.length}</span>
@@ -233,6 +307,14 @@ function MiniPredictionChart({ item, currency }) {
 function HistoryRow({ item, onRerun, onDelete, currency, expanded, onToggleExpand }) {
   const coinConfig = COIN_CONFIG[item.coin] || { icon: "🪙", name: item.coin, symbol: "???", color: "#888" };
   const priceChange = calculatePriceChange(item);
+  const isVerified = !!item.accuracy_verified_at;
+  const meanError = item.mean_error_pct;
+
+  // Get actual prices for display
+  const actualPrices = item.actual_prices || [];
+  const firstActualPrice = actualPrices.length > 0 ? actualPrices[0] : null;
+  const lastActualPrice = actualPrices.length > 0 ? actualPrices[actualPrices.length - 1] : null;
+  const hasActualPrices = firstActualPrice !== null && lastActualPrice !== null;
 
   return (
     <div className={`history-row ${expanded ? "expanded" : ""}`}>
@@ -255,11 +337,24 @@ function HistoryRow({ item, onRerun, onDelete, currency, expanded, onToggleExpan
           {item.use_live_data ? <span className="live-badge">🔴 Live</span> : <span className="hist-badge">📊 Hist</span>}
         </div>
 
-        {/* Price Range */}
-        <div className="history-row-prices">
+        {/* Predicted Price Range */}
+        <div className="history-row-prices predicted">
           <span className="history-row-base">{formatPrice(item.last_observed_close, currency)}</span>
           <span className="history-row-arrow">→</span>
           <span className="history-row-pred">{formatPrice(item.last_predicted_price, currency)}</span>
+        </div>
+
+        {/* Actual Price Range */}
+        <div className="history-row-prices actual">
+          {hasActualPrices ? (
+            <>
+              <span className="history-row-base">{formatPrice(firstActualPrice, currency)}</span>
+              <span className="history-row-arrow">→</span>
+              <span className="history-row-actual">{formatPrice(lastActualPrice, currency)}</span>
+            </>
+          ) : (
+            <span className="history-row-pending">⏳ Pending</span>
+          )}
         </div>
 
         {/* Change Badge */}
@@ -270,6 +365,17 @@ function HistoryRow({ item, onRerun, onDelete, currency, expanded, onToggleExpan
         ) : (
           <div className="history-row-change neutral">-</div>
         )}
+
+        {/* Verification Status / Accuracy */}
+        <div className="history-row-accuracy">
+          {isVerified ? (
+            <span className={`accuracy-badge ${meanError !== null && meanError < 2 ? 'good' : meanError !== null && meanError < 5 ? 'moderate' : 'poor'}`}>
+              {meanError !== null ? `${(100 - meanError).toFixed(0)}%` : '✓'}
+            </span>
+          ) : (
+            <span className="accuracy-badge pending">⏳</span>
+          )}
+        </div>
 
         {/* Time */}
         <div className="history-row-time">{getRelativeTime(item.predicted_at)}</div>
@@ -416,8 +522,10 @@ export default function PredictionHistory({
         <span>Coin</span>
         <span>Config</span>
         <span>Source</span>
-        <span>Price Range</span>
+        <span>Predicted</span>
+        <span>Actual</span>
         <span>Change</span>
+        <span>Accuracy</span>
         <span>Time</span>
         <span>Actions</span>
       </div>
