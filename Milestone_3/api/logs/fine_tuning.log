@@ -1,0 +1,26 @@
+2025-12-21 00:32:40,601 - FineTuning - INFO - Starting fine-tuning for ethereum
+2025-12-21 00:32:41,560 - FineTuning - INFO - Fetched 168 rows for ethereum
+2025-12-21 00:32:44,672 - FineTuning - INFO - ⚠️ ethereum/1h: MAE 0.0035 → 0.0205 (not enough improvement)
+2025-12-21 00:32:47,684 - FineTuning - INFO - ⚠️ ethereum/24h: MAE 0.0238 → 0.0530 (not enough improvement)
+2025-12-21 00:35:48,740 - FineTuning - INFO - Starting fine-tuning for bitcoin
+2025-12-21 00:35:50,644 - FineTuning - INFO - Fetched 168 rows for bitcoin
+2025-12-21 00:35:53,713 - FineTuning - INFO - ✅ bitcoin/1h: MAE 0.1162 → 0.1125 (improved by 0.0038)
+2025-12-21 00:35:56,459 - FineTuning - INFO - ⚠️ bitcoin/24h: MAE 0.1165 → 0.1195 (not enough improvement)
+2025-12-21 00:35:56,459 - FineTuning - INFO - Starting fine-tuning for ethereum
+2025-12-21 00:35:57,192 - FineTuning - INFO - Fetched 168 rows for ethereum
+2025-12-21 00:36:00,016 - FineTuning - INFO - ⚠️ ethereum/1h: MAE 0.0035 → 0.0318 (not enough improvement)
+2025-12-21 00:36:02,732 - FineTuning - INFO - ⚠️ ethereum/24h: MAE 0.0238 → 0.0518 (not enough improvement)
+2025-12-21 00:36:02,733 - FineTuning - INFO - Starting fine-tuning for binancecoin
+2025-12-21 00:36:03,480 - FineTuning - INFO - Fetched 168 rows for binancecoin
+2025-12-21 00:36:06,528 - FineTuning - INFO - ✅ binancecoin/1h: MAE 0.1173 → 0.1153 (improved by 0.0020)
+2025-12-21 00:36:09,463 - FineTuning - INFO - ✅ binancecoin/24h: MAE 0.0959 → 0.0769 (improved by 0.0190)
+2025-12-21 00:36:09,463 - FineTuning - INFO - Starting fine-tuning for cardano
+2025-12-21 00:36:10,435 - FineTuning - INFO - Fetched 168 rows for cardano
+2025-12-21 00:36:13,173 - FineTuning - INFO - ✅ cardano/1h: MAE 0.0068 → 0.0057 (improved by 0.0011)
+2025-12-21 00:36:13,620 - tensorflow - WARNING - 5 out of the last 17 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x12541a480> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-12-21 00:36:15,781 - tensorflow - WARNING - 6 out of the last 18 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x125419ee0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-12-21 00:36:16,099 - FineTuning - INFO - ✅ cardano/24h: MAE 0.0058 → 0.0025 (improved by 0.0033)
+2025-12-21 00:36:16,099 - FineTuning - INFO - Starting fine-tuning for solana
+2025-12-21 00:36:16,828 - FineTuning - INFO - Fetched 168 rows for solana
+2025-12-21 00:36:19,720 - FineTuning - INFO - ⚠️ solana/1h: MAE 0.0032 → 0.0168 (not enough improvement)
+2025-12-21 00:36:22,369 - FineTuning - INFO - ✅ solana/24h: MAE 0.0088 → 0.0080 (improved by 0.0007)

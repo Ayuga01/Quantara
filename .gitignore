@@ -4,3 +4,4 @@ anaconda_projects/
 README.md
 *.npy
 *.npz
+.env/

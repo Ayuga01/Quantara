@@ -12,7 +12,8 @@
 
 import "./App.css";
 import { useState, useEffect } from "react";
-import { authLoginPassword, authRegister, oauthLoginUrl } from "./services/api";
+import { authLoginPassword, authRegister } from "./services/api";
+import { loginWithGoogle } from "./services/appwrite";
 
 /* ========================================
    ICON COMPONENTS - Crypto & UI Icons
@@ -22,18 +23,18 @@ import { authLoginPassword, authRegister, oauthLoginUrl } from "./services/api";
 // Chart trending icon for brand - shows upward momentum
 function IconChart() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="currentColor" strokeWidth="2">
+      {/* Q Shape: Circle + Tail */}
       <path
-        d="M3 17l6-6 4 4 8-10"
+        d="M12 21a9 9 0 1 1 9-9c0 1.1-.18 2.15-.5 3.12M17 17l4 4"
         stroke="url(#chartGrad)"
-        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
+      {/* Rising Chart Line inside */}
       <path
-        d="M17 7h4v4"
+        d="M8 12l2.5 2.5 5.5-5.5"
         stroke="url(#chartGrad)"
-        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -216,7 +217,7 @@ function FloatingBackground() {
       <div className="gradientOrb orb1" />
       <div className="gradientOrb orb2" />
       <div className="gradientOrb orb3" />
-      
+
       {/* Floating crypto icons with different animations */}
       <div className="floatingIcon icon1"><IconBitcoin /></div>
       <div className="floatingIcon icon2"><IconEthereum /></div>
@@ -224,16 +225,16 @@ function FloatingBackground() {
       <div className="floatingIcon icon4"><IconBitcoin /></div>
       <div className="floatingIcon icon5"><IconSolana /></div>
       <div className="floatingIcon icon6"><IconEthereum /></div>
-      
+
       {/* Geometric shapes for abstract decoration */}
       <div className="geoShape shape1" />
       <div className="geoShape shape2" />
       <div className="geoShape shape3" />
       <div className="geoShape shape4" />
-      
+
       {/* Grid pattern overlay for tech aesthetic */}
       <div className="gridPattern" />
-      
+
       {/* Particle dots */}
       <div className="particle p1" />
       <div className="particle p2" />
@@ -248,7 +249,36 @@ function FloatingBackground() {
    MAIN LOGIN COMPONENT
    Handles authentication UI and logic
    ======================================== */
-export default function Login({ onGuestLogin }) {
+
+// Back arrow icon
+function IconBack() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M19 12H5M12 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+// Sun icon for light mode
+function IconSun() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="12" cy="12" r="5" />
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+  );
+}
+
+// Moon icon for dark mode
+function IconMoon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+    </svg>
+  );
+}
+
+export default function Login({ onGuestLogin, onBack, onLogin, darkMode, setDarkMode }) {
   // Form state management
   const [mode, setMode] = useState("signin"); // signin | signup
   const [email, setEmail] = useState("");
@@ -256,7 +286,7 @@ export default function Login({ onGuestLogin }) {
   const [name, setName] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
-  
+
   // UI state management
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -331,11 +361,14 @@ export default function Login({ onGuestLogin }) {
     setBusy(true);
 
     try {
+      let userData;
       if (mode === "signup") {
-        await authRegister(email, password, name || null);
+        const result = await authRegister(email, password, name || null);
+        userData = result.user || { email, name, provider: 'password' };
         setSuccess("Account created successfully! Redirecting...");
       } else {
-        await authLoginPassword(email, password);
+        const result = await authLoginPassword(email, password);
+        userData = result.user || { email, provider: 'password' };
         setSuccess("Login successful! Redirecting...");
       }
 
@@ -350,9 +383,13 @@ export default function Login({ onGuestLogin }) {
         // Ignore localStorage errors
       }
 
-      // Redirect after success animation completes
+      // Call onLogin callback to update app state and go to dashboard
       setTimeout(() => {
-        window.location.href = "/";
+        if (onLogin) {
+          onLogin(userData);
+        } else {
+          window.location.href = "/";
+        }
       }, 1200);
 
     } catch (err) {
@@ -374,9 +411,31 @@ export default function Login({ onGuestLogin }) {
   };
 
   return (
-    <div className="loginPage">
+    <div className={`loginPage ${darkMode ? 'dark' : 'light'}`}>
       {/* Animated background with floating elements */}
       <FloatingBackground />
+
+      {/* Top navigation bar with back button and theme toggle */}
+      <div className="loginTopNav">
+        {/* Back button to landing page */}
+        {onBack && (
+          <button className="backToLanding" onClick={onBack} aria-label="Back to landing page">
+            <IconBack />
+            <span>Back</span>
+          </button>
+        )}
+
+        {/* Theme toggle button */}
+        {setDarkMode && (
+          <button
+            className="loginThemeToggle"
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {darkMode ? <IconSun /> : <IconMoon />}
+          </button>
+        )}
+      </div>
 
       <div className="loginContainer">
         {/* Brand header with logo and tagline */}
@@ -385,7 +444,7 @@ export default function Login({ onGuestLogin }) {
             <IconChart />
           </div>
           <div className="brandText">
-            <h1 className="brandTitle">CryptoPredict</h1>
+            <h1 className="brandTitle">Quantara</h1>
             <p className="brandSubtitle">AI-Powered Price Forecasting</p>
           </div>
         </header>
@@ -575,14 +634,15 @@ export default function Login({ onGuestLogin }) {
 
             {/* OAuth button */}
             <div className="oauthButtons">
-              <a
-                href={oauthLoginUrl("google")}
+              <button
+                type="button"
+                onClick={loginWithGoogle}
                 className="oauthBtn googleBtn"
                 aria-label="Continue with Google"
               >
                 <IconGoogle />
                 <span>Google</span>
-              </a>
+              </button>
               <button
                 type="button"
                 className="oauthBtn guestBtn"

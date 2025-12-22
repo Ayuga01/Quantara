@@ -1,0 +1,19 @@
+INFO:     Started server process [83175]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-19 12:53:46.747587: I metal_plugin/src/device/metal_device.cc:1154] Metal device set to: Apple M1
+2025-12-19 12:53:46.747686: I metal_plugin/src/device/metal_device.cc:296] systemMemory: 8.00 GB
+2025-12-19 12:53:46.747701: I metal_plugin/src/device/metal_device.cc:313] maxCacheSize: 2.67 GB
+2025-12-19 12:53:46.747742: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2025-12-19 12:53:46.747757: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -> physical PluggableDevice (device: 0, name: METAL, pci bus id: <undefined>)
+/opt/anaconda3/envs/tf/lib/python3.10/site-packages/sklearn/base.py:442: InconsistentVersionWarning: Trying to unpickle estimator MinMaxScaler from version 1.6.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+2025-12-19 12:53:47.672608: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:117] Plugin optimizer for device_type GPU is enabled.
+INFO:     127.0.0.1:62894 - "POST /predict HTTP/1.1" 200 OK
+/opt/anaconda3/envs/tf/lib/python3.10/site-packages/sklearn/base.py:442: InconsistentVersionWarning: Trying to unpickle estimator MinMaxScaler from version 1.6.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+INFO:     127.0.0.1:62905 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62919 - "POST /predict HTTP/1.1" 200 OK

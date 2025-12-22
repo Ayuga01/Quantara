@@ -1,0 +1,179 @@
+[2025-12-21 01:15:00,912: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2025-12-21 01:15:00,915: INFO/MainProcess] mingle: searching for neighbors
+[2025-12-21 01:15:01,925: INFO/MainProcess] mingle: all alone
+[2025-12-21 01:15:01,951: INFO/MainProcess] celery@AYUSHs-MacBook-Air.local ready.
+[2025-12-21 05:30:00,256: INFO/MainProcess] Task celery_tasks.fine_tune_coin[9ee23176-e6fd-4926-9eef-8067d89259ff] received
+[2025-12-21 05:30:05,533: WARNING/ForkPoolWorker-8] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-21 05:30:05,702: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-21 05:30:05,702: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-21 05:30:06,471: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-21 05:30:09,414: INFO/ForkPoolWorker-8] ⚠️ bitcoin/1h: MAE 0.1133 → 0.1201 (not enough improvement)
+[2025-12-21 05:30:12,122: INFO/ForkPoolWorker-8] ⚠️ bitcoin/24h: MAE 0.1172 → 0.1199 (not enough improvement)
+[2025-12-21 05:30:12,123: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.11333479732275009, 'new_mae': 0.12009477615356445, 'improvement': -0.006759978830814362}, '24h': {'status': 'no_improvement', 'old_mae': 0.11720816791057587, 'new_mae': 0.11994127929210663, 'improvement': -0.0027331113815307617}}
+[2025-12-21 05:30:12,125: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[9ee23176-e6fd-4926-9eef-8067d89259ff] succeeded in 11.775608666997869s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.11333479732275009, 'new_mae': 0.12009477615356445, 'improvement': -0.006759978830814362}, '24h': {'status': 'no_improvement', 'old_mae': 0.11720816791057587, 'new_mae': 0.11994127929210663, 'improvement': -0.0027331113815307617}}}
+[2025-12-21 05:45:00,014: INFO/MainProcess] Task celery_tasks.fine_tune_coin[ec82139b-d1c3-4ab9-8006-19af111fb5fd] received
+[2025-12-21 05:45:00,021: INFO/ForkPoolWorker-8] Starting fine-tuning task for binancecoin
+[2025-12-21 05:45:00,022: INFO/ForkPoolWorker-8] Starting fine-tuning for binancecoin
+[2025-12-21 05:45:01,428: INFO/ForkPoolWorker-8] Fetched 168 rows for binancecoin
+[2025-12-21 05:45:04,612: INFO/ForkPoolWorker-8] ✅ binancecoin/1h: MAE 0.1158 → 0.1097 (improved by 0.0061)
+[2025-12-21 05:45:07,402: INFO/ForkPoolWorker-8] ✅ binancecoin/24h: MAE 0.0765 → 0.0567 (improved by 0.0199)
+[2025-12-21 05:45:07,403: INFO/ForkPoolWorker-8] Fine-tuning completed for binancecoin: {'1h': {'status': 'success', 'old_mae': 0.11584623903036118, 'new_mae': 0.10970751196146011, 'improvement': 0.006138727068901062}, '24h': {'status': 'success', 'old_mae': 0.07650401443243027, 'new_mae': 0.05665351077914238, 'improvement': 0.019850503653287888}}
+[2025-12-21 05:45:07,403: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[ec82139b-d1c3-4ab9-8006-19af111fb5fd] succeeded in 7.38541591601097s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.11584623903036118, 'new_mae': 0.10970751196146011, 'improvement': 0.006138727068901062}, '24h': {'status': 'success', 'old_mae': 0.07650401443243027, 'new_mae': 0.05665351077914238, 'improvement': 0.019850503653287888}}}
+[2025-12-21 06:00:00,014: INFO/MainProcess] Task celery_tasks.fine_tune_coin[4328cda3-7edc-4591-a071-74b018957957] received
+[2025-12-21 06:00:00,032: INFO/ForkPoolWorker-8] Starting fine-tuning task for ethereum
+[2025-12-21 06:00:00,035: INFO/ForkPoolWorker-8] Starting fine-tuning for ethereum
+[2025-12-21 06:00:01,112: INFO/ForkPoolWorker-8] Fetched 168 rows for ethereum
+[2025-12-21 06:00:04,291: INFO/ForkPoolWorker-8] ⚠️ ethereum/1h: MAE 0.0031 → 0.0097 (not enough improvement)
+[2025-12-21 06:00:06,959: INFO/ForkPoolWorker-8] ⚠️ ethereum/24h: MAE 0.0148 → 0.0491 (not enough improvement)
+[2025-12-21 06:00:06,960: INFO/ForkPoolWorker-8] Fine-tuning completed for ethereum: {'1h': {'status': 'no_improvement', 'old_mae': 0.0031209636945277452, 'new_mae': 0.009716679342091084, 'improvement': -0.006595715647563338}, '24h': {'status': 'no_improvement', 'old_mae': 0.014775017276406288, 'new_mae': 0.0491253063082695, 'improvement': -0.03435028903186321}}
+[2025-12-21 06:00:06,961: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[4328cda3-7edc-4591-a071-74b018957957] succeeded in 6.939603375009028s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.0031209636945277452, 'new_mae': 0.009716679342091084, 'improvement': -0.006595715647563338}, '24h': {'status': 'no_improvement', 'old_mae': 0.014775017276406288, 'new_mae': 0.0491253063082695, 'improvement': -0.03435028903186321}}}
+[2025-12-21 07:30:00,015: INFO/MainProcess] Task celery_tasks.fine_tune_coin[689e958f-6d08-404b-a492-179a57a50c47] received
+[2025-12-21 07:30:00,034: INFO/ForkPoolWorker-8] Starting fine-tuning task for solana
+[2025-12-21 07:30:00,036: INFO/ForkPoolWorker-8] Starting fine-tuning for solana
+[2025-12-21 07:30:01,273: INFO/ForkPoolWorker-8] Fetched 168 rows for solana
+[2025-12-21 07:30:04,444: INFO/ForkPoolWorker-8] ⚠️ solana/1h: MAE 0.0028 → 0.0123 (not enough improvement)
+[2025-12-21 07:30:04,897: WARNING/ForkPoolWorker-8] 5 out of the last 13 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x11ead7880> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-21 07:30:06,784: WARNING/ForkPoolWorker-8] 6 out of the last 14 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x11ead4400> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-21 07:30:07,100: INFO/ForkPoolWorker-8] ⚠️ solana/24h: MAE 0.0087 → 0.0097 (not enough improvement)
+[2025-12-21 07:30:07,100: INFO/ForkPoolWorker-8] Fine-tuning completed for solana: {'1h': {'status': 'no_improvement', 'old_mae': 0.0027571183163672686, 'new_mae': 0.012344044633209705, 'improvement': -0.009586926316842437}, '24h': {'status': 'no_improvement', 'old_mae': 0.008731844834983349, 'new_mae': 0.009661932475864887, 'improvement': -0.0009300876408815384}}
+[2025-12-21 07:30:07,102: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[689e958f-6d08-404b-a492-179a57a50c47] succeeded in 7.072749916987959s: {'coin': 'solana', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.0027571183163672686, 'new_mae': 0.012344044633209705, 'improvement': -0.009586926316842437}, '24h': {'status': 'no_improvement', 'old_mae': 0.008731844834983349, 'new_mae': 0.009661932475864887, 'improvement': -0.0009300876408815384}}}
+[2025-12-21 08:00:00,012: INFO/MainProcess] Task celery_tasks.fine_tune_coin[894a50de-0475-4560-aeb1-78eb35f2dc7d] received
+[2025-12-21 08:00:00,026: INFO/ForkPoolWorker-8] Starting fine-tuning task for cardano
+[2025-12-21 08:00:00,027: INFO/ForkPoolWorker-8] Starting fine-tuning for cardano
+[2025-12-21 08:00:00,034: ERROR/ForkPoolWorker-8] Error fetching data for cardano: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=ADAUSDT&interval=1h&startTime=1765659600028&endTime=1766264400028&limit=1000 (Caused by NameResolutionError("HTTPSConnection(host='api.binance.com', port=443): Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)"))
+[2025-12-21 08:00:00,034: INFO/ForkPoolWorker-8] Fine-tuning completed for cardano: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-21 08:00:00,036: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[894a50de-0475-4560-aeb1-78eb35f2dc7d] succeeded in 0.018117708998033777s: {'coin': 'cardano', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-21 12:30:02,526: INFO/MainProcess] Task celery_tasks.fine_tune_coin[4c65429b-2e4e-40d6-90a6-1883ee68319f] received
+[2025-12-21 12:30:02,530: INFO/MainProcess] Task celery_tasks.fine_tune_coin[d421e158-c5b2-4849-bce0-73132bd7c11e] received
+[2025-12-21 12:30:02,556: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-21 12:30:02,557: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-21 12:30:03,771: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-21 12:30:07,015: INFO/ForkPoolWorker-8] ⚠️ bitcoin/1h: MAE 0.1136 → 0.1234 (not enough improvement)
+[2025-12-21 12:30:07,996: WARNING/ForkPoolWorker-1] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-21 12:30:08,165: INFO/ForkPoolWorker-1] Starting fine-tuning task for binancecoin
+[2025-12-21 12:30:08,165: INFO/ForkPoolWorker-1] Starting fine-tuning for binancecoin
+[2025-12-21 12:30:08,913: INFO/ForkPoolWorker-1] Fetched 168 rows for binancecoin
+[2025-12-21 12:30:10,715: INFO/ForkPoolWorker-8] ⚠️ bitcoin/24h: MAE 0.1168 → 0.1246 (not enough improvement)
+[2025-12-21 12:30:10,716: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.11362690478563309, 'new_mae': 0.12341753393411636, 'improvement': -0.009790629148483276}, '24h': {'status': 'no_improvement', 'old_mae': 0.11677861213684082, 'new_mae': 0.12462089210748672, 'improvement': -0.007842279970645905}}
+[2025-12-21 12:30:10,718: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[4c65429b-2e4e-40d6-90a6-1883ee68319f] succeeded in 8.1846868339926s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.11362690478563309, 'new_mae': 0.12341753393411636, 'improvement': -0.009790629148483276}, '24h': {'status': 'no_improvement', 'old_mae': 0.11677861213684082, 'new_mae': 0.12462089210748672, 'improvement': -0.007842279970645905}}}
+[2025-12-21 12:30:12,064: INFO/ForkPoolWorker-1] ✅ binancecoin/1h: MAE 0.1088 → 0.1055 (improved by 0.0033)
+[2025-12-21 12:30:14,804: INFO/ForkPoolWorker-1] ✅ binancecoin/24h: MAE 0.0553 → 0.0197 (improved by 0.0357)
+[2025-12-21 12:30:14,805: INFO/ForkPoolWorker-1] Fine-tuning completed for binancecoin: {'1h': {'status': 'success', 'old_mae': 0.10879042744636536, 'new_mae': 0.10551624745130539, 'improvement': 0.003274179995059967}, '24h': {'status': 'success', 'old_mae': 0.05534011125564575, 'new_mae': 0.019664620980620384, 'improvement': 0.03567549027502537}}
+[2025-12-21 12:30:14,806: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[d421e158-c5b2-4849-bce0-73132bd7c11e] succeeded in 12.206105166987982s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.10879042744636536, 'new_mae': 0.10551624745130539, 'improvement': 0.003274179995059967}, '24h': {'status': 'success', 'old_mae': 0.05534011125564575, 'new_mae': 0.019664620980620384, 'improvement': 0.03567549027502537}}}
+[2025-12-21 17:30:00,476: INFO/MainProcess] Task celery_tasks.fine_tune_coin[81bc92f6-cd32-430d-9eb0-b73ff8587632] received
+[2025-12-21 17:30:00,783: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-21 17:30:00,804: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-21 17:30:04,122: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-21 17:30:21,005: INFO/ForkPoolWorker-8] ⚠️ bitcoin/1h: MAE 0.1131 → 0.1168 (not enough improvement)
+[2025-12-21 17:30:38,319: INFO/ForkPoolWorker-8] ⚠️ bitcoin/24h: MAE 0.1160 → 0.1241 (not enough improvement)
+[2025-12-21 17:30:38,327: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.11314170807600021, 'new_mae': 0.11683513969182968, 'improvement': -0.0036934316158294678}, '24h': {'status': 'no_improvement', 'old_mae': 0.11598465591669083, 'new_mae': 0.1240551695227623, 'improvement': -0.008070513606071472}}
+[2025-12-21 17:30:38,347: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[81bc92f6-cd32-430d-9eb0-b73ff8587632] succeeded in 37.682112499984214s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.11314170807600021, 'new_mae': 0.11683513969182968, 'improvement': -0.0036934316158294678}, '24h': {'status': 'no_improvement', 'old_mae': 0.11598465591669083, 'new_mae': 0.1240551695227623, 'improvement': -0.008070513606071472}}}
+[2025-12-21 17:45:00,188: INFO/MainProcess] Task celery_tasks.fine_tune_coin[fd34f69e-4f82-4974-9288-f632152953f1] received
+[2025-12-21 17:45:00,379: INFO/ForkPoolWorker-8] Starting fine-tuning task for binancecoin
+[2025-12-21 17:45:00,397: INFO/ForkPoolWorker-8] Starting fine-tuning for binancecoin
+[2025-12-21 17:45:02,167: INFO/ForkPoolWorker-8] Fetched 168 rows for binancecoin
+[2025-12-21 17:45:24,243: INFO/ForkPoolWorker-8] ⚠️ binancecoin/1h: MAE 0.1044 → 0.1149 (not enough improvement)
+[2025-12-21 17:45:35,768: INFO/ForkPoolWorker-8] ⚠️ binancecoin/24h: MAE 0.0179 → 0.0215 (not enough improvement)
+[2025-12-21 17:45:35,772: INFO/ForkPoolWorker-8] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.10444476455450058, 'new_mae': 0.11487621068954468, 'improvement': -0.010431446135044098}, '24h': {'status': 'no_improvement', 'old_mae': 0.017897743731737137, 'new_mae': 0.02151377499103546, 'improvement': -0.0036160312592983246}}
+[2025-12-21 17:45:35,783: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[fd34f69e-4f82-4974-9288-f632152953f1] succeeded in 35.464955709001515s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.10444476455450058, 'new_mae': 0.11487621068954468, 'improvement': -0.010431446135044098}, '24h': {'status': 'no_improvement', 'old_mae': 0.017897743731737137, 'new_mae': 0.02151377499103546, 'improvement': -0.0036160312592983246}}}
+[2025-12-21 18:29:56,001: INFO/MainProcess] Task celery_tasks.fine_tune_coin[b5e5bbed-4cd5-4d59-b90e-9e3658ed97bd] received
+[2025-12-21 18:29:56,186: INFO/ForkPoolWorker-8] Starting fine-tuning task for ethereum
+[2025-12-21 18:29:56,196: INFO/ForkPoolWorker-8] Starting fine-tuning for ethereum
+[2025-12-21 18:29:58,367: INFO/ForkPoolWorker-8] Fetched 168 rows for ethereum
+[2025-12-21 18:30:01,825: INFO/ForkPoolWorker-8] ⚠️ ethereum/1h: MAE 0.0018 → 0.0245 (not enough improvement)
+[2025-12-21 18:30:04,681: INFO/ForkPoolWorker-8] ⚠️ ethereum/24h: MAE 0.0027 → 0.0539 (not enough improvement)
+[2025-12-21 18:30:04,683: INFO/ForkPoolWorker-8] Fine-tuning completed for ethereum: {'1h': {'status': 'no_improvement', 'old_mae': 0.0017652735114097595, 'new_mae': 0.024452872574329376, 'improvement': -0.022687599062919617}, '24h': {'status': 'no_improvement', 'old_mae': 0.002740120980888605, 'new_mae': 0.05390642210841179, 'improvement': -0.051166301127523184}}
+[2025-12-21 18:30:04,684: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[b5e5bbed-4cd5-4d59-b90e-9e3658ed97bd] succeeded in 8.564438915986102s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.0017652735114097595, 'new_mae': 0.024452872574329376, 'improvement': -0.022687599062919617}, '24h': {'status': 'no_improvement', 'old_mae': 0.002740120980888605, 'new_mae': 0.05390642210841179, 'improvement': -0.051166301127523184}}}
+[2025-12-21 21:35:04,507: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2025-12-21 21:35:04,510: INFO/MainProcess] mingle: searching for neighbors
+[2025-12-21 21:35:05,524: INFO/MainProcess] mingle: all alone
+[2025-12-21 21:35:05,549: INFO/MainProcess] celery@AYUSHs-MacBook-Air.local ready.
+[2025-12-21 23:30:00,262: INFO/MainProcess] Task celery_tasks.fine_tune_coin[5617d1d0-cf73-49a7-a4df-d7e579f3c958] received
+[2025-12-21 23:30:09,050: WARNING/ForkPoolWorker-8] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-21 23:30:09,280: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-21 23:30:09,281: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-21 23:30:11,099: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-21 23:30:15,152: INFO/ForkPoolWorker-8] ✅ bitcoin/1h: MAE 0.1361 → 0.1347 (improved by 0.0014)
+[2025-12-21 23:30:18,368: INFO/ForkPoolWorker-8] ⚠️ bitcoin/24h: MAE 0.1287 → 0.1339 (not enough improvement)
+[2025-12-21 23:30:18,369: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.1361207813024521, 'new_mae': 0.13472318649291992, 'improvement': 0.0013975948095321655}, '24h': {'status': 'no_improvement', 'old_mae': 0.1287412941455841, 'new_mae': 0.1338537633419037, 'improvement': -0.00511246919631958}}
+[2025-12-21 23:30:18,373: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[5617d1d0-cf73-49a7-a4df-d7e579f3c958] succeeded in 18.01869408300263s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.1361207813024521, 'new_mae': 0.13472318649291992, 'improvement': 0.0013975948095321655}, '24h': {'status': 'no_improvement', 'old_mae': 0.1287412941455841, 'new_mae': 0.1338537633419037, 'improvement': -0.00511246919631958}}}
+[2025-12-21 23:45:00,082: INFO/MainProcess] Task celery_tasks.fine_tune_coin[3a79b85c-3cb3-4796-936a-0aebe6d518eb] received
+[2025-12-21 23:45:00,254: INFO/ForkPoolWorker-8] Starting fine-tuning task for binancecoin
+[2025-12-21 23:45:00,262: INFO/ForkPoolWorker-8] Starting fine-tuning for binancecoin
+[2025-12-21 23:45:02,480: INFO/ForkPoolWorker-8] Fetched 168 rows for binancecoin
+[2025-12-21 23:45:07,174: INFO/ForkPoolWorker-8] ✅ binancecoin/1h: MAE 0.1580 → 0.1578 (improved by 0.0002)
+[2025-12-21 23:45:10,245: INFO/ForkPoolWorker-8] ✅ binancecoin/24h: MAE 0.1622 → 0.1620 (improved by 0.0002)
+[2025-12-21 23:45:10,246: INFO/ForkPoolWorker-8] Fine-tuning completed for binancecoin: {'1h': {'status': 'success', 'old_mae': 0.15799959003925323, 'new_mae': 0.15777625143527985, 'improvement': 0.00022333860397338867}, '24h': {'status': 'success', 'old_mae': 0.16222922503948212, 'new_mae': 0.16200624406337738, 'improvement': 0.00022298097610473633}}
+[2025-12-21 23:45:10,249: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[3a79b85c-3cb3-4796-936a-0aebe6d518eb] succeeded in 10.052626124990638s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.15799959003925323, 'new_mae': 0.15777625143527985, 'improvement': 0.00022333860397338867}, '24h': {'status': 'success', 'old_mae': 0.16222922503948212, 'new_mae': 0.16200624406337738, 'improvement': 0.00022298097610473633}}}
+[2025-12-22 06:32:27,646: INFO/MainProcess] Task celery_tasks.fine_tune_coin[3fde5aae-375f-4ef8-baaf-0e5392cfbe3a] received
+[2025-12-22 06:32:27,688: INFO/MainProcess] Task celery_tasks.fine_tune_coin[05b65051-e94e-4a9f-8cc7-b677d55c42d4] received
+[2025-12-22 06:32:27,690: INFO/MainProcess] Task celery_tasks.fine_tune_coin[1a8101f6-7e4a-48b4-98d3-bf707ae4bf05] received
+[2025-12-22 06:32:27,885: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-22 06:32:27,894: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-22 06:32:28,882: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-22 06:49:01,161: INFO/ForkPoolWorker-8] ✅ bitcoin/1h: MAE 0.1346 → 0.1316 (improved by 0.0030)
+[2025-12-22 06:49:01,710: WARNING/ForkPoolWorker-1] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-22 06:49:01,710: WARNING/ForkPoolWorker-2] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-22 06:49:01,946: INFO/ForkPoolWorker-1] Starting fine-tuning task for binancecoin
+[2025-12-22 06:49:01,946: INFO/ForkPoolWorker-2] Starting fine-tuning task for ethereum
+[2025-12-22 06:49:01,946: INFO/ForkPoolWorker-1] Starting fine-tuning for binancecoin
+[2025-12-22 06:49:01,947: INFO/ForkPoolWorker-2] Starting fine-tuning for ethereum
+[2025-12-22 06:49:02,852: INFO/ForkPoolWorker-2] Fetched 168 rows for ethereum
+[2025-12-22 06:49:03,140: INFO/ForkPoolWorker-1] Fetched 168 rows for binancecoin
+[2025-12-22 06:49:05,245: INFO/ForkPoolWorker-8] ⚠️ bitcoin/24h: MAE 0.1284 → 0.1331 (not enough improvement)
+[2025-12-22 06:49:05,246: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.13460063934326172, 'new_mae': 0.1316274255514145, 'improvement': 0.002973213791847229}, '24h': {'status': 'no_improvement', 'old_mae': 0.1284407675266266, 'new_mae': 0.13313338160514832, 'improvement': -0.0046926140785217285}}
+[2025-12-22 06:49:05,258: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[3fde5aae-375f-4ef8-baaf-0e5392cfbe3a] succeeded in 11.400838875008048s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.13460063934326172, 'new_mae': 0.1316274255514145, 'improvement': 0.002973213791847229}, '24h': {'status': 'no_improvement', 'old_mae': 0.1284407675266266, 'new_mae': 0.13313338160514832, 'improvement': -0.0046926140785217285}}}
+[2025-12-22 06:49:06,858: INFO/ForkPoolWorker-2] ⚠️ ethereum/1h: MAE 0.0051 → 0.0170 (not enough improvement)
+[2025-12-22 06:49:07,244: INFO/ForkPoolWorker-1] ✅ binancecoin/1h: MAE 0.1573 → 0.1571 (improved by 0.0002)
+[2025-12-22 06:49:10,225: INFO/ForkPoolWorker-2] ⚠️ ethereum/24h: MAE 0.0030 → 0.0441 (not enough improvement)
+[2025-12-22 06:49:10,227: INFO/ForkPoolWorker-2] Fine-tuning completed for ethereum: {'1h': {'status': 'no_improvement', 'old_mae': 0.0051186406053602695, 'new_mae': 0.01698787696659565, 'improvement': -0.01186923636123538}, '24h': {'status': 'no_improvement', 'old_mae': 0.0030105500482022762, 'new_mae': 0.04409269243478775, 'improvement': -0.041082142386585474}}
+[2025-12-22 06:49:10,236: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[1a8101f6-7e4a-48b4-98d3-bf707ae4bf05] succeeded in 16.403071707987692s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.0051186406053602695, 'new_mae': 0.01698787696659565, 'improvement': -0.01186923636123538}, '24h': {'status': 'no_improvement', 'old_mae': 0.0030105500482022762, 'new_mae': 0.04409269243478775, 'improvement': -0.041082142386585474}}}
+[2025-12-22 06:49:10,757: INFO/ForkPoolWorker-1] ⚠️ binancecoin/24h: MAE 0.1615 → 0.1783 (not enough improvement)
+[2025-12-22 06:49:10,760: INFO/ForkPoolWorker-1] Fine-tuning completed for binancecoin: {'1h': {'status': 'success', 'old_mae': 0.15733186900615692, 'new_mae': 0.15710856020450592, 'improvement': 0.00022330880165100098}, '24h': {'status': 'no_improvement', 'old_mae': 0.16153238713741302, 'new_mae': 0.1783103048801422, 'improvement': -0.016777917742729187}}
+[2025-12-22 06:49:10,763: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[05b65051-e94e-4a9f-8cc7-b677d55c42d4] succeeded in 16.93030620799982s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.15733186900615692, 'new_mae': 0.15710856020450592, 'improvement': 0.00022330880165100098}, '24h': {'status': 'no_improvement', 'old_mae': 0.16153238713741302, 'new_mae': 0.1783103048801422, 'improvement': -0.016777917742729187}}}
+[2025-12-22 08:19:31,804: INFO/MainProcess] Task celery_tasks.fine_tune_coin[3fe56dc8-73a1-44d2-b2b3-624c94eace6d] received
+[2025-12-22 08:19:31,808: INFO/MainProcess] Task celery_tasks.fine_tune_coin[1256882b-57e1-4a0c-b9f2-d09e6b54f1b4] received
+[2025-12-22 08:19:31,826: INFO/ForkPoolWorker-1] Starting fine-tuning task for cardano
+[2025-12-22 08:19:31,826: INFO/ForkPoolWorker-8] Starting fine-tuning task for solana
+[2025-12-22 08:19:31,827: INFO/ForkPoolWorker-1] Starting fine-tuning for cardano
+[2025-12-22 08:19:31,827: INFO/ForkPoolWorker-8] Starting fine-tuning for solana
+[2025-12-22 08:19:32,742: INFO/ForkPoolWorker-8] Fetched 168 rows for solana
+[2025-12-22 08:19:32,742: INFO/ForkPoolWorker-1] Fetched 168 rows for cardano
+[2025-12-22 08:19:36,152: INFO/ForkPoolWorker-1] ⚠️ cardano/1h: MAE 0.0013 → 0.0014 (not enough improvement)
+[2025-12-22 08:19:36,186: INFO/ForkPoolWorker-8] ⚠️ solana/1h: MAE 0.0049 → 0.0087 (not enough improvement)
+[2025-12-22 08:19:36,629: WARNING/ForkPoolWorker-1] 5 out of the last 17 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x11fc4f600> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-22 08:19:36,667: WARNING/ForkPoolWorker-8] 5 out of the last 17 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x120a84720> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-22 08:19:38,667: WARNING/ForkPoolWorker-1] 6 out of the last 18 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x11fc4fb00> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-22 08:19:38,715: WARNING/ForkPoolWorker-8] 6 out of the last 18 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x120a84720> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-22 08:19:39,012: INFO/ForkPoolWorker-1] ✅ cardano/24h: MAE 0.0040 → 0.0018 (improved by 0.0022)
+[2025-12-22 08:19:39,013: INFO/ForkPoolWorker-1] Fine-tuning completed for cardano: {'1h': {'status': 'no_improvement', 'old_mae': 0.0013333099195733666, 'new_mae': 0.0013684412697330117, 'improvement': -3.513135015964508e-05}, '24h': {'status': 'success', 'old_mae': 0.004044727422297001, 'new_mae': 0.0018452759832143784, 'improvement': 0.0021994514390826225}}
+[2025-12-22 08:19:39,015: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[1256882b-57e1-4a0c-b9f2-d09e6b54f1b4] succeeded in 7.201337457983755s: {'coin': 'cardano', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.0013333099195733666, 'new_mae': 0.0013684412697330117, 'improvement': -3.513135015964508e-05}, '24h': {'status': 'success', 'old_mae': 0.004044727422297001, 'new_mae': 0.0018452759832143784, 'improvement': 0.0021994514390826225}}}
+[2025-12-22 08:19:39,027: INFO/ForkPoolWorker-8] ⚠️ solana/24h: MAE 0.0146 → 0.0158 (not enough improvement)
+[2025-12-22 08:19:39,027: INFO/ForkPoolWorker-8] Fine-tuning completed for solana: {'1h': {'status': 'no_improvement', 'old_mae': 0.004892811179161072, 'new_mae': 0.008741333149373531, 'improvement': -0.0038485219702124596}, '24h': {'status': 'no_improvement', 'old_mae': 0.014564317651093006, 'new_mae': 0.015754759311676025, 'improvement': -0.0011904416605830193}}
+[2025-12-22 08:19:39,032: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[3fe56dc8-73a1-44d2-b2b3-624c94eace6d] succeeded in 7.221497874998022s: {'coin': 'solana', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.004892811179161072, 'new_mae': 0.008741333149373531, 'improvement': -0.0038485219702124596}, '24h': {'status': 'no_improvement', 'old_mae': 0.014564317651093006, 'new_mae': 0.015754759311676025, 'improvement': -0.0011904416605830193}}}
+[2025-12-22 11:47:18,290: INFO/MainProcess] Task celery_tasks.fine_tune_coin[ce2c8fbe-b7ca-4260-85fa-7ff9be1553b4] received
+[2025-12-22 11:47:18,294: INFO/MainProcess] Task celery_tasks.fine_tune_coin[383f24db-f3ad-4169-9f04-de6ebf174922] received
+[2025-12-22 11:47:18,322: INFO/ForkPoolWorker-1] Starting fine-tuning task for binancecoin
+[2025-12-22 11:47:18,324: INFO/ForkPoolWorker-1] Starting fine-tuning for binancecoin
+[2025-12-22 11:47:18,324: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-22 11:47:18,325: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-22 11:47:19,722: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-22 11:47:19,722: INFO/ForkPoolWorker-1] Fetched 168 rows for binancecoin
+[2025-12-22 11:47:23,055: INFO/ForkPoolWorker-8] ✅ bitcoin/1h: MAE 0.1318 → 0.1299 (improved by 0.0019)
+[2025-12-22 11:47:23,272: INFO/ForkPoolWorker-1] ✅ binancecoin/1h: MAE 0.1575 → 0.1573 (improved by 0.0002)
+[2025-12-22 11:47:26,379: INFO/ForkPoolWorker-1] ⚠️ binancecoin/24h: MAE 0.1626 → 0.1673 (not enough improvement)
+[2025-12-22 11:47:26,380: INFO/ForkPoolWorker-1] Fine-tuning completed for binancecoin: {'1h': {'status': 'success', 'old_mae': 0.15752553939819336, 'new_mae': 0.15730217099189758, 'improvement': 0.00022336840629577637}, '24h': {'status': 'no_improvement', 'old_mae': 0.1625705361366272, 'new_mae': 0.1673256903886795, 'improvement': -0.004755154252052307}}
+[2025-12-22 11:47:26,392: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[383f24db-f3ad-4169-9f04-de6ebf174922] succeeded in 8.087201582995476s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.15752553939819336, 'new_mae': 0.15730217099189758, 'improvement': 0.00022336840629577637}, '24h': {'status': 'no_improvement', 'old_mae': 0.1625705361366272, 'new_mae': 0.1673256903886795, 'improvement': -0.004755154252052307}}}
+[2025-12-22 11:47:26,585: INFO/ForkPoolWorker-8] ⚠️ bitcoin/24h: MAE 0.1292 → 0.1306 (not enough improvement)
+[2025-12-22 11:47:26,586: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.1318102926015854, 'new_mae': 0.12987357378005981, 'improvement': 0.0019367188215255737}, '24h': {'status': 'no_improvement', 'old_mae': 0.12916278839111328, 'new_mae': 0.13064952194690704, 'improvement': -0.0014867335557937622}}
+[2025-12-22 11:47:26,591: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[ce2c8fbe-b7ca-4260-85fa-7ff9be1553b4] succeeded in 8.282883749983739s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.1318102926015854, 'new_mae': 0.12987357378005981, 'improvement': 0.0019367188215255737}, '24h': {'status': 'no_improvement', 'old_mae': 0.12916278839111328, 'new_mae': 0.13064952194690704, 'improvement': -0.0014867335557937622}}}
