@@ -215,3 +215,1176 @@
 [2025-12-22 21:15:00,035: INFO/ForkPoolWorker-8] No pending predictions to verify
 [2025-12-22 21:15:00,035: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
 [2025-12-22 21:15:00,037: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[a6c2c03c-d4ed-4524-9259-805fd432e8b2] succeeded in 0.019040458981180564s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-22 22:34:02,977: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[4dfcaad6-4091-4715-b439-76f339078fa8] received
+[2025-12-22 22:34:02,992: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-22 22:34:03,003: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-22 22:34:03,004: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-22 22:34:03,006: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[4dfcaad6-4091-4715-b439-76f339078fa8] succeeded in 0.02102995800669305s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-22 23:16:14,460: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[32355ade-3abd-4aee-b3dc-c439d9269ba0] received
+[2025-12-22 23:16:14,468: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-22 23:16:14,473: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-22 23:16:14,473: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-22 23:16:14,476: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[32355ade-3abd-4aee-b3dc-c439d9269ba0] succeeded in 0.011377749993698671s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-22 23:30:00,018: INFO/MainProcess] Task celery_tasks.fine_tune_coin[35ab66c4-994b-4901-8146-412bf597bd1e] received
+[2025-12-22 23:30:00,022: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[c37b4c9c-4739-443a-8847-923cd56c73e4] received
+[2025-12-22 23:30:00,089: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-22 23:30:00,098: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-22 23:30:00,098: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-22 23:30:00,099: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[c37b4c9c-4739-443a-8847-923cd56c73e4] succeeded in 0.058432457997696474s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-22 23:30:05,377: WARNING/ForkPoolWorker-8] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-22 23:30:05,545: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-22 23:30:05,550: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-22 23:30:06,392: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-22 23:30:09,573: INFO/ForkPoolWorker-8] ✅ bitcoin/1h: MAE 0.1307 → 0.1190 (improved by 0.0117)
+[2025-12-22 23:30:12,354: INFO/ForkPoolWorker-8] ⚠️ bitcoin/24h: MAE 0.1342 → 0.1362 (not enough improvement)
+[2025-12-22 23:30:12,355: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.13070885837078094, 'new_mae': 0.11901432275772095, 'improvement': 0.011694535613059998}, '24h': {'status': 'no_improvement', 'old_mae': 0.1341976523399353, 'new_mae': 0.13616131246089935, 'improvement': -0.0019636601209640503}}
+[2025-12-22 23:30:12,358: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[35ab66c4-994b-4901-8146-412bf597bd1e] succeeded in 12.336798500007717s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.13070885837078094, 'new_mae': 0.11901432275772095, 'improvement': 0.011694535613059998}, '24h': {'status': 'no_improvement', 'old_mae': 0.1341976523399353, 'new_mae': 0.13616131246089935, 'improvement': -0.0019636601209640503}}}
+[2025-12-22 23:45:00,011: INFO/MainProcess] Task celery_tasks.fine_tune_coin[6b7f7e00-b76f-4911-8734-66479c46ade6] received
+[2025-12-22 23:45:00,014: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[9bf7ab7d-5b12-43dd-be73-d2207050668a] received
+[2025-12-22 23:45:00,019: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-22 23:45:00,019: INFO/ForkPoolWorker-8] Starting fine-tuning task for binancecoin
+[2025-12-22 23:45:00,020: INFO/ForkPoolWorker-8] Starting fine-tuning for binancecoin
+[2025-12-22 23:45:00,028: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-22 23:45:00,029: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-22 23:45:00,030: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[9bf7ab7d-5b12-43dd-be73-d2207050668a] succeeded in 0.012380708998534828s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-22 23:45:01,445: INFO/ForkPoolWorker-8] Fetched 168 rows for binancecoin
+[2025-12-22 23:45:04,753: INFO/ForkPoolWorker-8] ✅ binancecoin/1h: MAE 0.1601 → 0.1599 (improved by 0.0002)
+[2025-12-22 23:45:07,517: INFO/ForkPoolWorker-8] ⚠️ binancecoin/24h: MAE 0.1663 → 0.1829 (not enough improvement)
+[2025-12-22 23:45:07,519: INFO/ForkPoolWorker-8] Fine-tuning completed for binancecoin: {'1h': {'status': 'success', 'old_mae': 0.16014628112316132, 'new_mae': 0.15992291271686554, 'improvement': 0.00022336840629577637}, '24h': {'status': 'no_improvement', 'old_mae': 0.16627173125743866, 'new_mae': 0.18291816115379333, 'improvement': -0.016646429896354675}}
+[2025-12-22 23:45:07,519: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[6b7f7e00-b76f-4911-8734-66479c46ade6] succeeded in 7.50498699999298s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.16014628112316132, 'new_mae': 0.15992291271686554, 'improvement': 0.00022336840629577637}, '24h': {'status': 'no_improvement', 'old_mae': 0.16627173125743866, 'new_mae': 0.18291816115379333, 'improvement': -0.016646429896354675}}}
+[2025-12-23 01:45:04,802: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[306aea2d-9da8-4b6d-a739-8a282e2f8818] received
+[2025-12-23 01:45:04,816: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 01:45:04,827: INFO/ForkPoolWorker-8] Found 1 predictions to verify
+[2025-12-23 01:45:06,237: INFO/ForkPoolWorker-8] Verified prediction 213: mean_error=0.66%
+[2025-12-23 01:45:06,238: INFO/ForkPoolWorker-8] Prediction verification completed: 1 predictions verified
+[2025-12-23 01:45:06,241: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[306aea2d-9da8-4b6d-a739-8a282e2f8818] succeeded in 1.4322032500058413s: {'status': 'success', 'verified_count': 1, 'total_pending': 1, 'results': [{'status': 'success', 'prediction_id': 213, 'coin': 'bitcoin', 'actual_prices': [...], 'mean_error_pct': 0.6610754537564301, 'max_error_pct': 0.6610754537564301}]}
+[2025-12-23 02:00:00,011: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[d2bed152-b4bd-4ac2-9e7e-3c9b40dc6e4a] received
+[2025-12-23 02:00:00,020: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 02:00:00,032: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 02:00:00,032: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 02:00:00,034: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[d2bed152-b4bd-4ac2-9e7e-3c9b40dc6e4a] succeeded in 0.01706370900501497s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 10:55:08,957: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[0e3b43a3-32c2-484f-a0c8-cfe16d815879] received
+[2025-12-23 10:55:08,961: INFO/MainProcess] Task celery_tasks.fine_tune_coin[55a7a3dd-d3df-46bd-b612-c86d98a06a0e] received
+[2025-12-23 10:55:08,962: INFO/MainProcess] Task celery_tasks.fine_tune_coin[d07ec078-d4fc-4710-ba1e-863fcb3f7f3f] received
+[2025-12-23 10:55:08,963: INFO/MainProcess] Task celery_tasks.fine_tune_coin[9c33ed4d-d433-4468-b78e-c37715341287] received
+[2025-12-23 10:55:08,988: INFO/MainProcess] Task celery_tasks.fine_tune_coin[10f59741-d75e-438a-bbe3-60e42224b483] received
+[2025-12-23 10:55:08,991: INFO/MainProcess] Task celery_tasks.fine_tune_coin[cd287137-8eeb-4906-bde7-ffa0bcdd899b] received
+[2025-12-23 10:55:08,988: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 10:55:09,011: INFO/ForkPoolWorker-8] Found 6 predictions to verify
+[2025-12-23 10:55:09,554: INFO/ForkPoolWorker-8] Verified prediction 202: mean_error=0.34%
+[2025-12-23 10:55:09,842: INFO/ForkPoolWorker-8] Verified prediction 203: mean_error=0.29%
+[2025-12-23 10:55:10,119: INFO/ForkPoolWorker-8] Verified prediction 205: mean_error=1.53%
+[2025-12-23 10:55:10,397: INFO/ForkPoolWorker-8] Verified prediction 208: mean_error=0.70%
+[2025-12-23 10:55:10,993: INFO/ForkPoolWorker-8] Verified prediction 211: mean_error=1.19%
+[2025-12-23 10:55:11,277: INFO/ForkPoolWorker-8] Verified prediction 212: mean_error=1.06%
+[2025-12-23 10:55:11,277: INFO/ForkPoolWorker-8] Prediction verification completed: 6 predictions verified
+[2025-12-23 10:55:11,279: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[0e3b43a3-32c2-484f-a0c8-cfe16d815879] succeeded in 2.314688832993852s: {'status': 'success', 'verified_count': 6, 'total_pending': 6, 'results': [{'status': 'success', 'prediction_id': 202, 'coin': 'bitcoin', 'actual_prices': [...], 'mean_error_pct': 0.3409576374877679, 'max_error_pct': 0.6365869550696659}, {'status': 'success', 'prediction_id': 203, 'coin': 'solana', 'actual_prices': [...], 'mean_error_pct': 0.28923768341925316, 'max_error_pct': 0.351126829384267}, {'status': 'success', 'prediction_id': 205, 'coin': 'ethereum', 'actual_prices': [...], 'mean_error_pct': 1.5299793912743211, 'max_error_pct': 2.151939740292635}, {'status': 'success', 'prediction_id': 208, 'coin': 'bitcoin', 'actual_prices': [...], 'mean_error_pct': 0.6964533814259982, 'max_error_pct': 0.986849808833975}, {'status': 'success', 'prediction_id': 211, 'coin': 'solana', 'actual_prices': [...], 'mean_error_pct': 1.1866547540001366, 'max_error_pct': 2.9830242776818348}, {'status': 'success', 'prediction_id': 212, 'coin': 'cardano', 'actual_prices': [...], 'mean_error_pct': 1.0560352739140793, 'max_error_pc...', ...}]}
+[2025-12-23 11:12:42,380: WARNING/ForkPoolWorker-2] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-23 11:12:42,380: WARNING/ForkPoolWorker-3] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-23 11:12:42,380: WARNING/ForkPoolWorker-1] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-23 11:12:42,390: WARNING/ForkPoolWorker-4] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-23 11:12:42,404: WARNING/ForkPoolWorker-5] /Users/ayushgupta/Desktop/ML-Driven-Web-Platform-for-Cryptocurrency-Price-Forecasting_November_Batch-5_2025/.venv/lib/python3.12/site-packages/keras/src/export/tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+
+[2025-12-23 11:12:42,659: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-23 11:12:42,659: INFO/ForkPoolWorker-4] Starting fine-tuning task for solana
+[2025-12-23 11:12:42,659: INFO/ForkPoolWorker-5] Starting fine-tuning task for cardano
+[2025-12-23 11:12:42,660: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-23 11:12:42,660: INFO/ForkPoolWorker-5] Starting fine-tuning for cardano
+[2025-12-23 11:12:42,660: INFO/ForkPoolWorker-4] Starting fine-tuning for solana
+[2025-12-23 11:12:42,660: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-23 11:12:42,660: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-23 11:12:42,661: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-23 11:12:42,662: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-23 11:13:56,870: INFO/ForkPoolWorker-5] Fetched 168 rows for cardano
+[2025-12-23 11:13:56,870: INFO/ForkPoolWorker-4] Fetched 168 rows for solana
+[2025-12-23 11:13:56,870: INFO/ForkPoolWorker-1] Fetched 168 rows for bitcoin
+[2025-12-23 11:13:56,870: INFO/ForkPoolWorker-3] Fetched 168 rows for ethereum
+[2025-12-23 11:13:56,871: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-23 11:14:01,593: INFO/ForkPoolWorker-4] ⚠️ solana/1h: MAE 0.0056 → 0.0090 (not enough improvement)
+[2025-12-23 11:14:01,666: INFO/ForkPoolWorker-5] ✅ cardano/1h: MAE 0.0029 → 0.0011 (improved by 0.0017)
+[2025-12-23 11:14:01,757: INFO/ForkPoolWorker-3] ⚠️ ethereum/1h: MAE 0.0052 → 0.0062 (not enough improvement)
+[2025-12-23 11:14:01,845: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1633 → 0.1666 (not enough improvement)
+[2025-12-23 11:14:02,156: INFO/ForkPoolWorker-1] ✅ bitcoin/1h: MAE 0.1210 → 0.1157 (improved by 0.0053)
+[2025-12-23 11:14:09,980: WARNING/ForkPoolWorker-4] 5 out of the last 8 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x11ce2aac0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-23 11:14:10,235: WARNING/ForkPoolWorker-5] 5 out of the last 8 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x11ce92a20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-23 11:14:11,150: WARNING/ForkPoolWorker-4] 6 out of the last 11 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x11d607b00> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-23 11:14:11,334: INFO/ForkPoolWorker-4] ⚠️ solana/24h: MAE 0.0043 → 0.0058 (not enough improvement)
+[2025-12-23 11:14:11,336: INFO/ForkPoolWorker-4] Fine-tuning completed for solana: {'1h': {'status': 'no_improvement', 'old_mae': 0.005556283053010702, 'new_mae': 0.0089775575324893, 'improvement': -0.0034212744794785976}, '24h': {'status': 'no_improvement', 'old_mae': 0.004308980889618397, 'new_mae': 0.005772230215370655, 'improvement': -0.0014632493257522583}}
+[2025-12-23 11:14:11,348: INFO/ForkPoolWorker-4] Task celery_tasks.fine_tune_coin[10f59741-d75e-438a-bbe3-60e42224b483] succeeded in 27.687469416996464s: {'coin': 'solana', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.005556283053010702, 'new_mae': 0.0089775575324893, 'improvement': -0.0034212744794785976}, '24h': {'status': 'no_improvement', 'old_mae': 0.004308980889618397, 'new_mae': 0.005772230215370655, 'improvement': -0.0014632493257522583}}}
+[2025-12-23 11:14:11,423: WARNING/ForkPoolWorker-5] 6 out of the last 11 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x11d666700> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-23 11:14:11,637: INFO/ForkPoolWorker-5] ✅ cardano/24h: MAE 0.0032 → 0.0017 (improved by 0.0016)
+[2025-12-23 11:14:11,639: INFO/ForkPoolWorker-5] Fine-tuning completed for cardano: {'1h': {'status': 'success', 'old_mae': 0.0028504442889243364, 'new_mae': 0.001119594438932836, 'improvement': 0.0017308498499915004}, '24h': {'status': 'success', 'old_mae': 0.003228974062949419, 'new_mae': 0.0016641803085803986, 'improvement': 0.0015647937543690205}}
+[2025-12-23 11:14:11,643: INFO/ForkPoolWorker-5] Task celery_tasks.fine_tune_coin[cd287137-8eeb-4906-bde7-ffa0bcdd899b] succeeded in 27.97511183298775s: {'coin': 'cardano', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.0028504442889243364, 'new_mae': 0.001119594438932836, 'improvement': 0.0017308498499915004}, '24h': {'status': 'success', 'old_mae': 0.003228974062949419, 'new_mae': 0.0016641803085803986, 'improvement': 0.0015647937543690205}}}
+[2025-12-23 11:14:11,796: INFO/ForkPoolWorker-3] ⚠️ ethereum/24h: MAE 0.0082 → 0.0406 (not enough improvement)
+[2025-12-23 11:14:11,798: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'1h': {'status': 'no_improvement', 'old_mae': 0.005167901515960693, 'new_mae': 0.006217328365892172, 'improvement': -0.0010494268499314785}, '24h': {'status': 'no_improvement', 'old_mae': 0.008155080489814281, 'new_mae': 0.040625736117362976, 'improvement': -0.032470655627548695}}
+[2025-12-23 11:14:11,804: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[9c33ed4d-d433-4468-b78e-c37715341287] succeeded in 28.166562250000425s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.005167901515960693, 'new_mae': 0.006217328365892172, 'improvement': -0.0010494268499314785}, '24h': {'status': 'no_improvement', 'old_mae': 0.008155080489814281, 'new_mae': 0.040625736117362976, 'improvement': -0.032470655627548695}}}
+[2025-12-23 11:14:12,117: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1692 → 0.1705 (not enough improvement)
+[2025-12-23 11:14:12,119: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.16332830488681793, 'new_mae': 0.16660714149475098, 'improvement': -0.0032788366079330444}, '24h': {'status': 'no_improvement', 'old_mae': 0.16920307278633118, 'new_mae': 0.17050370573997498, 'improvement': -0.0013006329536437988}}
+[2025-12-23 11:14:12,131: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[d07ec078-d4fc-4710-ba1e-863fcb3f7f3f] succeeded in 28.497694375022547s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.16332830488681793, 'new_mae': 0.16660714149475098, 'improvement': -0.0032788366079330444}, '24h': {'status': 'no_improvement', 'old_mae': 0.16920307278633118, 'new_mae': 0.17050370573997498, 'improvement': -0.0013006329536437988}}}
+[2025-12-23 11:14:12,557: INFO/ForkPoolWorker-1] ✅ bitcoin/24h: MAE 0.1370 → 0.1366 (improved by 0.0005)
+[2025-12-23 11:14:12,559: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.12104155868291855, 'new_mae': 0.11574330180883408, 'improvement': 0.005298256874084473}, '24h': {'status': 'success', 'old_mae': 0.13704021275043488, 'new_mae': 0.13658873736858368, 'improvement': 0.0004514753818511963}}
+[2025-12-23 11:14:12,562: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[55a7a3dd-d3df-46bd-b612-c86d98a06a0e] succeeded in 28.963313374988502s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.12104155868291855, 'new_mae': 0.11574330180883408, 'improvement': 0.005298256874084473}, '24h': {'status': 'success', 'old_mae': 0.13704021275043488, 'new_mae': 0.13658873736858368, 'improvement': 0.0004514753818511963}}}
+[2025-12-23 13:39:19,467: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[9cefacd7-6639-4a89-a5a8-7987a8489277] received
+[2025-12-23 13:39:19,471: INFO/MainProcess] Task celery_tasks.fine_tune_coin[69fc385d-17cc-4a61-be3b-a565067562e0] received
+[2025-12-23 13:39:19,473: INFO/MainProcess] Task celery_tasks.fine_tune_coin[ab63595d-a25a-4584-93c4-2b5bff3ee6a6] received
+[2025-12-23 13:39:19,487: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-23 13:39:19,487: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 13:39:19,490: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-23 13:39:19,489: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-23 13:39:19,491: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-23 13:39:19,505: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 13:39:19,505: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 13:39:19,508: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[9cefacd7-6639-4a89-a5a8-7987a8489277] succeeded in 0.03180937501019798s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 13:39:20,388: INFO/ForkPoolWorker-1] Fetched 168 rows for bitcoin
+[2025-12-23 13:39:20,774: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-23 13:39:23,802: INFO/ForkPoolWorker-1] ✅ bitcoin/1h: MAE 0.1154 → 0.1069 (improved by 0.0085)
+[2025-12-23 13:39:23,936: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1633 → 0.1667 (not enough improvement)
+[2025-12-23 13:39:26,661: INFO/ForkPoolWorker-1] ✅ bitcoin/24h: MAE 0.1361 → 0.1338 (improved by 0.0023)
+[2025-12-23 13:39:26,662: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.11542860418558121, 'new_mae': 0.10687940567731857, 'improvement': 0.008549198508262634}, '24h': {'status': 'success', 'old_mae': 0.13608583807945251, 'new_mae': 0.133794903755188, 'improvement': 0.0022909343242645264}}
+[2025-12-23 13:39:26,663: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[69fc385d-17cc-4a61-be3b-a565067562e0] succeeded in 7.185173291014507s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.11542860418558121, 'new_mae': 0.10687940567731857, 'improvement': 0.008549198508262634}, '24h': {'status': 'success', 'old_mae': 0.13608583807945251, 'new_mae': 0.133794903755188, 'improvement': 0.0022909343242645264}}}
+[2025-12-23 13:39:26,762: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1691 → 0.1733 (not enough improvement)
+[2025-12-23 13:39:26,763: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.16334295272827148, 'new_mae': 0.16672563552856445, 'improvement': -0.0033826828002929688}, '24h': {'status': 'no_improvement', 'old_mae': 0.1691223680973053, 'new_mae': 0.17329588532447815, 'improvement': -0.0041735172271728516}}
+[2025-12-23 13:39:26,764: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[ab63595d-a25a-4584-93c4-2b5bff3ee6a6] succeeded in 7.283239374984987s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.16334295272827148, 'new_mae': 0.16672563552856445, 'improvement': -0.0033826828002929688}, '24h': {'status': 'no_improvement', 'old_mae': 0.1691223680973053, 'new_mae': 0.17329588532447815, 'improvement': -0.0041735172271728516}}}
+[2025-12-23 13:45:32,721: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[1048a99f-81b0-4dbc-aca0-ce952a9c3e2b] received
+[2025-12-23 13:45:32,731: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 13:45:32,744: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 13:45:32,745: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 13:45:32,748: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[1048a99f-81b0-4dbc-aca0-ce952a9c3e2b] succeeded in 0.020203666004817933s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 14:00:00,011: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[b1bb8664-7a80-4bec-ad5f-d8acba418d72] received
+[2025-12-23 14:00:00,025: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 14:00:00,030: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 14:00:00,030: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 14:00:00,032: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[b1bb8664-7a80-4bec-ad5f-d8acba418d72] succeeded in 0.015034583018859848s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 15:19:26,013: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[167ebbfb-81fc-4c71-8e6f-513e21c0eda4] received
+[2025-12-23 15:19:26,025: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 15:19:26,040: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 15:19:26,040: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 15:19:26,043: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[167ebbfb-81fc-4c71-8e6f-513e21c0eda4] succeeded in 0.024292833026265725s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 16:23:03,564: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[ef9f12d0-0bbb-4ad3-95a3-b59f47ad540c] received
+[2025-12-23 16:23:03,575: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 16:23:03,587: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 16:23:03,588: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 16:23:03,590: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[ef9f12d0-0bbb-4ad3-95a3-b59f47ad540c] succeeded in 0.01993516701622866s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 16:56:49,220: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[aadb79f1-c16b-432f-ac4e-92b135e6d0f5] received
+[2025-12-23 16:56:49,229: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 16:56:49,245: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 16:56:49,246: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 16:56:49,248: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[aadb79f1-c16b-432f-ac4e-92b135e6d0f5] succeeded in 0.022099917026935145s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 17:00:00,021: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[48774a6a-a8f7-4e07-b55f-31813d1c1ecd] received
+[2025-12-23 17:00:00,033: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 17:00:00,046: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 17:00:00,047: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 17:00:00,048: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[48774a6a-a8f7-4e07-b55f-31813d1c1ecd] succeeded in 0.019636582990642637s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 17:34:56,995: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[0cb72e86-5844-4431-a581-f3e4accf0cfd] received
+[2025-12-23 17:34:57,003: INFO/MainProcess] Task celery_tasks.fine_tune_coin[3087b98c-8d6e-49aa-89a8-8365c4e487e9] received
+[2025-12-23 17:34:57,003: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 17:34:57,011: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-23 17:34:57,012: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-23 17:34:57,018: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 17:34:57,018: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 17:34:57,019: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[0cb72e86-5844-4431-a581-f3e4accf0cfd] succeeded in 0.018244874983793125s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 17:36:40,386: INFO/ForkPoolWorker-1] Fetched 168 rows for bitcoin
+[2025-12-23 17:41:51,145: INFO/ForkPoolWorker-1] ✅ bitcoin/1h: MAE 0.1051 → 0.0987 (improved by 0.0064)
+[2025-12-23 17:41:55,239: INFO/ForkPoolWorker-1] ✅ bitcoin/24h: MAE 0.1306 → 0.1291 (improved by 0.0014)
+[2025-12-23 17:41:55,242: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.1050572395324707, 'new_mae': 0.09869755059480667, 'improvement': 0.006359688937664032}, '24h': {'status': 'success', 'old_mae': 0.13059279322624207, 'new_mae': 0.12914466857910156, 'improvement': 0.001448124647140503}}
+[2025-12-23 17:41:55,245: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[3087b98c-8d6e-49aa-89a8-8365c4e487e9] succeeded in 34.01946329200291s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.1050572395324707, 'new_mae': 0.09869755059480667, 'improvement': 0.006359688937664032}, '24h': {'status': 'success', 'old_mae': 0.13059279322624207, 'new_mae': 0.12914466857910156, 'improvement': 0.001448124647140503}}}
+[2025-12-23 17:46:21,262: INFO/MainProcess] Task celery_tasks.fine_tune_coin[5010b95f-85eb-41b4-b001-30126fe8865f] received
+[2025-12-23 17:46:21,266: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[8e36db6c-2922-4cc5-bcd9-ffc9b3a60187] received
+[2025-12-23 17:46:21,272: INFO/ForkPoolWorker-8] Starting fine-tuning task for binancecoin
+[2025-12-23 17:46:21,272: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-23 17:46:21,273: INFO/ForkPoolWorker-8] Starting fine-tuning for binancecoin
+[2025-12-23 17:46:21,287: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-23 17:46:21,287: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-23 17:46:21,290: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[8e36db6c-2922-4cc5-bcd9-ffc9b3a60187] succeeded in 0.02115329197840765s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 17:46:22,439: INFO/ForkPoolWorker-8] Fetched 168 rows for binancecoin
+[2025-12-23 17:46:26,467: INFO/ForkPoolWorker-8] ⚠️ binancecoin/1h: MAE 0.1628 → 0.1652 (not enough improvement)
+[2025-12-23 17:46:29,248: INFO/ForkPoolWorker-8] ✅ binancecoin/24h: MAE 0.1678 → 0.1675 (improved by 0.0002)
+[2025-12-23 17:46:29,248: INFO/ForkPoolWorker-8] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.16281290352344513, 'new_mae': 0.16517771780490875, 'improvement': -0.002364814281463623}, '24h': {'status': 'success', 'old_mae': 0.1677527278661728, 'new_mae': 0.16752979159355164, 'improvement': 0.00022293627262115479}}
+[2025-12-23 17:46:29,249: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[5010b95f-85eb-41b4-b001-30126fe8865f] succeeded in 7.981540333013982s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.16281290352344513, 'new_mae': 0.16517771780490875, 'improvement': -0.002364814281463623}, '24h': {'status': 'success', 'old_mae': 0.1677527278661728, 'new_mae': 0.16752979159355164, 'improvement': 0.00022293627262115479}}}
+[2025-12-23 18:00:00,011: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[649cdd26-16f3-42ef-8bb5-cfd747a5a0f7] received
+[2025-12-23 18:00:00,015: INFO/MainProcess] Task celery_tasks.fine_tune_coin[b869b5a2-c087-4164-aaaf-dda31e1d6b28] received
+[2025-12-23 18:00:00,029: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 18:00:00,032: INFO/ForkPoolWorker-1] Starting fine-tuning task for ethereum
+[2025-12-23 18:00:00,034: INFO/ForkPoolWorker-1] Starting fine-tuning for ethereum
+[2025-12-23 18:00:00,044: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 18:00:00,045: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 18:00:00,046: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[649cdd26-16f3-42ef-8bb5-cfd747a5a0f7] succeeded in 0.026316167000913993s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 18:00:01,307: INFO/ForkPoolWorker-1] Fetched 168 rows for ethereum
+[2025-12-23 18:00:04,566: INFO/ForkPoolWorker-1] ⚠️ ethereum/1h: MAE 0.0071 → 0.0099 (not enough improvement)
+[2025-12-23 18:00:07,215: INFO/ForkPoolWorker-1] ⚠️ ethereum/24h: MAE 0.0093 → 0.0324 (not enough improvement)
+[2025-12-23 18:00:07,216: INFO/ForkPoolWorker-1] Fine-tuning completed for ethereum: {'1h': {'status': 'no_improvement', 'old_mae': 0.007130265235900879, 'new_mae': 0.009861175902187824, 'improvement': -0.0027309106662869453}, '24h': {'status': 'no_improvement', 'old_mae': 0.009310290217399597, 'new_mae': 0.03238870948553085, 'improvement': -0.023078419268131256}}
+[2025-12-23 18:00:07,216: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[b869b5a2-c087-4164-aaaf-dda31e1d6b28] succeeded in 7.192942458001198s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.007130265235900879, 'new_mae': 0.009861175902187824, 'improvement': -0.0027309106662869453}, '24h': {'status': 'no_improvement', 'old_mae': 0.009310290217399597, 'new_mae': 0.03238870948553085, 'improvement': -0.023078419268131256}}}
+[2025-12-23 18:15:00,011: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[f470d302-2eae-4814-ac40-a39f6f3a579d] received
+[2025-12-23 18:15:00,025: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 18:15:00,030: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 18:15:00,031: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 18:15:00,033: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[f470d302-2eae-4814-ac40-a39f6f3a579d] succeeded in 0.012015166983474046s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 18:30:00,055: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[c5ac3872-659f-4b37-b96e-a78769a0d458] received
+[2025-12-23 18:30:00,133: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 18:30:00,166: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 18:30:00,167: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 18:30:00,178: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[c5ac3872-659f-4b37-b96e-a78769a0d458] succeeded in 0.08120650000637397s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 18:45:00,013: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[4edca92b-ebc2-41d8-bebc-ae8ccf20cf7f] received
+[2025-12-23 18:45:00,023: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 18:45:00,040: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 18:45:00,040: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 18:45:00,044: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[4edca92b-ebc2-41d8-bebc-ae8ccf20cf7f] succeeded in 0.024464333022478968s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 19:00:00,024: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[ab432432-5de1-4aac-9673-1de6656d6a1f] received
+[2025-12-23 19:00:00,036: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 19:00:00,057: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 19:00:00,057: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 19:00:00,062: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[ab432432-5de1-4aac-9673-1de6656d6a1f] succeeded in 0.03308379199006595s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 19:46:12,417: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[6278931b-882b-456a-9fa8-dc08b4943590] received
+[2025-12-23 19:46:12,429: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 19:46:12,443: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 19:46:12,444: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 19:46:12,535: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[6278931b-882b-456a-9fa8-dc08b4943590] succeeded in 0.10911433299770579s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 20:04:40,664: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[37dc3d0c-9bac-495c-b6ef-3a89bffc90eb] received
+[2025-12-23 20:04:40,688: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 20:04:40,701: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 20:04:40,702: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 20:04:40,706: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[37dc3d0c-9bac-495c-b6ef-3a89bffc90eb] succeeded in 0.02677020800183527s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 20:15:00,014: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[8ec5a862-fabb-4693-9ecc-f125482f7b08] received
+[2025-12-23 20:15:00,031: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 20:15:00,041: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 20:15:00,041: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 20:15:00,046: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[8ec5a862-fabb-4693-9ecc-f125482f7b08] succeeded in 0.01938416698249057s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 20:30:00,015: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[d4cca670-6bed-48f8-abc3-cdc14dedb4ae] received
+[2025-12-23 20:30:00,032: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 20:30:00,044: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 20:30:00,044: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 20:30:00,055: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[d4cca670-6bed-48f8-abc3-cdc14dedb4ae] succeeded in 0.027634124999167398s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 20:45:00,013: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[69a24a45-d3b9-4649-b09d-aaa9c8a17dca] received
+[2025-12-23 20:45:00,026: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 20:45:00,041: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 20:45:00,042: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 20:45:00,046: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[69a24a45-d3b9-4649-b09d-aaa9c8a17dca] succeeded in 0.02680166601203382s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 21:00:00,011: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[3f069b2b-1dc4-4857-8774-e9a8d15d2c0e] received
+[2025-12-23 21:00:00,026: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 21:00:00,048: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 21:00:00,049: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 21:00:00,051: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[3f069b2b-1dc4-4857-8774-e9a8d15d2c0e] succeeded in 0.031532791996141896s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 21:15:00,028: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[30a2fd77-00bb-43c6-b664-30311f3c0ad2] received
+[2025-12-23 21:15:00,042: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 21:15:00,060: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 21:15:00,061: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 21:15:00,064: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[30a2fd77-00bb-43c6-b664-30311f3c0ad2] succeeded in 0.024428667005850002s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 21:45:07,303: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[f98d5e95-0b24-47c5-894f-3c4819bb39ca] received
+[2025-12-23 21:45:07,315: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 21:45:07,330: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 21:45:07,331: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 21:45:07,334: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[f98d5e95-0b24-47c5-894f-3c4819bb39ca] succeeded in 0.02479900000616908s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 22:00:00,031: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[16dfdb2a-577a-4f90-879a-3992c1a0fd78] received
+[2025-12-23 22:00:00,052: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 22:00:00,068: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 22:00:00,068: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 22:00:00,071: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[16dfdb2a-577a-4f90-879a-3992c1a0fd78] succeeded in 0.03227779199369252s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 22:30:01,397: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[7e906029-51d8-42a4-bb39-671b3d5ed6a7] received
+[2025-12-23 22:30:01,410: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 22:30:01,431: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 22:30:01,431: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 22:30:01,435: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[7e906029-51d8-42a4-bb39-671b3d5ed6a7] succeeded in 0.030953709007008s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 23:14:41,778: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[0321906b-8194-4390-83bf-141b1bc39509] received
+[2025-12-23 23:14:41,819: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 23:14:41,838: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 23:14:41,839: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 23:14:41,844: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[0321906b-8194-4390-83bf-141b1bc39509] succeeded in 0.041062792006414384s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 23:15:00,006: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[9c63582d-d406-45d4-8062-ef31428bf7b9] received
+[2025-12-23 23:15:00,013: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-23 23:15:00,018: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-23 23:15:00,019: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-23 23:15:00,021: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[9c63582d-d406-45d4-8062-ef31428bf7b9] succeeded in 0.01104229100747034s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 23:35:26,713: INFO/MainProcess] Task celery_tasks.fine_tune_coin[5ad68f2c-12b1-46d0-bd92-8275e8d50cd3] received
+[2025-12-23 23:35:26,719: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[f5434cce-bf68-471d-8e17-8b1aa5b01fd2] received
+[2025-12-23 23:35:26,746: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-23 23:35:26,749: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-23 23:35:26,832: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-23 23:35:26,898: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-23 23:35:26,899: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-23 23:35:26,922: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[f5434cce-bf68-471d-8e17-8b1aa5b01fd2] succeeded in 0.13834212499205023s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-23 23:35:42,990: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-23 23:52:36,239: INFO/ForkPoolWorker-8] ✅ bitcoin/1h: MAE 0.0942 → 0.0889 (improved by 0.0053)
+[2025-12-23 23:52:39,000: INFO/ForkPoolWorker-8] ✅ bitcoin/24h: MAE 0.1228 → 0.1173 (improved by 0.0055)
+[2025-12-23 23:52:39,000: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.09422758966684341, 'new_mae': 0.08892878144979477, 'improvement': 0.005298808217048645}, '24h': {'status': 'success', 'old_mae': 0.12276440858840942, 'new_mae': 0.11727993190288544, 'improvement': 0.005484476685523987}}
+[2025-12-23 23:52:39,002: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[5ad68f2c-12b1-46d0-bd92-8275e8d50cd3] succeeded in 23.937102500000037s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.09422758966684341, 'new_mae': 0.08892878144979477, 'improvement': 0.005298808217048645}, '24h': {'status': 'success', 'old_mae': 0.12276440858840942, 'new_mae': 0.11727993190288544, 'improvement': 0.005484476685523987}}}
+[2025-12-24 00:52:03,944: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[91540b5f-56f7-454f-9923-72f27a4b029c] received
+[2025-12-24 00:52:03,952: INFO/MainProcess] Task celery_tasks.fine_tune_coin[2d43b72d-54ac-4e97-a54d-c7a465865068] received
+[2025-12-24 00:52:03,956: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 00:52:03,969: INFO/ForkPoolWorker-1] Starting fine-tuning task for binancecoin
+[2025-12-24 00:52:03,972: INFO/ForkPoolWorker-8] Found 1 predictions to verify
+[2025-12-24 00:52:03,973: INFO/ForkPoolWorker-1] Starting fine-tuning for binancecoin
+[2025-12-24 00:52:04,388: INFO/ForkPoolWorker-8] Verified prediction 214: mean_error=0.22%
+[2025-12-24 00:52:04,389: INFO/ForkPoolWorker-8] Prediction verification completed: 1 predictions verified
+[2025-12-24 00:52:04,392: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[91540b5f-56f7-454f-9923-72f27a4b029c] succeeded in 0.4409952500136569s: {'status': 'success', 'verified_count': 1, 'total_pending': 1, 'results': [{'status': 'success', 'prediction_id': 214, 'coin': 'bitcoin', 'actual_prices': [...], 'mean_error_pct': 0.21545712953300913, 'max_error_pct': 0.39391153943258755}]}
+[2025-12-24 00:52:05,020: INFO/ForkPoolWorker-1] Fetched 168 rows for binancecoin
+[2025-12-24 00:52:08,580: INFO/ForkPoolWorker-1] ⚠️ binancecoin/1h: MAE 0.1598 → 0.1616 (not enough improvement)
+[2025-12-24 00:52:12,468: INFO/ForkPoolWorker-1] ⚠️ binancecoin/24h: MAE 0.1632 → 0.1651 (not enough improvement)
+[2025-12-24 00:52:12,469: INFO/ForkPoolWorker-1] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.1597609668970108, 'new_mae': 0.16158168017864227, 'improvement': -0.0018207132816314697}, '24h': {'status': 'no_improvement', 'old_mae': 0.16315031051635742, 'new_mae': 0.1650649905204773, 'improvement': -0.001914680004119873}}
+[2025-12-24 00:52:12,470: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[2d43b72d-54ac-4e97-a54d-c7a465865068] succeeded in 8.510269249993144s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.1597609668970108, 'new_mae': 0.16158168017864227, 'improvement': -0.0018207132816314697}, '24h': {'status': 'no_improvement', 'old_mae': 0.16315031051635742, 'new_mae': 0.1650649905204773, 'improvement': -0.001914680004119873}}}
+[2025-12-24 01:44:40,215: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[c2aaf7ad-5aa6-490e-8adb-417fda04d928] received
+[2025-12-24 01:44:40,228: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 01:44:40,240: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 01:44:40,241: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 01:44:40,242: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[c2aaf7ad-5aa6-490e-8adb-417fda04d928] succeeded in 0.020191540999803692s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 01:55:17,418: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[4cd6fca4-f480-456c-a9b3-edd280105cf4] received
+[2025-12-24 01:55:17,426: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 01:55:17,437: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 01:55:17,437: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 01:55:17,440: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[4cd6fca4-f480-456c-a9b3-edd280105cf4] succeeded in 0.01714487501885742s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 03:11:55,543: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[6575bdb8-d204-455f-8d0d-d37cb479a335] received
+[2025-12-24 03:11:55,552: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 03:11:55,564: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 03:11:55,564: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 03:11:55,568: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[6575bdb8-d204-455f-8d0d-d37cb479a335] succeeded in 0.019160166004439816s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 03:54:11,186: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[d7d0b43b-7110-4c1b-a63d-50cadbb459e6] received
+[2025-12-24 03:54:11,199: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 03:54:11,211: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 03:54:11,211: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 03:54:11,213: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[d7d0b43b-7110-4c1b-a63d-50cadbb459e6] succeeded in 0.020437208004295826s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 05:22:59,522: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[f8fd12fa-fb94-449b-9ca2-138bb9f041e1] received
+[2025-12-24 05:22:59,531: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 05:22:59,542: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 05:22:59,543: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 05:22:59,544: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[f8fd12fa-fb94-449b-9ca2-138bb9f041e1] succeeded in 0.01775249998900108s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 06:57:03,834: INFO/MainProcess] Task celery_tasks.fine_tune_coin[e3ac1491-0dcc-419b-84c4-31d72cd83dfd] received
+[2025-12-24 06:57:03,840: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[7915d42d-ed49-480e-abfa-649a90b4de10] received
+[2025-12-24 06:57:03,842: INFO/MainProcess] Task celery_tasks.fine_tune_coin[5d82ee2c-4687-4d23-a9a7-b2c7bf41ce28] received
+[2025-12-24 06:57:03,845: INFO/MainProcess] Task celery_tasks.fine_tune_coin[fe42e0fa-8e41-45e2-9e66-07867b89065e] received
+[2025-12-24 06:57:03,846: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-24 06:57:03,848: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-24 06:57:03,854: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-24 06:57:03,864: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-24 06:57:03,865: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-24 06:57:03,871: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[7915d42d-ed49-480e-abfa-649a90b4de10] succeeded in 0.023146834020735696s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 06:57:03,983: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-24 06:57:03,992: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-24 06:57:03,985: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-24 06:57:03,996: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-24 06:57:05,591: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-24 06:57:05,653: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-24 06:57:05,696: INFO/ForkPoolWorker-3] Fetched 168 rows for ethereum
+[2025-12-24 06:57:09,135: INFO/ForkPoolWorker-8] ✅ bitcoin/1h: MAE 0.0852 → 0.0832 (improved by 0.0019)
+[2025-12-24 06:57:10,127: INFO/ForkPoolWorker-2] ✅ binancecoin/1h: MAE 0.1556 → 0.1554 (improved by 0.0002)
+[2025-12-24 06:57:10,600: INFO/ForkPoolWorker-3] ⚠️ ethereum/1h: MAE 0.0080 → 0.0199 (not enough improvement)
+[2025-12-24 06:57:12,593: INFO/ForkPoolWorker-8] ✅ bitcoin/24h: MAE 0.1134 → 0.1036 (improved by 0.0098)
+[2025-12-24 06:57:12,593: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'success', 'old_mae': 0.08516383916139603, 'new_mae': 0.0832306519150734, 'improvement': 0.0019331872463226318}, '24h': {'status': 'success', 'old_mae': 0.11338184028863907, 'new_mae': 0.10362279415130615, 'improvement': 0.009759046137332916}}
+[2025-12-24 06:57:12,594: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[e3ac1491-0dcc-419b-84c4-31d72cd83dfd] succeeded in 8.753769417002331s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.08516383916139603, 'new_mae': 0.0832306519150734, 'improvement': 0.0019331872463226318}, '24h': {'status': 'success', 'old_mae': 0.11338184028863907, 'new_mae': 0.10362279415130615, 'improvement': 0.009759046137332916}}}
+[2025-12-24 06:57:13,168: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1596 → 0.1694 (not enough improvement)
+[2025-12-24 06:57:13,169: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'success', 'old_mae': 0.15558478236198425, 'new_mae': 0.15535137057304382, 'improvement': 0.0002334117889404297}, '24h': {'status': 'no_improvement', 'old_mae': 0.15958291292190552, 'new_mae': 0.1694338619709015, 'improvement': -0.009850949048995972}}
+[2025-12-24 06:57:13,174: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[5d82ee2c-4687-4d23-a9a7-b2c7bf41ce28] succeeded in 9.269325458008097s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.15558478236198425, 'new_mae': 0.15535137057304382, 'improvement': 0.0002334117889404297}, '24h': {'status': 'no_improvement', 'old_mae': 0.15958291292190552, 'new_mae': 0.1694338619709015, 'improvement': -0.009850949048995972}}}
+[2025-12-24 06:57:13,509: INFO/ForkPoolWorker-3] ✅ ethereum/24h: MAE 0.0205 → 0.0142 (improved by 0.0063)
+[2025-12-24 06:57:13,510: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'1h': {'status': 'no_improvement', 'old_mae': 0.008036662824451923, 'new_mae': 0.019899575039744377, 'improvement': -0.011862912215292454}, '24h': {'status': 'success', 'old_mae': 0.020495304837822914, 'new_mae': 0.014182287268340588, 'improvement': 0.0063130175694823265}}
+[2025-12-24 06:57:13,512: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[fe42e0fa-8e41-45e2-9e66-07867b89065e] succeeded in 9.588013832981233s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.008036662824451923, 'new_mae': 0.019899575039744377, 'improvement': -0.011862912215292454}, '24h': {'status': 'success', 'old_mae': 0.020495304837822914, 'new_mae': 0.014182287268340588, 'improvement': 0.0063130175694823265}}}
+[2025-12-24 07:16:37,562: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[357de1f3-0699-46ec-842f-a85102f550bc] received
+[2025-12-24 07:16:37,573: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 07:16:37,585: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 07:16:37,586: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 07:16:37,588: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[357de1f3-0699-46ec-842f-a85102f550bc] succeeded in 0.018760874983854592s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 07:40:54,300: INFO/MainProcess] Task celery_tasks.fine_tune_coin[e8bbccef-19e8-41f3-8bb2-19022166320b] received
+[2025-12-24 07:40:54,304: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[2d2fef93-c204-45ef-b45d-48ab1a83e6ed] received
+[2025-12-24 07:40:54,313: INFO/ForkPoolWorker-8] Starting fine-tuning task for solana
+[2025-12-24 07:40:54,315: INFO/ForkPoolWorker-8] Starting fine-tuning for solana
+[2025-12-24 07:40:54,315: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-24 07:40:54,326: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-24 07:40:54,327: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-24 07:40:54,334: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[2d2fef93-c204-45ef-b45d-48ab1a83e6ed] succeeded in 0.022703541995724663s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 07:40:55,240: INFO/ForkPoolWorker-8] Fetched 168 rows for solana
+[2025-12-24 07:40:58,218: INFO/ForkPoolWorker-8] ✅ solana/1h: MAE 0.0053 → 0.0048 (improved by 0.0005)
+[2025-12-24 07:40:58,644: WARNING/ForkPoolWorker-8] 5 out of the last 17 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x1215f7b00> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-24 07:41:00,506: WARNING/ForkPoolWorker-8] 6 out of the last 18 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x1215f7560> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-24 07:41:00,795: INFO/ForkPoolWorker-8] ⚠️ solana/24h: MAE 0.0168 → 0.0172 (not enough improvement)
+[2025-12-24 07:41:00,795: INFO/ForkPoolWorker-8] Fine-tuning completed for solana: {'1h': {'status': 'success', 'old_mae': 0.005303052719682455, 'new_mae': 0.004849627614021301, 'improvement': 0.0004534251056611538}, '24h': {'status': 'no_improvement', 'old_mae': 0.016782114282250404, 'new_mae': 0.017189402133226395, 'improvement': -0.0004072878509759903}}
+[2025-12-24 07:41:00,796: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[e8bbccef-19e8-41f3-8bb2-19022166320b] succeeded in 6.491204624995589s: {'coin': 'solana', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.005303052719682455, 'new_mae': 0.004849627614021301, 'improvement': 0.0004534251056611538}, '24h': {'status': 'no_improvement', 'old_mae': 0.016782114282250404, 'new_mae': 0.017189402133226395, 'improvement': -0.0004072878509759903}}}
+[2025-12-24 08:25:24,264: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[7f07f0b6-ceb4-491b-b17b-bd830074de87] received
+[2025-12-24 08:25:24,268: INFO/MainProcess] Task celery_tasks.fine_tune_coin[99e714fe-fc33-41b7-a0b5-f111a72c788b] received
+[2025-12-24 08:25:24,280: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 08:25:24,281: INFO/ForkPoolWorker-1] Starting fine-tuning task for cardano
+[2025-12-24 08:25:24,283: INFO/ForkPoolWorker-1] Starting fine-tuning for cardano
+[2025-12-24 08:25:24,291: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 08:25:24,292: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 08:25:24,294: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[7f07f0b6-ceb4-491b-b17b-bd830074de87] succeeded in 0.02293879201170057s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 08:25:26,090: INFO/ForkPoolWorker-1] Fetched 168 rows for cardano
+[2025-12-24 08:25:29,082: INFO/ForkPoolWorker-1] ⚠️ cardano/1h: MAE 0.0016 → 0.0038 (not enough improvement)
+[2025-12-24 08:25:29,524: WARNING/ForkPoolWorker-1] 5 out of the last 17 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x12166bb00> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-24 08:25:31,376: WARNING/ForkPoolWorker-1] 6 out of the last 18 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x12166b560> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-24 08:25:31,656: INFO/ForkPoolWorker-1] ⚠️ cardano/24h: MAE 0.0013 → 0.0030 (not enough improvement)
+[2025-12-24 08:25:31,658: INFO/ForkPoolWorker-1] Fine-tuning completed for cardano: {'1h': {'status': 'no_improvement', 'old_mae': 0.0016359599540010095, 'new_mae': 0.0038335230201482773, 'improvement': -0.002197563066147268}, '24h': {'status': 'no_improvement', 'old_mae': 0.001301272539421916, 'new_mae': 0.0029745555948466063, 'improvement': -0.0016732830554246902}}
+[2025-12-24 08:25:31,661: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[99e714fe-fc33-41b7-a0b5-f111a72c788b] succeeded in 7.389373792015249s: {'coin': 'cardano', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.0016359599540010095, 'new_mae': 0.0038335230201482773, 'improvement': -0.002197563066147268}, '24h': {'status': 'no_improvement', 'old_mae': 0.001301272539421916, 'new_mae': 0.0029745555948466063, 'improvement': -0.0016732830554246902}}}
+[2025-12-24 09:05:47,359: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[549e3deb-5870-42c9-9c23-2cb4af0e16af] received
+[2025-12-24 09:05:47,368: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 09:05:47,380: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 09:05:47,380: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 09:05:47,382: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[549e3deb-5870-42c9-9c23-2cb4af0e16af] succeeded in 0.017122707999078557s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 09:15:00,011: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[18de879c-62c6-4a02-be35-f1bd38c4054b] received
+[2025-12-24 09:15:00,032: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 09:15:00,041: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 09:15:00,041: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 09:15:00,043: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[18de879c-62c6-4a02-be35-f1bd38c4054b] succeeded in 0.023830874997656792s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 09:54:01,078: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[75b32846-e644-4172-818d-321ebb13b7da] received
+[2025-12-24 09:54:01,092: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 09:54:01,104: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 09:54:01,104: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 09:54:01,106: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[75b32846-e644-4172-818d-321ebb13b7da] succeeded in 0.022077042027376592s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 11:03:50,620: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[07c125e9-425b-4e99-85b9-f5b3f706a08f] received
+[2025-12-24 11:03:50,634: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 11:03:50,648: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 11:03:50,648: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 11:03:50,650: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[07c125e9-425b-4e99-85b9-f5b3f706a08f] succeeded in 0.021932874980848283s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 12:04:52,204: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[2630df5f-4799-4208-9fd5-758796a0fb53] received
+[2025-12-24 12:04:52,208: INFO/MainProcess] Task celery_tasks.fine_tune_coin[cd3c3f25-ada0-4835-aebc-0d6e1c59757a] received
+[2025-12-24 12:04:52,209: INFO/MainProcess] Task celery_tasks.fine_tune_coin[df494481-0437-4d60-9dd7-e82c47825ab0] received
+[2025-12-24 12:04:52,219: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 12:04:52,228: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-24 12:04:52,228: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-24 12:04:52,229: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-24 12:04:52,230: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-24 12:04:52,239: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 12:04:52,239: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 12:04:52,241: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[2630df5f-4799-4208-9fd5-758796a0fb53] succeeded in 0.02965216600568965s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 12:04:53,991: INFO/ForkPoolWorker-1] Fetched 168 rows for bitcoin
+[2025-12-24 12:04:53,995: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-24 12:05:01,876: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1529 → 0.1531 (not enough improvement)
+[2025-12-24 12:05:02,015: INFO/ForkPoolWorker-1] ⚠️ bitcoin/1h: MAE 0.0823 → 0.0869 (not enough improvement)
+[2025-12-24 12:05:04,719: INFO/ForkPoolWorker-2] ✅ binancecoin/24h: MAE 0.1569 → 0.1566 (improved by 0.0002)
+[2025-12-24 12:05:04,719: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.1528509259223938, 'new_mae': 0.15312637388706207, 'improvement': -0.0002754479646682739}, '24h': {'status': 'success', 'old_mae': 0.15686456859111786, 'new_mae': 0.1566416174173355, 'improvement': 0.00022295117378234863}}
+[2025-12-24 12:05:04,721: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[df494481-0437-4d60-9dd7-e82c47825ab0] succeeded in 8.366826416982803s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.1528509259223938, 'new_mae': 0.15312637388706207, 'improvement': -0.0002754479646682739}, '24h': {'status': 'success', 'old_mae': 0.15686456859111786, 'new_mae': 0.1566416174173355, 'improvement': 0.00022295117378234863}}}
+[2025-12-24 12:05:04,878: INFO/ForkPoolWorker-1] ✅ bitcoin/24h: MAE 0.1016 → 0.0931 (improved by 0.0085)
+[2025-12-24 12:05:04,879: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.08233696967363358, 'new_mae': 0.08691307157278061, 'improvement': -0.004576101899147034}, '24h': {'status': 'success', 'old_mae': 0.10162560641765594, 'new_mae': 0.09307698905467987, 'improvement': 0.008548617362976074}}
+[2025-12-24 12:05:04,880: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[cd3c3f25-ada0-4835-aebc-0d6e1c59757a] succeeded in 8.52549291701871s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.08233696967363358, 'new_mae': 0.08691307157278061, 'improvement': -0.004576101899147034}, '24h': {'status': 'success', 'old_mae': 0.10162560641765594, 'new_mae': 0.09307698905467987, 'improvement': 0.008548617362976074}}}
+[2025-12-24 13:20:54,232: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[8222ad5f-2a2d-41ca-9d15-31cf0b81a2d9] received
+[2025-12-24 13:20:54,244: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 13:20:54,259: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 13:20:54,259: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 13:20:54,262: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[8222ad5f-2a2d-41ca-9d15-31cf0b81a2d9] succeeded in 0.02340216701850295s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 14:16:19,426: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[79fdf2ff-a0ea-45d7-b39c-5749cbb1939d] received
+[2025-12-24 14:16:19,436: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 14:16:19,453: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 14:16:19,453: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 14:16:19,457: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[79fdf2ff-a0ea-45d7-b39c-5749cbb1939d] succeeded in 0.024891333014238626s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 15:56:47,360: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[744dcf62-5162-4a44-8ce6-6d6b06481eca] received
+[2025-12-24 15:56:47,372: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 15:56:47,386: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 15:56:47,386: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 15:56:47,390: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[744dcf62-5162-4a44-8ce6-6d6b06481eca] succeeded in 0.022878707997733727s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 17:21:16,994: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[d6085f3b-802a-4abb-9e4e-fffc4e4e5a97] received
+[2025-12-24 17:21:17,004: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 17:21:17,017: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 17:21:17,017: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 17:21:17,027: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[d6085f3b-802a-4abb-9e4e-fffc4e4e5a97] succeeded in 0.026952624990371987s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 18:18:28,897: INFO/MainProcess] Task celery_tasks.fine_tune_coin[6053fc70-02a3-43b7-be91-8e64e53b0cf6] received
+[2025-12-24 18:18:28,910: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[16fa3abd-89cd-497a-93d1-dce1e6d60c6a] received
+[2025-12-24 18:18:28,911: INFO/MainProcess] Task celery_tasks.fine_tune_coin[2cc0c84b-3891-43f0-adb0-574e58e88830] received
+[2025-12-24 18:18:28,912: INFO/MainProcess] Task celery_tasks.fine_tune_coin[4852c846-356a-43ae-85bb-68c869c3d661] received
+[2025-12-24 18:18:28,911: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-24 18:18:28,914: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-24 18:18:28,997: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-24 18:18:29,000: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-24 18:18:28,998: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-24 18:18:29,013: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-24 18:18:29,013: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-24 18:18:29,014: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[16fa3abd-89cd-497a-93d1-dce1e6d60c6a] succeeded in 0.09272754099220037s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 18:18:29,014: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-24 18:18:29,024: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-24 18:18:30,449: ERROR/ForkPoolWorker-2] Error fetching data for binancecoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BNBUSDT&interval=1h&startTime=1765955909001&endTime=1766560709001&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-24 18:18:30,450: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-24 18:18:30,453: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[2cc0c84b-3891-43f0-adb0-574e58e88830] succeeded in 1.5362079170008656s: {'coin': 'binancecoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-24 18:18:30,453: ERROR/ForkPoolWorker-3] Error fetching data for ethereum: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=ETHUSDT&interval=1h&startTime=1765955909027&endTime=1766560709027&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-24 18:18:30,454: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-24 18:18:30,458: ERROR/ForkPoolWorker-8] Error fetching data for bitcoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1765955908916&endTime=1766560708916&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-24 18:18:30,461: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-24 18:18:30,461: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[4852c846-356a-43ae-85bb-68c869c3d661] succeeded in 1.480556541995611s: {'coin': 'ethereum', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-24 18:18:30,467: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[6053fc70-02a3-43b7-be91-8e64e53b0cf6] succeeded in 1.561951500014402s: {'coin': 'bitcoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-24 19:44:33,480: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[ed2244f9-e5e4-489d-a1a4-60ebcdf5be03] received
+[2025-12-24 19:44:33,488: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 19:44:33,492: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 19:44:33,493: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 19:44:33,495: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[ed2244f9-e5e4-489d-a1a4-60ebcdf5be03] succeeded in 0.01086529198801145s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 20:00:53,444: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[e1c63f98-322a-4f8f-ab5a-07b92d4f8d68] received
+[2025-12-24 20:00:53,448: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 20:00:53,457: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 20:00:53,457: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 20:00:53,459: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[e1c63f98-322a-4f8f-ab5a-07b92d4f8d68] succeeded in 0.010932750010397285s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 21:13:15,714: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[fd41a036-ada0-4bde-b818-e9b25f82ed4e] received
+[2025-12-24 21:13:15,723: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 21:13:15,737: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 21:13:15,737: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 21:13:15,739: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[fd41a036-ada0-4bde-b818-e9b25f82ed4e] succeeded in 0.01960079200216569s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 21:30:20,351: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[09b70a80-8b2a-4af6-94e7-a122e586e5fe] received
+[2025-12-24 21:30:20,355: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 21:30:20,361: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 21:30:20,362: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 21:30:20,364: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[09b70a80-8b2a-4af6-94e7-a122e586e5fe] succeeded in 0.011029874993255362s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 21:56:04,195: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[234a02a0-088a-4e8c-9e5b-c3f3137c7e62] received
+[2025-12-24 21:56:04,201: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 21:56:04,207: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 21:56:04,208: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 21:56:04,210: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[234a02a0-088a-4e8c-9e5b-c3f3137c7e62] succeeded in 0.01128937499015592s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 22:39:18,167: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[0cff1f70-f8e0-4ac1-bd9f-cced71deb299] received
+[2025-12-24 22:39:18,176: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 22:39:18,187: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 22:39:18,188: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 22:39:18,190: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[0cff1f70-f8e0-4ac1-bd9f-cced71deb299] succeeded in 0.01703120899037458s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 22:45:00,013: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[431839e3-732a-4280-80cc-34b3bc9ff709] received
+[2025-12-24 22:45:00,022: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 22:45:00,033: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 22:45:00,034: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 22:45:00,037: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[431839e3-732a-4280-80cc-34b3bc9ff709] succeeded in 0.01852658300776966s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-24 23:00:00,015: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[cd201306-6d1e-439b-9ea3-eab8d3e23443] received
+[2025-12-24 23:00:00,054: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-24 23:00:00,071: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-24 23:00:00,071: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-24 23:00:00,075: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[cd201306-6d1e-439b-9ea3-eab8d3e23443] succeeded in 0.053588249982567504s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 03:03:16,078: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[e816f0d4-66d6-4edf-a648-2166e1d3eb00] received
+[2025-12-25 03:03:16,125: INFO/MainProcess] Task celery_tasks.fine_tune_coin[4814367d-cefd-4b8a-b6ba-95b7366c0d40] received
+[2025-12-25 03:03:16,148: INFO/MainProcess] Task celery_tasks.fine_tune_coin[a9a8d111-9d12-42af-bd0e-251fca109b22] received
+[2025-12-25 03:03:16,173: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 03:03:16,196: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 03:03:16,196: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 03:03:16,197: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-25 03:03:16,203: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[e816f0d4-66d6-4edf-a648-2166e1d3eb00] succeeded in 0.09943637502146885s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 03:03:16,204: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-25 03:03:16,201: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-25 03:03:16,209: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-25 03:03:17,419: INFO/ForkPoolWorker-1] Fetched 168 rows for bitcoin
+[2025-12-25 03:03:17,420: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-25 03:03:20,962: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1483 → 0.1677 (not enough improvement)
+[2025-12-25 03:03:20,972: INFO/ForkPoolWorker-1] ⚠️ bitcoin/1h: MAE 0.0817 → 0.0855 (not enough improvement)
+[2025-12-25 03:03:23,896: INFO/ForkPoolWorker-1] ✅ bitcoin/24h: MAE 0.0901 → 0.0805 (improved by 0.0096)
+[2025-12-25 03:03:23,897: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.08174362033605576, 'new_mae': 0.0854768231511116, 'improvement': -0.003733202815055847}, '24h': {'status': 'success', 'old_mae': 0.09008338302373886, 'new_mae': 0.08045732975006104, 'improvement': 0.009626053273677826}}
+[2025-12-25 03:03:23,899: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[4814367d-cefd-4b8a-b6ba-95b7366c0d40] succeeded in 7.733947000000626s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.08174362033605576, 'new_mae': 0.0854768231511116, 'improvement': -0.003733202815055847}, '24h': {'status': 'success', 'old_mae': 0.09008338302373886, 'new_mae': 0.08045732975006104, 'improvement': 0.009626053273677826}}}
+[2025-12-25 03:03:24,745: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1525 → 0.1645 (not enough improvement)
+[2025-12-25 03:03:24,746: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.14830724895000458, 'new_mae': 0.1677456498146057, 'improvement': -0.019438400864601135}, '24h': {'status': 'no_improvement', 'old_mae': 0.1524539440870285, 'new_mae': 0.1644713580608368, 'improvement': -0.012017413973808289}}
+[2025-12-25 03:03:24,747: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[a9a8d111-9d12-42af-bd0e-251fca109b22] succeeded in 8.570766791992355s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.14830724895000458, 'new_mae': 0.1677456498146057, 'improvement': -0.019438400864601135}, '24h': {'status': 'no_improvement', 'old_mae': 0.1524539440870285, 'new_mae': 0.1644713580608368, 'improvement': -0.012017413973808289}}}
+[2025-12-25 03:23:47,598: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[27253c6c-f0b7-4adf-ad44-fce3dcc0c3e4] received
+[2025-12-25 03:23:47,610: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 03:23:47,624: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 03:23:47,625: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 03:23:47,628: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[27253c6c-f0b7-4adf-ad44-fce3dcc0c3e4] succeeded in 0.021506624994799495s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 03:57:13,886: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[20df34d6-24ca-45b0-b549-00a0eadea6bb] received
+[2025-12-25 03:57:13,895: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 03:57:13,905: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 03:57:13,906: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 03:57:13,908: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[20df34d6-24ca-45b0-b549-00a0eadea6bb] succeeded in 0.016042457980802283s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 04:00:00,008: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[6615c1ee-6f08-4c85-a52a-8ba4f8ae7c88] received
+[2025-12-25 04:00:00,011: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 04:00:00,021: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 04:00:00,022: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 04:00:00,026: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[6615c1ee-6f08-4c85-a52a-8ba4f8ae7c88] succeeded in 0.015547916991636157s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 04:15:00,007: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[66c7403c-0837-49e2-8840-33633617516b] received
+[2025-12-25 04:15:00,012: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 04:15:00,015: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 04:15:00,017: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 04:15:00,020: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[66c7403c-0837-49e2-8840-33633617516b] succeeded in 0.009598375007044524s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 04:30:00,010: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[c0bc5b18-4e21-44a6-9775-1db59851d9c1] received
+[2025-12-25 04:30:00,014: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 04:30:00,022: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 04:30:00,023: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 04:30:00,027: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[c0bc5b18-4e21-44a6-9775-1db59851d9c1] succeeded in 0.014656874991487712s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 04:45:00,008: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[91bf702c-4136-49b4-9bba-0196c0e4d6f3] received
+[2025-12-25 04:45:00,012: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 04:45:00,017: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 04:45:00,018: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 04:45:00,022: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[91bf702c-4136-49b4-9bba-0196c0e4d6f3] succeeded in 0.010776375012937933s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 05:00:00,009: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[bed511c7-73c7-4aa5-99dd-b70131d3c29f] received
+[2025-12-25 05:00:00,013: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 05:00:00,018: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 05:00:00,019: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 05:00:00,023: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[bed511c7-73c7-4aa5-99dd-b70131d3c29f] succeeded in 0.011222374974749982s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 05:15:00,010: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[9c3df5f7-f9e9-4405-809f-5adb217c66e9] received
+[2025-12-25 05:15:00,017: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 05:15:00,022: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 05:15:00,023: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 05:15:00,027: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[9c3df5f7-f9e9-4405-809f-5adb217c66e9] succeeded in 0.011980999988736585s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 05:30:00,015: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[c455e996-0a1a-4e9d-91fe-2ed0e4d779f1] received
+[2025-12-25 05:30:00,021: INFO/MainProcess] Task celery_tasks.fine_tune_coin[a21b6c84-b759-48d7-97e9-79c8f887050e] received
+[2025-12-25 05:30:00,030: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 05:30:00,036: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-25 05:30:00,039: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-25 05:30:00,044: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 05:30:00,045: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 05:30:00,046: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[c455e996-0a1a-4e9d-91fe-2ed0e4d779f1] succeeded in 0.021738416980952024s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 05:30:01,417: INFO/ForkPoolWorker-1] Fetched 168 rows for bitcoin
+[2025-12-25 05:30:05,512: INFO/ForkPoolWorker-1] ⚠️ bitcoin/1h: MAE 0.0819 → 0.0855 (not enough improvement)
+[2025-12-25 05:30:08,180: INFO/ForkPoolWorker-1] ✅ bitcoin/24h: MAE 0.0804 → 0.0700 (improved by 0.0104)
+[2025-12-25 05:30:08,180: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.08189529925584793, 'new_mae': 0.08545219898223877, 'improvement': -0.0035568997263908386}, '24h': {'status': 'success', 'old_mae': 0.08043131977319717, 'new_mae': 0.0700225979089737, 'improvement': 0.01040872186422348}}
+[2025-12-25 05:30:08,181: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[a21b6c84-b759-48d7-97e9-79c8f887050e] succeeded in 8.154036499996437s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.08189529925584793, 'new_mae': 0.08545219898223877, 'improvement': -0.0035568997263908386}, '24h': {'status': 'success', 'old_mae': 0.08043131977319717, 'new_mae': 0.0700225979089737, 'improvement': 0.01040872186422348}}}
+[2025-12-25 06:27:28,549: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[5078f463-7402-4eff-8bef-3c82cca8fbaf] received
+[2025-12-25 06:27:28,553: INFO/MainProcess] Task celery_tasks.fine_tune_coin[cfada682-5a58-4231-a165-377b4b5385c5] received
+[2025-12-25 06:27:28,555: INFO/MainProcess] Task celery_tasks.fine_tune_coin[5074645c-6bb0-4ddd-aded-3250487fba00] received
+[2025-12-25 06:27:28,562: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 06:27:28,564: INFO/ForkPoolWorker-1] Starting fine-tuning task for binancecoin
+[2025-12-25 06:27:28,566: INFO/ForkPoolWorker-1] Starting fine-tuning for binancecoin
+[2025-12-25 06:27:28,566: INFO/ForkPoolWorker-2] Starting fine-tuning task for ethereum
+[2025-12-25 06:27:28,567: INFO/ForkPoolWorker-2] Starting fine-tuning for ethereum
+[2025-12-25 06:27:28,568: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 06:27:28,569: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 06:27:28,572: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[5078f463-7402-4eff-8bef-3c82cca8fbaf] succeeded in 0.015832917008083314s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 06:27:29,527: INFO/ForkPoolWorker-2] Fetched 168 rows for ethereum
+[2025-12-25 06:27:29,785: INFO/ForkPoolWorker-1] Fetched 168 rows for binancecoin
+[2025-12-25 06:27:32,354: INFO/ForkPoolWorker-2] ⚠️ ethereum/1h: MAE 0.0062 → 0.0068 (not enough improvement)
+[2025-12-25 06:27:32,640: INFO/ForkPoolWorker-1] ⚠️ binancecoin/1h: MAE 0.1489 → 0.1682 (not enough improvement)
+[2025-12-25 06:27:35,095: INFO/ForkPoolWorker-2] ⚠️ ethereum/24h: MAE 0.0224 → 0.0538 (not enough improvement)
+[2025-12-25 06:27:35,096: INFO/ForkPoolWorker-2] Fine-tuning completed for ethereum: {'1h': {'status': 'no_improvement', 'old_mae': 0.006168539170175791, 'new_mae': 0.006832301616668701, 'improvement': -0.0006637624464929104}, '24h': {'status': 'no_improvement', 'old_mae': 0.02236567810177803, 'new_mae': 0.05383604019880295, 'improvement': -0.03147036209702492}}
+[2025-12-25 06:27:35,097: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[5074645c-6bb0-4ddd-aded-3250487fba00] succeeded in 6.536337792000268s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.006168539170175791, 'new_mae': 0.006832301616668701, 'improvement': -0.0006637624464929104}, '24h': {'status': 'no_improvement', 'old_mae': 0.02236567810177803, 'new_mae': 0.05383604019880295, 'improvement': -0.03147036209702492}}}
+[2025-12-25 06:27:35,418: INFO/ForkPoolWorker-1] ⚠️ binancecoin/24h: MAE 0.1528 → 0.1667 (not enough improvement)
+[2025-12-25 06:27:35,419: INFO/ForkPoolWorker-1] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.14885608851909637, 'new_mae': 0.168201744556427, 'improvement': -0.019345656037330627}, '24h': {'status': 'no_improvement', 'old_mae': 0.1527881622314453, 'new_mae': 0.16670960187911987, 'improvement': -0.01392143964767456}}
+[2025-12-25 06:27:35,420: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[cfada682-5a58-4231-a165-377b4b5385c5] succeeded in 6.861434958002064s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.14885608851909637, 'new_mae': 0.168201744556427, 'improvement': -0.019345656037330627}, '24h': {'status': 'no_improvement', 'old_mae': 0.1527881622314453, 'new_mae': 0.16670960187911987, 'improvement': -0.01392143964767456}}}
+[2025-12-25 06:45:20,817: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[72b80329-d7f9-4771-8297-29e2de258ea8] received
+[2025-12-25 06:45:20,824: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 06:45:20,830: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 06:45:20,831: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 06:45:20,834: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[72b80329-d7f9-4771-8297-29e2de258ea8] succeeded in 0.012712458003079519s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 08:01:50,425: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[143ee941-ee4c-421c-a3be-01e9f2c7a6fd] received
+[2025-12-25 08:01:50,428: INFO/MainProcess] Task celery_tasks.fine_tune_coin[bb512871-8583-4f73-96d2-a6d215ac5724] received
+[2025-12-25 08:01:50,430: INFO/MainProcess] Task celery_tasks.fine_tune_coin[55afb65c-619f-49d0-a68b-a9839a1e9c64] received
+[2025-12-25 08:01:50,439: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 08:01:50,441: INFO/ForkPoolWorker-1] Starting fine-tuning task for solana
+[2025-12-25 08:01:50,443: INFO/ForkPoolWorker-1] Starting fine-tuning for solana
+[2025-12-25 08:01:50,443: INFO/ForkPoolWorker-2] Starting fine-tuning task for cardano
+[2025-12-25 08:01:50,445: INFO/ForkPoolWorker-2] Starting fine-tuning for cardano
+[2025-12-25 08:01:50,446: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 08:01:50,447: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 08:01:50,450: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[143ee941-ee4c-421c-a3be-01e9f2c7a6fd] succeeded in 0.01782712500425987s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 08:01:51,574: INFO/ForkPoolWorker-1] Fetched 168 rows for solana
+[2025-12-25 08:01:51,581: INFO/ForkPoolWorker-2] Fetched 168 rows for cardano
+[2025-12-25 08:01:54,389: INFO/ForkPoolWorker-1] ⚠️ solana/1h: MAE 0.0080 → 0.0176 (not enough improvement)
+[2025-12-25 08:01:54,737: INFO/ForkPoolWorker-2] ⚠️ cardano/1h: MAE 0.0027 → 0.0051 (not enough improvement)
+[2025-12-25 08:01:55,216: WARNING/ForkPoolWorker-2] 5 out of the last 13 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x1215bd3a0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-25 08:01:57,141: WARNING/ForkPoolWorker-2] 6 out of the last 14 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x121393a60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[2025-12-25 08:01:57,458: INFO/ForkPoolWorker-2] ✅ cardano/24h: MAE 0.0034 → 0.0032 (improved by 0.0002)
+[2025-12-25 08:01:57,459: INFO/ForkPoolWorker-2] Fine-tuning completed for cardano: {'1h': {'status': 'no_improvement', 'old_mae': 0.002692293142899871, 'new_mae': 0.005123298615217209, 'improvement': -0.002431005472317338}, '24h': {'status': 'success', 'old_mae': 0.0034155589528381824, 'new_mae': 0.003236571792513132, 'improvement': 0.00017898716032505035}}
+[2025-12-25 08:01:57,460: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[55afb65c-619f-49d0-a68b-a9839a1e9c64] succeeded in 7.024242040992249s: {'coin': 'cardano', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.002692293142899871, 'new_mae': 0.005123298615217209, 'improvement': -0.002431005472317338}, '24h': {'status': 'success', 'old_mae': 0.0034155589528381824, 'new_mae': 0.003236571792513132, 'improvement': 0.00017898716032505035}}}
+[2025-12-25 08:01:57,589: INFO/ForkPoolWorker-1] ✅ solana/24h: MAE 0.0173 → 0.0056 (improved by 0.0117)
+[2025-12-25 08:01:57,589: INFO/ForkPoolWorker-1] Fine-tuning completed for solana: {'1h': {'status': 'no_improvement', 'old_mae': 0.008048169314861298, 'new_mae': 0.017628641799092293, 'improvement': -0.009580472484230995}, '24h': {'status': 'success', 'old_mae': 0.017261486500501633, 'new_mae': 0.005552047397941351, 'improvement': 0.011709439102560282}}
+[2025-12-25 08:01:57,590: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[bb512871-8583-4f73-96d2-a6d215ac5724] succeeded in 7.156761167017976s: {'coin': 'solana', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.008048169314861298, 'new_mae': 0.017628641799092293, 'improvement': -0.009580472484230995}, '24h': {'status': 'success', 'old_mae': 0.017261486500501633, 'new_mae': 0.005552047397941351, 'improvement': 0.011709439102560282}}}
+[2025-12-25 09:10:52,891: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[c085719c-3a86-4dc2-b3fc-5e7511d33114] received
+[2025-12-25 09:10:52,902: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 09:10:52,910: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 09:10:52,911: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 09:10:52,915: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[c085719c-3a86-4dc2-b3fc-5e7511d33114] succeeded in 0.01712108400533907s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 10:10:21,369: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[3b020070-7a9b-4244-a1f3-90202e503880] received
+[2025-12-25 10:10:21,372: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 10:10:21,377: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 10:10:21,378: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 10:10:21,381: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[3b020070-7a9b-4244-a1f3-90202e503880] succeeded in 0.010640500026056543s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 11:22:25,909: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[8932dc88-d032-4e53-b4f8-dd7c58fa852d] received
+[2025-12-25 11:22:25,919: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 11:22:25,926: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 11:22:25,927: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 11:22:25,930: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[8932dc88-d032-4e53-b4f8-dd7c58fa852d] succeeded in 0.015868290996877477s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 12:37:30,365: INFO/MainProcess] Task celery_tasks.fine_tune_coin[34b7ff46-d996-4716-981b-cf306be21199] received
+[2025-12-25 12:37:30,368: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[3cfcda1e-98ad-4f5f-8d9d-717d235b080d] received
+[2025-12-25 12:37:30,370: INFO/MainProcess] Task celery_tasks.fine_tune_coin[fa24f3e5-cc96-4251-af48-524c78e7001b] received
+[2025-12-25 12:37:30,371: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-25 12:37:30,373: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-25 12:37:30,384: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-25 12:37:30,390: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-25 12:37:30,393: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-25 12:37:30,395: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-25 12:37:30,396: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-25 12:37:30,398: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[3cfcda1e-98ad-4f5f-8d9d-717d235b080d] succeeded in 0.02374087498174049s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 12:37:31,404: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-25 12:37:31,619: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-25 12:37:34,313: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1495 → 0.1529 (not enough improvement)
+[2025-12-25 12:37:36,491: INFO/ForkPoolWorker-8] ⚠️ bitcoin/1h: MAE 0.0826 → 0.0888 (not enough improvement)
+[2025-12-25 12:37:37,212: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1545 → 0.1788 (not enough improvement)
+[2025-12-25 12:37:37,213: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.1495329588651657, 'new_mae': 0.15289248526096344, 'improvement': -0.0033595263957977295}, '24h': {'status': 'no_improvement', 'old_mae': 0.1544887125492096, 'new_mae': 0.17876750230789185, 'improvement': -0.02427878975868225}}
+[2025-12-25 12:37:37,214: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[fa24f3e5-cc96-4251-af48-524c78e7001b] succeeded in 6.8355244169943035s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.1495329588651657, 'new_mae': 0.15289248526096344, 'improvement': -0.0033595263957977295}, '24h': {'status': 'no_improvement', 'old_mae': 0.1544887125492096, 'new_mae': 0.17876750230789185, 'improvement': -0.02427878975868225}}}
+[2025-12-25 12:37:39,213: INFO/ForkPoolWorker-8] ✅ bitcoin/24h: MAE 0.0715 → 0.0619 (improved by 0.0096)
+[2025-12-25 12:37:39,214: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.08259546756744385, 'new_mae': 0.08881181478500366, 'improvement': -0.0062163472175598145}, '24h': {'status': 'success', 'old_mae': 0.0715060830116272, 'new_mae': 0.06193901225924492, 'improvement': 0.009567070752382278}}
+[2025-12-25 12:37:39,214: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[34b7ff46-d996-4716-981b-cf306be21199] succeeded in 8.845465499995044s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.08259546756744385, 'new_mae': 0.08881181478500366, 'improvement': -0.0062163472175598145}, '24h': {'status': 'success', 'old_mae': 0.0715060830116272, 'new_mae': 0.06193901225924492, 'improvement': 0.009567070752382278}}}
+[2025-12-25 13:50:11,342: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[3e7626a0-18a0-4b00-a8aa-8374476056df] received
+[2025-12-25 13:50:11,360: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 13:50:11,371: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 13:50:11,372: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 13:50:11,374: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[3e7626a0-18a0-4b00-a8aa-8374476056df] succeeded in 0.023267292010132223s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 14:47:38,490: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[9f24f6c5-a5c4-45ea-8c15-db28c2e46e49] received
+[2025-12-25 14:47:38,504: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 14:47:38,512: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 14:47:38,512: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 14:47:38,514: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[9f24f6c5-a5c4-45ea-8c15-db28c2e46e49] succeeded in 0.0160640410031192s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 15:58:45,858: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[7ec19146-61be-4bc1-b7fc-b23ed64bcc76] received
+[2025-12-25 15:58:45,871: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 15:58:45,879: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 15:58:45,880: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 15:58:45,882: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[7ec19146-61be-4bc1-b7fc-b23ed64bcc76] succeeded in 0.01703849999466911s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 16:14:54,869: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[7a18c595-f5a0-4c6b-a81f-f587d18116fd] received
+[2025-12-25 16:14:54,873: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 16:14:54,880: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 16:14:54,881: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 16:14:54,883: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[7a18c595-f5a0-4c6b-a81f-f587d18116fd] succeeded in 0.01103029100340791s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 16:15:00,007: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[408689a3-a634-4cdc-8585-229992f4d582] received
+[2025-12-25 16:15:00,010: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 16:15:00,013: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 16:15:00,014: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 16:15:00,016: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[408689a3-a634-4cdc-8585-229992f4d582] succeeded in 0.007624875026522204s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 17:15:40,404: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[68b8c590-6f91-4d1e-8a86-14858412fe0e] received
+[2025-12-25 17:15:40,432: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 17:15:40,444: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 17:15:40,446: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 17:15:40,449: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[68b8c590-6f91-4d1e-8a86-14858412fe0e] succeeded in 0.037610124971251935s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 18:17:22,200: INFO/MainProcess] Task celery_tasks.fine_tune_coin[75086955-6a44-4190-8561-cc7dddd33bba] received
+[2025-12-25 18:17:22,205: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[1318de0d-b2a7-4c25-a30c-d502cff73293] received
+[2025-12-25 18:17:22,207: INFO/MainProcess] Task celery_tasks.fine_tune_coin[35c3fac6-46b2-499a-81dc-5caa51c086d8] received
+[2025-12-25 18:17:22,209: INFO/MainProcess] Task celery_tasks.fine_tune_coin[e8b4c9f0-4706-448e-83b2-0cbdfb7bbb52] received
+[2025-12-25 18:17:22,211: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-25 18:17:22,214: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-25 18:17:22,217: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-25 18:17:22,217: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-25 18:17:22,219: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-25 18:17:22,224: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-25 18:17:22,225: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-25 18:17:22,227: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[1318de0d-b2a7-4c25-a30c-d502cff73293] succeeded in 0.01610554102808237s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 18:17:22,247: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-25 18:17:22,252: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-25 18:34:19,220: ERROR/ForkPoolWorker-2] Error fetching data for binancecoin: HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out. (read timeout=10)
+[2025-12-25 18:34:19,220: ERROR/ForkPoolWorker-8] Error fetching data for bitcoin: HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out. (read timeout=10)
+[2025-12-25 18:34:19,221: ERROR/ForkPoolWorker-3] Error fetching data for ethereum: HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out. (read timeout=10)
+[2025-12-25 18:34:19,222: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-25 18:34:19,222: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-25 18:34:19,223: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-25 18:34:19,227: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[35c3fac6-46b2-499a-81dc-5caa51c086d8] succeeded in 15.210616083990317s: {'coin': 'binancecoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-25 18:34:19,227: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[75086955-6a44-4190-8561-cc7dddd33bba] succeeded in 15.215536875010002s: {'coin': 'bitcoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-25 18:34:19,228: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[e8b4c9f0-4706-448e-83b2-0cbdfb7bbb52] succeeded in 15.189039040997159s: {'coin': 'ethereum', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-25 19:35:44,883: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[309f54c8-490e-4dc4-9c81-0c26a364802d] received
+[2025-12-25 19:35:44,896: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 19:35:44,902: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 19:35:44,903: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 19:35:44,907: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[309f54c8-490e-4dc4-9c81-0c26a364802d] succeeded in 0.014819499978329986s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 20:40:35,236: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[f81d19cd-8884-433c-9e57-129aa2c3e52a] received
+[2025-12-25 20:40:35,248: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 20:40:35,254: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 20:40:35,254: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 20:40:35,257: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[f81d19cd-8884-433c-9e57-129aa2c3e52a] succeeded in 0.014370832999702543s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 21:36:59,737: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[542ee8a8-f574-411d-8d3a-72833bbd53e7] received
+[2025-12-25 21:36:59,749: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 21:36:59,755: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 21:36:59,755: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 21:36:59,757: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[542ee8a8-f574-411d-8d3a-72833bbd53e7] succeeded in 0.013490999990608543s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 21:45:00,016: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[bdccc184-038f-49ac-91ad-e022aad322f7] received
+[2025-12-25 21:45:00,029: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 21:45:00,037: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 21:45:00,037: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 21:45:00,039: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[bdccc184-038f-49ac-91ad-e022aad322f7] succeeded in 0.015863207983784378s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 22:13:08,639: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[f80722dd-4a33-469c-93f3-d4f52fc4eb91] received
+[2025-12-25 22:13:08,649: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 22:13:08,658: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 22:13:08,659: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 22:13:08,662: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[f80722dd-4a33-469c-93f3-d4f52fc4eb91] succeeded in 0.01725529204122722s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 22:20:39,883: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[be81c08b-e5f4-43af-b49b-d15dbd0821f8] received
+[2025-12-25 22:20:39,887: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 22:20:39,892: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 22:20:39,893: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 22:20:39,895: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[be81c08b-e5f4-43af-b49b-d15dbd0821f8] succeeded in 0.009643625002354383s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 22:36:06,071: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[d40a32f3-0752-4ecd-8273-7abcc6f45c0e] received
+[2025-12-25 22:36:06,082: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 22:36:06,097: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 22:36:06,097: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 22:36:06,099: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[d40a32f3-0752-4ecd-8273-7abcc6f45c0e] succeeded in 0.02301487501244992s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 23:24:16,329: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[b56184ba-4d59-4f25-b98f-4d0353c4a815] received
+[2025-12-25 23:24:16,346: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-25 23:24:16,363: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-25 23:24:16,365: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-25 23:24:16,414: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[b56184ba-4d59-4f25-b98f-4d0353c4a815] succeeded in 0.07697670796187595s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 23:41:21,389: INFO/MainProcess] Task celery_tasks.fine_tune_coin[15409bb0-7df8-4373-8cc6-a1441f01d151] received
+[2025-12-25 23:41:21,393: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[2cf5fcfa-b447-4b6c-b1e6-0cf79eb71534] received
+[2025-12-25 23:41:21,395: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-25 23:41:21,396: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-25 23:41:21,402: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-25 23:41:21,409: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-25 23:41:21,410: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-25 23:41:21,412: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[2cf5fcfa-b447-4b6c-b1e6-0cf79eb71534] succeeded in 0.015081249992363155s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 23:41:22,595: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-25 23:41:25,476: INFO/ForkPoolWorker-8] ⚠️ bitcoin/1h: MAE 0.0846 → 0.0906 (not enough improvement)
+[2025-12-25 23:41:28,144: INFO/ForkPoolWorker-8] ✅ bitcoin/24h: MAE 0.0655 → 0.0572 (improved by 0.0083)
+[2025-12-25 23:41:28,144: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.08462367206811905, 'new_mae': 0.09060287475585938, 'improvement': -0.005979202687740326}, '24h': {'status': 'success', 'old_mae': 0.06550236791372299, 'new_mae': 0.05715464428067207, 'improvement': 0.008347723633050919}}
+[2025-12-25 23:41:28,145: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[15409bb0-7df8-4373-8cc6-a1441f01d151] succeeded in 6.751919667003676s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.08462367206811905, 'new_mae': 0.09060287475585938, 'improvement': -0.005979202687740326}, '24h': {'status': 'success', 'old_mae': 0.06550236791372299, 'new_mae': 0.05715464428067207, 'improvement': 0.008347723633050919}}}
+[2025-12-25 23:45:00,008: INFO/MainProcess] Task celery_tasks.fine_tune_coin[f7a0c559-ebac-4756-ae77-ace9799f9563] received
+[2025-12-25 23:45:00,011: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[cc788012-9561-4de6-af59-82ffc8d4ca37] received
+[2025-12-25 23:45:00,011: INFO/ForkPoolWorker-8] Starting fine-tuning task for binancecoin
+[2025-12-25 23:45:00,013: INFO/ForkPoolWorker-8] Starting fine-tuning for binancecoin
+[2025-12-25 23:45:00,017: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-25 23:45:00,022: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-25 23:45:00,023: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-25 23:45:00,024: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[cc788012-9561-4de6-af59-82ffc8d4ca37] succeeded in 0.011460250010713935s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-25 23:45:01,330: INFO/ForkPoolWorker-8] Fetched 168 rows for binancecoin
+[2025-12-25 23:45:04,415: INFO/ForkPoolWorker-8] ⚠️ binancecoin/1h: MAE 0.1505 → 0.1573 (not enough improvement)
+[2025-12-25 23:45:07,069: INFO/ForkPoolWorker-8] ⚠️ binancecoin/24h: MAE 0.1564 → 0.1765 (not enough improvement)
+[2025-12-25 23:45:07,070: INFO/ForkPoolWorker-8] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.15048225224018097, 'new_mae': 0.1572752296924591, 'improvement': -0.006792977452278137}, '24h': {'status': 'no_improvement', 'old_mae': 0.15640410780906677, 'new_mae': 0.17650721967220306, 'improvement': -0.02010311186313629}}
+[2025-12-25 23:45:07,071: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[f7a0c559-ebac-4756-ae77-ace9799f9563] succeeded in 7.060985041956883s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.15048225224018097, 'new_mae': 0.1572752296924591, 'improvement': -0.006792977452278137}, '24h': {'status': 'no_improvement', 'old_mae': 0.15640410780906677, 'new_mae': 0.17650721967220306, 'improvement': -0.02010311186313629}}}
+[2025-12-26 00:00:00,010: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[4197e821-c04b-4483-a747-a4d7594ac7d7] received
+[2025-12-26 00:00:00,044: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 00:00:00,046: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 00:00:00,046: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 00:00:00,069: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[4197e821-c04b-4483-a747-a4d7594ac7d7] succeeded in 0.039161874970886856s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 00:15:00,008: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[fca5c8c2-f166-4706-9fc2-14592007f842] received
+[2025-12-26 00:15:00,013: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 00:15:00,021: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 00:15:00,022: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 00:15:00,026: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[fca5c8c2-f166-4706-9fc2-14592007f842] succeeded in 0.014863167016301304s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 01:05:37,492: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[dcf28026-7210-4aec-8f40-3e8ac12ee6f2] received
+[2025-12-26 01:05:37,497: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 01:05:37,503: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 01:05:37,504: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 01:05:37,506: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[dcf28026-7210-4aec-8f40-3e8ac12ee6f2] succeeded in 0.010272416984662414s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 02:15:48,528: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[6ef8c6de-f4d2-4b94-bc8b-b53483d74b8d] received
+[2025-12-26 02:15:48,540: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 02:15:48,546: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 02:15:48,547: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 02:15:48,550: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[6ef8c6de-f4d2-4b94-bc8b-b53483d74b8d] succeeded in 0.014440542028751224s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 03:44:41,770: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[e691d055-3c38-4f32-b18d-2ab5a07df2e8] received
+[2025-12-26 03:44:41,775: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 03:44:41,781: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 03:44:41,782: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 03:44:41,784: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[e691d055-3c38-4f32-b18d-2ab5a07df2e8] succeeded in 0.010863707982935011s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 03:45:00,007: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[1d43d31d-3356-4480-bef6-d2d48af3e106] received
+[2025-12-26 03:45:00,011: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 03:45:00,015: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 03:45:00,016: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 03:45:00,019: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[1d43d31d-3356-4480-bef6-d2d48af3e106] succeeded in 0.01045720896217972s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 05:09:05,976: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[efe037b9-0a46-41ec-8d42-b414dc934956] received
+[2025-12-26 05:09:05,987: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 05:09:05,992: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 05:09:05,993: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 05:09:05,995: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[efe037b9-0a46-41ec-8d42-b414dc934956] succeeded in 0.012678584025707096s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 06:02:27,103: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[2cf24ef3-5154-40ba-bd13-53d3d4372bb6] received
+[2025-12-26 06:02:27,108: INFO/MainProcess] Task celery_tasks.fine_tune_coin[74ac9053-6e88-4f2c-850b-0a3d65e46ca5] received
+[2025-12-26 06:02:27,110: INFO/MainProcess] Task celery_tasks.fine_tune_coin[67b66f38-2c08-4516-9829-bcd9419223c2] received
+[2025-12-26 06:02:27,112: INFO/MainProcess] Task celery_tasks.fine_tune_coin[2d57cef3-71f8-4d20-95c2-f771aa8c6f6b] received
+[2025-12-26 06:02:27,114: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 06:02:27,119: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-26 06:02:27,120: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-26 06:02:27,120: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-26 06:02:27,121: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-26 06:02:27,122: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 06:02:27,122: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-26 06:02:27,123: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 06:02:27,123: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-26 06:02:27,125: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[2cf24ef3-5154-40ba-bd13-53d3d4372bb6] succeeded in 0.016286375001072884s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 06:02:28,247: INFO/ForkPoolWorker-1] Fetched 168 rows for bitcoin
+[2025-12-26 06:02:28,247: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-26 06:02:28,312: INFO/ForkPoolWorker-3] Fetched 168 rows for ethereum
+[2025-12-26 06:02:31,611: INFO/ForkPoolWorker-1] ⚠️ bitcoin/1h: MAE 0.0859 → 0.0885 (not enough improvement)
+[2025-12-26 06:02:32,041: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1497 → 0.1689 (not enough improvement)
+[2025-12-26 06:02:32,473: INFO/ForkPoolWorker-3] ✅ ethereum/1h: MAE 0.0067 → 0.0045 (improved by 0.0021)
+[2025-12-26 06:02:34,596: INFO/ForkPoolWorker-1] ✅ bitcoin/24h: MAE 0.0588 → 0.0492 (improved by 0.0096)
+[2025-12-26 06:02:34,596: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.08591121435165405, 'new_mae': 0.08853068202733994, 'improvement': -0.0026194676756858826}, '24h': {'status': 'success', 'old_mae': 0.05879936367273331, 'new_mae': 0.04918495565652847, 'improvement': 0.009614408016204834}}
+[2025-12-26 06:02:34,597: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[74ac9053-6e88-4f2c-850b-0a3d65e46ca5] succeeded in 7.483923790976405s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.08591121435165405, 'new_mae': 0.08853068202733994, 'improvement': -0.0026194676756858826}, '24h': {'status': 'success', 'old_mae': 0.05879936367273331, 'new_mae': 0.04918495565652847, 'improvement': 0.009614408016204834}}}
+[2025-12-26 06:02:34,971: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1550 → 0.1756 (not enough improvement)
+[2025-12-26 06:02:34,972: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.14968912303447723, 'new_mae': 0.1689131259918213, 'improvement': -0.019224002957344055}, '24h': {'status': 'no_improvement', 'old_mae': 0.15498551726341248, 'new_mae': 0.17560157179832458, 'improvement': -0.02061605453491211}}
+[2025-12-26 06:02:34,973: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[67b66f38-2c08-4516-9829-bcd9419223c2] succeeded in 7.858273959020153s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.14968912303447723, 'new_mae': 0.1689131259918213, 'improvement': -0.019224002957344055}, '24h': {'status': 'no_improvement', 'old_mae': 0.15498551726341248, 'new_mae': 0.17560157179832458, 'improvement': -0.02061605453491211}}}
+[2025-12-26 06:02:35,299: INFO/ForkPoolWorker-3] ⚠️ ethereum/24h: MAE 0.0313 → 0.0693 (not enough improvement)
+[2025-12-26 06:02:35,300: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'1h': {'status': 'success', 'old_mae': 0.006668448448181152, 'new_mae': 0.004525564610958099, 'improvement': 0.002142883837223053}, '24h': {'status': 'no_improvement', 'old_mae': 0.031286995857954025, 'new_mae': 0.0692581981420517, 'improvement': -0.03797120228409767}}
+[2025-12-26 06:02:35,301: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[2d57cef3-71f8-4d20-95c2-f771aa8c6f6b] succeeded in 8.18439412501175s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'success', 'old_mae': 0.006668448448181152, 'new_mae': 0.004525564610958099, 'improvement': 0.002142883837223053}, '24h': {'status': 'no_improvement', 'old_mae': 0.031286995857954025, 'new_mae': 0.0692581981420517, 'improvement': -0.03797120228409767}}}
+[2025-12-26 06:38:23,278: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[6db648d2-bcb9-442e-a3d3-3cb413510d38] received
+[2025-12-26 06:38:23,291: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 06:38:23,299: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 06:38:23,300: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 06:38:23,303: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[6db648d2-bcb9-442e-a3d3-3cb413510d38] succeeded in 0.01705270796082914s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 06:59:45,608: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[ae434b18-4b5f-4182-a5c0-c239128f0cf3] received
+[2025-12-26 06:59:45,617: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 06:59:45,624: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 06:59:45,625: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 06:59:45,627: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[ae434b18-4b5f-4182-a5c0-c239128f0cf3] succeeded in 0.013364250015001744s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 07:00:00,007: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[a6ac4916-4ded-4a88-b9f3-d8cb9345e8fc] received
+[2025-12-26 07:00:00,010: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 07:00:00,014: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 07:00:00,015: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 07:00:00,018: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[a6ac4916-4ded-4a88-b9f3-d8cb9345e8fc] succeeded in 0.008957249985542148s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 07:50:23,406: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[ab608ae2-96c3-4f22-87a8-c456e7c56e7e] received
+[2025-12-26 07:50:23,410: INFO/MainProcess] Task celery_tasks.fine_tune_coin[0f00ccf4-2316-4bfe-9176-39346aa3d46c] received
+[2025-12-26 07:50:23,413: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 07:50:23,419: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 07:50:23,421: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 07:50:23,423: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[ab608ae2-96c3-4f22-87a8-c456e7c56e7e] succeeded in 0.011423209041822702s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 07:50:23,423: INFO/ForkPoolWorker-1] Starting fine-tuning task for solana
+[2025-12-26 07:50:23,425: INFO/ForkPoolWorker-1] Starting fine-tuning for solana
+[2025-12-26 07:50:24,816: INFO/ForkPoolWorker-1] Fetched 168 rows for solana
+[2025-12-26 07:50:27,626: INFO/ForkPoolWorker-1] ⚠️ solana/1h: MAE 0.0083 → 0.0099 (not enough improvement)
+[2025-12-26 08:05:50,971: INFO/ForkPoolWorker-1] ⚠️ solana/24h: MAE 0.0096 → 0.0214 (not enough improvement)
+[2025-12-26 08:05:50,972: INFO/ForkPoolWorker-1] Fine-tuning completed for solana: {'1h': {'status': 'no_improvement', 'old_mae': 0.008306470699608326, 'new_mae': 0.009918139316141605, 'improvement': -0.0016116686165332794}, '24h': {'status': 'no_improvement', 'old_mae': 0.009577842429280281, 'new_mae': 0.02139618620276451, 'improvement': -0.01181834377348423}}
+[2025-12-26 08:05:50,973: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[0f00ccf4-2316-4bfe-9176-39346aa3d46c] succeeded in 6.931017416995019s: {'coin': 'solana', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.008306470699608326, 'new_mae': 0.009918139316141605, 'improvement': -0.0016116686165332794}, '24h': {'status': 'no_improvement', 'old_mae': 0.009577842429280281, 'new_mae': 0.02139618620276451, 'improvement': -0.01181834377348423}}}
+[2025-12-26 09:28:56,745: INFO/MainProcess] Task celery_tasks.fine_tune_coin[690e4882-5b45-4729-bd16-b75d670698e6] received
+[2025-12-26 09:28:56,749: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[715e48ab-0fb3-40ae-8e7f-11521ac56a8a] received
+[2025-12-26 09:28:56,757: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-26 09:28:56,757: INFO/ForkPoolWorker-8] Starting fine-tuning task for cardano
+[2025-12-26 09:28:56,759: INFO/ForkPoolWorker-8] Starting fine-tuning for cardano
+[2025-12-26 09:28:56,765: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-26 09:28:56,766: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-26 09:28:56,768: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[715e48ab-0fb3-40ae-8e7f-11521ac56a8a] succeeded in 0.015591542003676295s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 09:28:57,864: INFO/ForkPoolWorker-8] Fetched 168 rows for cardano
+[2025-12-26 09:37:48,070: INFO/ForkPoolWorker-8] ⚠️ cardano/1h: MAE 0.0020 → 0.0042 (not enough improvement)
+[2025-12-26 09:37:50,618: INFO/ForkPoolWorker-8] ⚠️ cardano/24h: MAE 0.0018 → 0.0037 (not enough improvement)
+[2025-12-26 09:37:50,619: INFO/ForkPoolWorker-8] Fine-tuning completed for cardano: {'1h': {'status': 'no_improvement', 'old_mae': 0.001957573229447007, 'new_mae': 0.004231820348650217, 'improvement': -0.00227424711920321}, '24h': {'status': 'no_improvement', 'old_mae': 0.0018129948293790221, 'new_mae': 0.003728888463228941, 'improvement': -0.0019158936338499188}}
+[2025-12-26 09:37:50,620: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[690e4882-5b45-4729-bd16-b75d670698e6] succeeded in 6.479434666980524s: {'coin': 'cardano', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.001957573229447007, 'new_mae': 0.004231820348650217, 'improvement': -0.00227424711920321}, '24h': {'status': 'no_improvement', 'old_mae': 0.0018129948293790221, 'new_mae': 0.003728888463228941, 'improvement': -0.0019158936338499188}}}
+[2025-12-26 09:54:53,869: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[4cf5d3ef-e0f9-407a-8f07-93357ad59144] received
+[2025-12-26 09:54:53,873: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 09:54:53,878: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 09:54:53,879: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 09:54:53,880: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[4cf5d3ef-e0f9-407a-8f07-93357ad59144] succeeded in 0.009073292021639645s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 11:28:04,059: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[8fb77394-9a2d-4d15-8659-123ea09f0e6f] received
+[2025-12-26 11:28:04,072: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 11:28:04,080: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 11:28:04,081: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 11:28:04,083: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[8fb77394-9a2d-4d15-8659-123ea09f0e6f] succeeded in 0.016299291979521513s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 11:56:36,504: INFO/MainProcess] Task celery_tasks.fine_tune_coin[ca4227b2-faee-4797-86b6-32eb8d01872d] received
+[2025-12-26 11:56:36,508: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[3676c658-9a4d-44cb-9c4a-f71575cd3577] received
+[2025-12-26 11:56:36,510: INFO/MainProcess] Task celery_tasks.fine_tune_coin[bc07c493-ed18-48a3-9f23-244a87f0ee2d] received
+[2025-12-26 11:56:36,510: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-26 11:56:36,512: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-26 11:56:36,518: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-26 11:56:36,520: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-26 11:56:36,521: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-26 11:56:36,525: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-26 11:56:36,526: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-26 11:56:36,529: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[3676c658-9a4d-44cb-9c4a-f71575cd3577] succeeded in 0.015361167024821043s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 11:56:37,410: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-26 11:56:37,410: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-26 11:56:40,523: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1479 → 0.1557 (not enough improvement)
+[2025-12-26 11:56:40,523: INFO/ForkPoolWorker-8] ⚠️ bitcoin/1h: MAE 0.0852 → 0.0894 (not enough improvement)
+[2025-12-26 11:56:43,330: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1533 → 0.1792 (not enough improvement)
+[2025-12-26 11:56:43,331: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.1479009985923767, 'new_mae': 0.15567724406719208, 'improvement': -0.007776245474815369}, '24h': {'status': 'no_improvement', 'old_mae': 0.153262659907341, 'new_mae': 0.17924664914608002, 'improvement': -0.025983989238739014}}
+[2025-12-26 11:56:43,332: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[bc07c493-ed18-48a3-9f23-244a87f0ee2d] succeeded in 6.817268250044435s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.1479009985923767, 'new_mae': 0.15567724406719208, 'improvement': -0.007776245474815369}, '24h': {'status': 'no_improvement', 'old_mae': 0.153262659907341, 'new_mae': 0.17924664914608002, 'improvement': -0.025983989238739014}}}
+[2025-12-26 11:56:43,805: INFO/ForkPoolWorker-8] ✅ bitcoin/24h: MAE 0.0488 → 0.0343 (improved by 0.0146)
+[2025-12-26 11:56:43,806: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.0852205827832222, 'new_mae': 0.08942780643701553, 'improvement': -0.004207223653793335}, '24h': {'status': 'success', 'old_mae': 0.048839110881090164, 'new_mae': 0.03427974134683609, 'improvement': 0.014559369534254074}}
+[2025-12-26 11:56:43,807: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[ca4227b2-faee-4797-86b6-32eb8d01872d] succeeded in 7.297821915999521s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.0852205827832222, 'new_mae': 0.08942780643701553, 'improvement': -0.004207223653793335}, '24h': {'status': 'success', 'old_mae': 0.048839110881090164, 'new_mae': 0.03427974134683609, 'improvement': 0.014559369534254074}}}
+[2025-12-26 12:59:05,729: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[55272c1b-c9b1-4847-8111-1e11c129de91] received
+[2025-12-26 12:59:05,735: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 12:59:05,741: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 12:59:05,742: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 12:59:05,744: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[55272c1b-c9b1-4847-8111-1e11c129de91] succeeded in 0.009802291984669864s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 13:15:54,485: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[eeee1cec-ac1d-4035-82cf-710323ceff0c] received
+[2025-12-26 13:15:54,489: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 13:15:54,494: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 13:15:54,495: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 13:15:54,497: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[eeee1cec-ac1d-4035-82cf-710323ceff0c] succeeded in 0.009262750041671097s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 14:42:55,784: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[1273beda-2fdd-4f55-9b25-b4dafe39d567] received
+[2025-12-26 14:42:55,795: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 14:42:55,807: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 14:42:55,808: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 14:42:55,809: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[1273beda-2fdd-4f55-9b25-b4dafe39d567] succeeded in 0.01834545802557841s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 17:00:47,709: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[12ff5ba0-d531-4cc6-8e53-df2b60c9b4b4] received
+[2025-12-26 17:00:47,716: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 17:00:47,722: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 17:00:47,723: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 17:00:47,725: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[12ff5ba0-d531-4cc6-8e53-df2b60c9b4b4] succeeded in 0.011322166013997048s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 23:05:58,555: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[85f654da-de1f-48bd-9e54-da94bdd220fa] received
+[2025-12-26 23:05:58,561: INFO/MainProcess] Task celery_tasks.fine_tune_coin[4e4d30cd-ed55-4b0a-8fb3-12b2dfcf5037] received
+[2025-12-26 23:05:58,561: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-26 23:05:58,566: INFO/MainProcess] Task celery_tasks.fine_tune_coin[efe5a101-0200-4907-b3c5-d4b091e74343] received
+[2025-12-26 23:05:58,568: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-26 23:05:58,570: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-26 23:05:58,573: INFO/MainProcess] Task celery_tasks.fine_tune_coin[17410bde-646b-4d6c-b0dd-2cb4a49c52bc] received
+[2025-12-26 23:05:58,573: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[85f654da-de1f-48bd-9e54-da94bdd220fa] succeeded in 0.014746084052603692s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-26 23:05:58,584: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-26 23:05:58,586: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-26 23:05:58,587: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-26 23:05:58,589: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-26 23:05:58,591: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-26 23:05:58,593: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-26 23:23:10,849: ERROR/ForkPoolWorker-2] Error fetching data for binancecoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BNBUSDT&interval=1h&startTime=1766145958590&endTime=1766750758590&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-26 23:23:10,849: ERROR/ForkPoolWorker-3] Error fetching data for ethereum: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=ETHUSDT&interval=1h&startTime=1766145958594&endTime=1766750758594&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-26 23:23:10,849: ERROR/ForkPoolWorker-1] Error fetching data for bitcoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1766145958588&endTime=1766750758588&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-26 23:23:10,850: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-26 23:23:10,851: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-26 23:23:10,851: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-26 23:23:10,856: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[efe5a101-0200-4907-b3c5-d4b091e74343] succeeded in 3.5978966670227237s: {'coin': 'binancecoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-26 23:23:10,856: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[4e4d30cd-ed55-4b0a-8fb3-12b2dfcf5037] succeeded in 3.6038790000020526s: {'coin': 'bitcoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-26 23:23:10,858: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[17410bde-646b-4d6c-b0dd-2cb4a49c52bc] succeeded in 3.5945327500230633s: {'coin': 'ethereum', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-27 08:10:20,072: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[26ef67c4-2be7-48c4-919e-ba49d2daa020] received
+[2025-12-27 08:10:20,077: INFO/MainProcess] Task celery_tasks.fine_tune_coin[0da1c695-1b49-4bcc-b4e6-719c94519d17] received
+[2025-12-27 08:10:20,078: INFO/MainProcess] Task celery_tasks.fine_tune_coin[9523083f-d0f2-4353-9249-3b57158bcc4a] received
+[2025-12-27 08:10:20,080: INFO/MainProcess] Task celery_tasks.fine_tune_coin[a9813f4d-d54b-47a5-ab71-01e40c280d23] received
+[2025-12-27 08:10:20,079: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-27 08:10:20,082: INFO/MainProcess] Task celery_tasks.fine_tune_coin[15009a45-455a-4751-b44c-45b91e28111b] received
+[2025-12-27 08:10:20,093: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-27 08:10:20,093: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-27 08:10:20,095: INFO/MainProcess] Task celery_tasks.fine_tune_coin[0ed805fe-ff01-418a-81b9-68eac3de6ad3] received
+[2025-12-27 08:10:20,095: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[26ef67c4-2be7-48c4-919e-ba49d2daa020] succeeded in 0.019260750035755336s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-27 08:10:20,095: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-27 08:10:20,096: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-27 08:10:20,117: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-27 08:10:20,117: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-27 08:10:20,118: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-27 08:10:20,118: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-27 08:10:20,208: INFO/ForkPoolWorker-4] Starting fine-tuning task for solana
+[2025-12-27 08:10:20,215: INFO/ForkPoolWorker-4] Starting fine-tuning for solana
+[2025-12-27 08:10:20,208: INFO/ForkPoolWorker-5] Starting fine-tuning task for cardano
+[2025-12-27 08:10:20,218: INFO/ForkPoolWorker-5] Starting fine-tuning for cardano
+[2025-12-27 08:10:20,706: ERROR/ForkPoolWorker-3] Error fetching data for ethereum: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=ETHUSDT&interval=1h&startTime=1766178620119&endTime=1766783420119&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-27 08:10:20,707: ERROR/ForkPoolWorker-1] Error fetching data for bitcoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1766178620096&endTime=1766783420096&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-27 08:10:20,707: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-27 08:10:20,707: ERROR/ForkPoolWorker-2] Error fetching data for binancecoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BNBUSDT&interval=1h&startTime=1766178620119&endTime=1766783420119&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-27 08:10:20,707: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-27 08:10:20,708: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-27 08:10:20,711: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[a9813f4d-d54b-47a5-ab71-01e40c280d23] succeeded in 0.6282115830108523s: {'coin': 'ethereum', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-27 08:10:20,711: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[0da1c695-1b49-4bcc-b4e6-719c94519d17] succeeded in 0.6321407500072382s: {'coin': 'bitcoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-27 08:10:20,711: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[9523083f-d0f2-4353-9249-3b57158bcc4a] succeeded in 0.6292467919993214s: {'coin': 'binancecoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-27 08:10:20,735: ERROR/ForkPoolWorker-4] Error fetching data for solana: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=SOLUSDT&interval=1h&startTime=1766178620218&endTime=1766783420218&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-27 08:10:20,737: INFO/ForkPoolWorker-4] Fine-tuning completed for solana: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-27 08:10:20,745: INFO/ForkPoolWorker-4] Task celery_tasks.fine_tune_coin[15009a45-455a-4751-b44c-45b91e28111b] succeeded in 0.5901952080312185s: {'coin': 'solana', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-27 08:10:20,746: ERROR/ForkPoolWorker-5] Error fetching data for cardano: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=ADAUSDT&interval=1h&startTime=1766178620220&endTime=1766783420220&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-27 08:10:20,746: INFO/ForkPoolWorker-5] Fine-tuning completed for cardano: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-27 08:10:20,752: INFO/ForkPoolWorker-5] Task celery_tasks.fine_tune_coin[0ed805fe-ff01-418a-81b9-68eac3de6ad3] succeeded in 0.5911051249713637s: {'coin': 'cardano', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-27 15:27:28,865: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[7294634a-5b9e-4e0e-b83b-7b5442230d78] received
+[2025-12-27 15:27:28,875: INFO/MainProcess] Task celery_tasks.fine_tune_coin[b9963064-eb4b-4421-81a9-ccc3aba011aa] received
+[2025-12-27 15:27:28,883: INFO/MainProcess] Task celery_tasks.fine_tune_coin[ac9f5246-410f-40e2-a186-192305f8a55d] received
+[2025-12-27 15:27:28,884: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-27 15:27:28,887: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-27 15:27:28,891: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-27 15:27:28,900: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-27 15:27:28,901: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-27 15:27:28,902: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-27 15:27:28,905: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-27 15:27:28,906: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[7294634a-5b9e-4e0e-b83b-7b5442230d78] succeeded in 0.03173070901539177s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-27 15:27:30,731: INFO/ForkPoolWorker-1] Fetched 168 rows for bitcoin
+[2025-12-27 15:27:30,738: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-27 15:27:34,779: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1460 → 0.1476 (not enough improvement)
+[2025-12-27 15:27:34,890: INFO/ForkPoolWorker-1] ⚠️ bitcoin/1h: MAE 0.0881 → 0.0931 (not enough improvement)
+[2025-12-27 15:27:37,772: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1504 → 0.1615 (not enough improvement)
+[2025-12-27 15:27:37,773: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.14604279398918152, 'new_mae': 0.14759279787540436, 'improvement': -0.0015500038862228394}, '24h': {'status': 'no_improvement', 'old_mae': 0.150393545627594, 'new_mae': 0.1614542305469513, 'improvement': -0.0110606849193573}}
+[2025-12-27 15:27:37,776: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[ac9f5246-410f-40e2-a186-192305f8a55d] succeeded in 8.955629625008442s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.14604279398918152, 'new_mae': 0.14759279787540436, 'improvement': -0.0015500038862228394}, '24h': {'status': 'no_improvement', 'old_mae': 0.150393545627594, 'new_mae': 0.1614542305469513, 'improvement': -0.0110606849193573}}}
+[2025-12-27 15:27:37,873: INFO/ForkPoolWorker-1] ✅ bitcoin/24h: MAE 0.0334 → 0.0167 (improved by 0.0168)
+[2025-12-27 15:27:37,875: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.08810282498598099, 'new_mae': 0.09307219833135605, 'improvement': -0.004969373345375061}, '24h': {'status': 'success', 'old_mae': 0.03341316431760788, 'new_mae': 0.016653001308441162, 'improvement': 0.016760163009166718}}
+[2025-12-27 15:27:37,880: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[b9963064-eb4b-4421-81a9-ccc3aba011aa] succeeded in 9.068408666993491s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.08810282498598099, 'new_mae': 0.09307219833135605, 'improvement': -0.004969373345375061}, '24h': {'status': 'success', 'old_mae': 0.03341316431760788, 'new_mae': 0.016653001308441162, 'improvement': 0.016760163009166718}}}
+[2025-12-27 15:30:00,020: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[d254aa8c-e785-4221-b5c7-5535ef719490] received
+[2025-12-27 15:30:00,032: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-27 15:30:00,045: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-27 15:30:00,046: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-27 15:30:00,048: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[d254aa8c-e785-4221-b5c7-5535ef719490] succeeded in 0.02035258401883766s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-27 17:34:51,262: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[a3f55250-4508-451f-9ef8-6e9b72b197cd] received
+[2025-12-27 17:34:51,268: INFO/MainProcess] Task celery_tasks.fine_tune_coin[0a45f189-d9f0-444f-8cce-0b2f53ab2e82] received
+[2025-12-27 17:34:51,281: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-27 17:34:51,283: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-27 17:34:51,285: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-27 17:34:51,294: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-27 17:34:51,294: ERROR/ForkPoolWorker-1] Error fetching data for bitcoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1766212491286&endTime=1766817291286&limit=1000 (Caused by NameResolutionError("HTTPSConnection(host='api.binance.com', port=443): Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)"))
+[2025-12-27 17:34:51,294: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-27 17:34:51,294: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-27 17:34:51,298: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[0a45f189-d9f0-444f-8cce-0b2f53ab2e82] succeeded in 0.023540541995316744s: {'coin': 'bitcoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-27 17:34:51,299: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[a3f55250-4508-451f-9ef8-6e9b72b197cd] succeeded in 0.025598458014428616s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-28 01:58:13,761: INFO/MainProcess] Task celery_tasks.fine_tune_coin[7d27de0a-c756-4cf5-8cec-b66baf63b593] received
+[2025-12-28 01:58:13,765: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[05855f1e-d50b-44df-8afd-38823083e913] received
+[2025-12-28 01:58:13,766: INFO/MainProcess] Task celery_tasks.fine_tune_coin[cbc2e6de-4071-4914-81a3-ddb66c89b653] received
+[2025-12-28 01:58:13,767: INFO/MainProcess] Task celery_tasks.fine_tune_coin[03484e0a-63e6-4a54-9c93-88f60fb596c3] received
+[2025-12-28 01:58:13,777: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-28 01:58:13,777: INFO/ForkPoolWorker-8] Starting fine-tuning task for binancecoin
+[2025-12-28 01:58:13,781: INFO/ForkPoolWorker-8] Starting fine-tuning for binancecoin
+[2025-12-28 01:58:13,780: INFO/ForkPoolWorker-2] Starting fine-tuning task for ethereum
+[2025-12-28 01:58:13,783: INFO/ForkPoolWorker-2] Starting fine-tuning for ethereum
+[2025-12-28 01:58:13,782: INFO/ForkPoolWorker-3] Starting fine-tuning task for bitcoin
+[2025-12-28 01:58:13,784: INFO/ForkPoolWorker-3] Starting fine-tuning for bitcoin
+[2025-12-28 01:58:13,793: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-28 01:58:13,795: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-28 01:58:13,797: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[05855f1e-d50b-44df-8afd-38823083e913] succeeded in 0.028423250012565404s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-28 01:58:13,954: ERROR/ForkPoolWorker-3] Error fetching data for bitcoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1766242693785&endTime=1766847493785&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-28 01:58:13,954: INFO/ForkPoolWorker-3] Fine-tuning completed for bitcoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-28 01:58:13,954: ERROR/ForkPoolWorker-2] Error fetching data for ethereum: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=ETHUSDT&interval=1h&startTime=1766242693784&endTime=1766847493784&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-28 01:58:13,955: INFO/ForkPoolWorker-2] Fine-tuning completed for ethereum: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-28 01:58:13,955: ERROR/ForkPoolWorker-8] Error fetching data for binancecoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BNBUSDT&interval=1h&startTime=1766242693782&endTime=1766847493782&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-28 01:58:13,956: INFO/ForkPoolWorker-8] Fine-tuning completed for binancecoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-28 01:58:13,957: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[03484e0a-63e6-4a54-9c93-88f60fb596c3] succeeded in 0.18513516598613933s: {'coin': 'bitcoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-28 01:58:13,957: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[cbc2e6de-4071-4914-81a3-ddb66c89b653] succeeded in 0.18600425001932308s: {'coin': 'ethereum', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-28 01:58:13,958: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[7d27de0a-c756-4cf5-8cec-b66baf63b593] succeeded in 0.18837774998974055s: {'coin': 'binancecoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-28 04:52:59,584: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[7b7b2738-21fe-4675-85e1-1e460c775dc7] received
+[2025-12-28 04:52:59,589: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-28 04:52:59,595: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-28 04:52:59,596: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-28 04:52:59,598: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[7b7b2738-21fe-4675-85e1-1e460c775dc7] succeeded in 0.011158375011291355s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-28 17:00:21,985: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[8f8182b1-2e60-4cb9-93a4-a181a446429c] received
+[2025-12-28 17:00:21,990: INFO/MainProcess] Task celery_tasks.fine_tune_coin[e3cba788-f154-4241-8613-668fc495472e] received
+[2025-12-28 17:00:21,994: INFO/MainProcess] Task celery_tasks.fine_tune_coin[9ef93c74-20fd-4e22-813e-ef92c303baab] received
+[2025-12-28 17:00:22,000: INFO/MainProcess] Task celery_tasks.fine_tune_coin[5b4a138b-ea4b-45e4-b288-5f1107b0fe3f] received
+[2025-12-28 17:00:22,000: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-28 17:00:22,001: INFO/ForkPoolWorker-1] Starting fine-tuning task for bitcoin
+[2025-12-28 17:00:22,002: INFO/MainProcess] Task celery_tasks.fine_tune_coin[d7eab570-89da-449b-9737-64bf83009402] received
+[2025-12-28 17:00:22,002: INFO/ForkPoolWorker-1] Starting fine-tuning for bitcoin
+[2025-12-28 17:00:22,003: INFO/MainProcess] Task celery_tasks.fine_tune_coin[a025546f-cca7-405d-a548-7b0d193f68c2] received
+[2025-12-28 17:00:22,003: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-28 17:00:22,005: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-28 17:00:22,007: INFO/ForkPoolWorker-8] Found 1 predictions to verify
+[2025-12-28 17:00:22,012: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-28 17:00:22,014: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-28 17:00:22,015: INFO/ForkPoolWorker-4] Starting fine-tuning task for solana
+[2025-12-28 17:00:22,016: INFO/ForkPoolWorker-4] Starting fine-tuning for solana
+[2025-12-28 17:00:22,021: INFO/ForkPoolWorker-5] Starting fine-tuning task for cardano
+[2025-12-28 17:00:22,022: INFO/ForkPoolWorker-5] Starting fine-tuning for cardano
+[2025-12-28 17:00:22,152: ERROR/ForkPoolWorker-8] Binance API error for ETHUSDT: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)>
+[2025-12-28 17:00:22,155: INFO/ForkPoolWorker-8] Verified prediction 204: no valid errors
+[2025-12-28 17:00:22,155: INFO/ForkPoolWorker-8] Prediction verification completed: 1 predictions verified
+[2025-12-28 17:00:22,157: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[8f8182b1-2e60-4cb9-93a4-a181a446429c] succeeded in 0.16595604200847447s: {'status': 'success', 'verified_count': 1, 'total_pending': 1, 'results': [{'status': 'success', 'prediction_id': 204, 'coin': 'ethereum', 'actual_prices': [...], 'mean_error_pct': None, 'max_error_pct': None}]}
+[2025-12-28 17:00:22,165: ERROR/ForkPoolWorker-3] Error fetching data for ethereum: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=ETHUSDT&interval=1h&startTime=1766296822014&endTime=1766901622014&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-28 17:00:22,165: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-28 17:00:22,166: ERROR/ForkPoolWorker-2] Error fetching data for binancecoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BNBUSDT&interval=1h&startTime=1766296822006&endTime=1766901622006&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-28 17:00:22,166: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-28 17:00:22,167: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[5b4a138b-ea4b-45e4-b288-5f1107b0fe3f] succeeded in 0.16271279100328684s: {'coin': 'ethereum', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-28 17:00:22,168: ERROR/ForkPoolWorker-1] Error fetching data for bitcoin: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=1h&startTime=1766296822003&endTime=1766901622003&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-28 17:00:22,168: INFO/ForkPoolWorker-1] Fine-tuning completed for bitcoin: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-28 17:00:22,168: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[9ef93c74-20fd-4e22-813e-ef92c303baab] succeeded in 0.17071658396162093s: {'coin': 'binancecoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-28 17:00:22,170: INFO/ForkPoolWorker-1] Task celery_tasks.fine_tune_coin[e3cba788-f154-4241-8613-668fc495472e] succeeded in 0.17540966597152874s: {'coin': 'bitcoin', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-28 17:00:22,174: ERROR/ForkPoolWorker-4] Error fetching data for solana: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=SOLUSDT&interval=1h&startTime=1766296822017&endTime=1766901622017&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-28 17:00:22,174: INFO/ForkPoolWorker-4] Fine-tuning completed for solana: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-28 17:00:22,178: INFO/ForkPoolWorker-4] Task celery_tasks.fine_tune_coin[d7eab570-89da-449b-9737-64bf83009402] succeeded in 0.16907941602403298s: {'coin': 'solana', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-28 17:00:22,179: ERROR/ForkPoolWorker-5] Error fetching data for cardano: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=ADAUSDT&interval=1h&startTime=1766296822022&endTime=1766901622022&limit=1000 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1010)')))
+[2025-12-28 17:00:22,181: INFO/ForkPoolWorker-5] Fine-tuning completed for cardano: {'status': 'error', 'message': 'Insufficient data'}
+[2025-12-28 17:00:22,187: INFO/ForkPoolWorker-5] Task celery_tasks.fine_tune_coin[a025546f-cca7-405d-a548-7b0d193f68c2] succeeded in 0.17421554098837078s: {'coin': 'cardano', 'status': 'success', 'result': {'status': 'error', 'message': 'Insufficient data'}}
+[2025-12-28 17:15:00,019: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[6066cac3-3cf3-4e8d-8dab-bbc67b3b8c71] received
+[2025-12-28 17:15:00,030: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-28 17:15:00,045: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-28 17:15:00,046: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-28 17:15:00,048: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[6066cac3-3cf3-4e8d-8dab-bbc67b3b8c71] succeeded in 0.02245633298298344s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-28 18:12:04,724: INFO/MainProcess] Task celery_tasks.fine_tune_coin[baa924ee-0567-4b0f-a23b-4adf07618adb] received
+[2025-12-28 18:12:04,728: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[734f912d-06a3-4eed-ae1e-5d00f62c2147] received
+[2025-12-28 18:12:04,730: INFO/MainProcess] Task celery_tasks.fine_tune_coin[c7b6b52b-e505-4a84-98d0-2a9fb2b61e79] received
+[2025-12-28 18:12:04,731: INFO/MainProcess] Task celery_tasks.fine_tune_coin[f75669c9-d5f5-4c35-aee0-9b21380de762] received
+[2025-12-28 18:12:04,739: INFO/ForkPoolWorker-8] Starting fine-tuning task for bitcoin
+[2025-12-28 18:12:04,740: INFO/ForkPoolWorker-1] Starting prediction accuracy verification
+[2025-12-28 18:12:04,741: INFO/ForkPoolWorker-8] Starting fine-tuning for bitcoin
+[2025-12-28 18:12:04,740: INFO/ForkPoolWorker-2] Starting fine-tuning task for binancecoin
+[2025-12-28 18:12:04,740: INFO/ForkPoolWorker-3] Starting fine-tuning task for ethereum
+[2025-12-28 18:12:04,742: INFO/ForkPoolWorker-2] Starting fine-tuning for binancecoin
+[2025-12-28 18:12:04,742: INFO/ForkPoolWorker-3] Starting fine-tuning for ethereum
+[2025-12-28 18:12:04,755: INFO/ForkPoolWorker-1] No pending predictions to verify
+[2025-12-28 18:12:04,755: INFO/ForkPoolWorker-1] Prediction verification completed: 0 predictions verified
+[2025-12-28 18:12:04,758: INFO/ForkPoolWorker-1] Task celery_tasks.verify_prediction_accuracy[734f912d-06a3-4eed-ae1e-5d00f62c2147] succeeded in 0.025955500022973865s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-28 18:12:06,596: INFO/ForkPoolWorker-8] Fetched 168 rows for bitcoin
+[2025-12-28 18:12:06,642: INFO/ForkPoolWorker-3] Fetched 168 rows for ethereum
+[2025-12-28 18:12:06,698: INFO/ForkPoolWorker-2] Fetched 168 rows for binancecoin
+[2025-12-28 18:12:12,810: INFO/ForkPoolWorker-8] ⚠️ bitcoin/1h: MAE 0.0848 → 0.0910 (not enough improvement)
+[2025-12-28 18:12:13,168: INFO/ForkPoolWorker-3] ⚠️ ethereum/1h: MAE 0.0049 → 0.0111 (not enough improvement)
+[2025-12-28 18:12:13,580: INFO/ForkPoolWorker-2] ⚠️ binancecoin/1h: MAE 0.1492 → 0.1745 (not enough improvement)
+[2025-12-28 18:12:19,251: INFO/ForkPoolWorker-8] ✅ bitcoin/24h: MAE 0.0161 → 0.0034 (improved by 0.0127)
+[2025-12-28 18:12:19,252: INFO/ForkPoolWorker-8] Fine-tuning completed for bitcoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.0847947970032692, 'new_mae': 0.09096034616231918, 'improvement': -0.006165549159049988}, '24h': {'status': 'success', 'old_mae': 0.016107752919197083, 'new_mae': 0.003385379910469055, 'improvement': 0.012722373008728027}}
+[2025-12-28 18:12:19,254: INFO/ForkPoolWorker-8] Task celery_tasks.fine_tune_coin[baa924ee-0567-4b0f-a23b-4adf07618adb] succeeded in 14.522286041988991s: {'coin': 'bitcoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.0847947970032692, 'new_mae': 0.09096034616231918, 'improvement': -0.006165549159049988}, '24h': {'status': 'success', 'old_mae': 0.016107752919197083, 'new_mae': 0.003385379910469055, 'improvement': 0.012722373008728027}}}
+[2025-12-28 18:12:19,256: INFO/ForkPoolWorker-3] ⚠️ ethereum/24h: MAE 0.0308 → 0.0540 (not enough improvement)
+[2025-12-28 18:12:19,257: INFO/ForkPoolWorker-3] Fine-tuning completed for ethereum: {'1h': {'status': 'no_improvement', 'old_mae': 0.004939320031553507, 'new_mae': 0.011060237884521484, 'improvement': -0.0061209178529679775}, '24h': {'status': 'no_improvement', 'old_mae': 0.030843768268823624, 'new_mae': 0.053955573588609695, 'improvement': -0.023111805319786072}}
+[2025-12-28 18:12:19,257: INFO/ForkPoolWorker-3] Task celery_tasks.fine_tune_coin[f75669c9-d5f5-4c35-aee0-9b21380de762] succeeded in 14.521282667003106s: {'coin': 'ethereum', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.004939320031553507, 'new_mae': 0.011060237884521484, 'improvement': -0.0061209178529679775}, '24h': {'status': 'no_improvement', 'old_mae': 0.030843768268823624, 'new_mae': 0.053955573588609695, 'improvement': -0.023111805319786072}}}
+[2025-12-28 18:12:19,434: INFO/ForkPoolWorker-2] ⚠️ binancecoin/24h: MAE 0.1556 → 0.1622 (not enough improvement)
+[2025-12-28 18:12:19,435: INFO/ForkPoolWorker-2] Fine-tuning completed for binancecoin: {'1h': {'status': 'no_improvement', 'old_mae': 0.149156853556633, 'new_mae': 0.17454518377780914, 'improvement': -0.025388330221176147}, '24h': {'status': 'no_improvement', 'old_mae': 0.15558090806007385, 'new_mae': 0.16222159564495087, 'improvement': -0.006640687584877014}}
+[2025-12-28 18:12:19,437: INFO/ForkPoolWorker-2] Task celery_tasks.fine_tune_coin[c7b6b52b-e505-4a84-98d0-2a9fb2b61e79] succeeded in 14.702755916980095s: {'coin': 'binancecoin', 'status': 'success', 'result': {'1h': {'status': 'no_improvement', 'old_mae': 0.149156853556633, 'new_mae': 0.17454518377780914, 'improvement': -0.025388330221176147}, '24h': {'status': 'no_improvement', 'old_mae': 0.15558090806007385, 'new_mae': 0.16222159564495087, 'improvement': -0.006640687584877014}}}
+[2025-12-28 18:46:04,349: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[0b310458-4284-46f3-beaf-9f03e39040b1] received
+[2025-12-28 18:46:04,362: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-28 18:46:04,374: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-28 18:46:04,375: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-28 18:46:04,377: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[0b310458-4284-46f3-beaf-9f03e39040b1] succeeded in 0.019464208045974374s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-28 19:23:17,894: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[4e46a570-6348-414c-ab94-6727c566bd26] received
+[2025-12-28 19:23:17,907: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-28 19:23:17,920: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-28 19:23:17,921: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-28 19:23:17,923: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[4e46a570-6348-414c-ab94-6727c566bd26] succeeded in 0.0216518749948591s: {'status': 'success', 'verified_count': 0, 'results': []}
+[2025-12-28 19:30:00,044: INFO/MainProcess] Task celery_tasks.verify_prediction_accuracy[0ad9077b-8d40-4721-a730-d7077051bf82] received
+[2025-12-28 19:30:00,094: INFO/ForkPoolWorker-8] Starting prediction accuracy verification
+[2025-12-28 19:30:00,115: INFO/ForkPoolWorker-8] No pending predictions to verify
+[2025-12-28 19:30:00,115: INFO/ForkPoolWorker-8] Prediction verification completed: 0 predictions verified
+[2025-12-28 19:30:00,121: INFO/ForkPoolWorker-8] Task celery_tasks.verify_prediction_accuracy[0ad9077b-8d40-4721-a730-d7077051bf82] succeeded in 0.04624895803863183s: {'status': 'success', 'verified_count': 0, 'results': []}
